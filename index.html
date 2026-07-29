@@ -21,8 +21,9 @@ body{background:var(--canvas);color:var(--ink);
 .wrap{max-width:920px;margin:0 auto;padding:0 14px}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.18em;
   text-transform:uppercase;color:var(--muted);font-weight:500}
-h1{font-family:"Hahmlet",serif;font-weight:900;font-size:clamp(30px,8.4vw,50px);
-  line-height:1.12;letter-spacing:-.02em;margin:10px 0 14px}
+h1{font-family:"Hahmlet",serif;font-weight:900;font-size:clamp(27px,7.4vw,46px);
+  line-height:1.16;letter-spacing:-.025em;margin:10px 0 14px;text-wrap:balance}
+h1 .hi{color:var(--exposed)}
 h2{font-family:"Hahmlet",serif;font-weight:700;font-size:22px;letter-spacing:-.01em}
 .lede{font-size:17px;color:#294B45;max-width:62ch}
 .mono{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
@@ -230,7 +231,7 @@ footer{padding:26px 0 0;color:var(--muted);font-size:13px}
 
 <header>
   <div class="eyebrow" id="ebrow">8월 8일 토요일 · 5인 · 남한강자전거길</div>
-  <h1>그늘은<br>10시 전에 사라진다</h1>
+  <h1><span class="hi">그늘</span>은 10시 전에 사라진다.<br>팔당 <span class="hi">라이딩</span>~!</h1>
   <p class="lede">팔당역 08:00 대여 → 북한강철교 왕복 21km → 가락시장 점심.
   여름 라이딩에서 관리할 변수는 거리가 아니라 <b>태양 고도</b>입니다. 이 문서는 그것 하나를 위해 만들었습니다.</p>
   <div class="chips">
