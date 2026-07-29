@@ -17,18 +17,18 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{background:var(--canvas);color:var(--ink);
-  font-family:"IBM Plex Sans KR",system-ui,sans-serif;font-size:15px;line-height:1.65;padding:0 0 72px}
+  font-family:"IBM Plex Sans KR",system-ui,sans-serif;font-size:16.5px;line-height:1.68;padding:0 0 72px}
 .wrap{max-width:760px;margin:0 auto;padding:0 18px}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.18em;
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.18em;
   text-transform:uppercase;color:var(--muted);font-weight:500}
 h1{font-family:"Hahmlet",serif;font-weight:900;font-size:clamp(30px,8.4vw,50px);
   line-height:1.12;letter-spacing:-.02em;margin:10px 0 14px}
-h2{font-family:"Hahmlet",serif;font-weight:700;font-size:20px;letter-spacing:-.01em}
-.lede{font-size:15.5px;color:#294B45;max-width:56ch}
+h2{font-family:"Hahmlet",serif;font-weight:700;font-size:22px;letter-spacing:-.01em}
+.lede{font-size:17px;color:#294B45;max-width:56ch}
 .mono{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
 
 .masthead{background:var(--ink);color:#F2F5F3;text-align:center;padding:9px 18px}
-.masthead .mh{font-family:"Hahmlet",serif;font-weight:700;font-size:12.5px;
+.masthead .mh{font-family:"Hahmlet",serif;font-weight:700;font-size:13.5px;
   letter-spacing:.34em;text-transform:uppercase;text-indent:.34em}
 .masthead .mh em{font-style:normal;color:var(--partial)}
 
@@ -36,60 +36,63 @@ h2{font-family:"Hahmlet",serif;font-weight:700;font-size:20px;letter-spacing:-.0
 .colophon .rule{height:1px;background:var(--line);margin-bottom:26px}
 .colophon .co1{font-family:"Hahmlet",serif;font-weight:900;
   font-size:clamp(20px,5.6vw,30px);letter-spacing:.1em;line-height:1.2;text-indent:.1em}
-.colophon .co2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.42em;
+.colophon .co2{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.42em;
   color:var(--muted);margin-top:10px;text-indent:.42em}
 .colophon .dot{width:5px;height:5px;background:var(--exposed);border-radius:50%;margin:20px auto 0}
 
 .dateswitch{display:flex;gap:0;border:1px solid var(--ink);border-radius:3px;overflow:hidden;margin-bottom:16px}
 .dateswitch button{flex:1;background:var(--paper);border:0;padding:9px 2px;cursor:pointer;
-  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;color:var(--muted);
+  font-family:"IBM Plex Mono",monospace;font-size:13.5px;font-weight:600;color:var(--muted);
   border-right:1px solid var(--ink);transition:background .15s,color .15s;white-space:nowrap}
-.dateswitch button span{font-size:9px;letter-spacing:.06em;opacity:.65;display:block;margin-top:-2px}
+.dateswitch button span{font-size:10.5px;letter-spacing:.06em;opacity:.65;display:block;margin-top:-2px}
 .dateswitch button:last-child{border-right:0}
 .dateswitch button[aria-pressed="true"]{background:var(--ink);color:#fff}
 .dateswitch button:focus-visible{outline:3px solid var(--tunnel);outline-offset:-3px}
 .crit{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;padding:10px 12px;
-  border:1px dashed var(--line);border-radius:2px;font-family:"IBM Plex Mono",monospace;font-size:11.5px}
+  border:1px dashed var(--line);border-radius:2px;font-family:"IBM Plex Mono",monospace;font-size:12.5px}
 .crit b{font-weight:600;color:var(--exposed)}
 .datenote{margin-top:10px;padding:10px 12px;border-left:3px solid var(--partial);
-  background:#FFFAF0;border-radius:2px;font-size:13px}
+  background:#FFFAF0;border-radius:2px;font-size:14.5px}
 
 header{padding:34px 0 26px;border-bottom:2px solid var(--ink);
   background:linear-gradient(180deg,rgba(240,169,59,.13),rgba(240,169,59,0) 62%)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
-.chip{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;
+.chip{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
   border:1px solid var(--line);border-radius:2px;padding:4px 9px;background:var(--paper);color:#3A5A54}
 
 section{padding:34px 0;border-bottom:1px solid var(--line)}
 .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;flex-wrap:wrap}
-.sec-num{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--exposed);
+.sec-num{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--exposed);
   font-weight:600;letter-spacing:.1em}
-.sec-note{color:var(--muted);font-size:13.5px;margin-bottom:20px;max-width:58ch}
+.sec-note{color:var(--muted);font-size:14.5px;margin-bottom:20px;max-width:58ch}
 
 /* ---------- combined console ---------- */
 .console{border:1px solid var(--line);border-radius:4px;background:var(--paper);overflow:hidden}
 #map{height:300px;background:#E8EEEC;z-index:1;border-bottom:1px solid var(--ink)}
-.pin{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;
-  color:#fff;font-weight:600;font-size:12px;font-family:"IBM Plex Mono",monospace;
+.pin{display:flex;align-items:center;justify-content:center;width:27px;height:27px;border-radius:50%;
+  color:#fff;font-weight:600;font-size:13px;font-family:"IBM Plex Mono",monospace;
   border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)}
 .rdot{width:16px;height:16px;border-radius:50%;background:var(--ink);border:3px solid #fff;
   box-shadow:0 0 0 2px var(--ink),0 2px 7px rgba(0,0,0,.45)}
+.engine{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+  padding:6px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.engine b{font-weight:600;color:var(--ink)}
 .instrument{padding:16px}
 .readout{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:6px}
 .ro-item{border-left:2px solid var(--line);padding-left:10px}
-.ro-k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
+.ro-k{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;
   color:var(--muted);text-transform:uppercase}
-.ro-v{font-family:"Hahmlet",serif;font-weight:700;font-size:23px;line-height:1.2}
-.ro-v small{font-size:12px;font-weight:500;color:var(--muted);font-family:"IBM Plex Mono",monospace}
+.ro-v{font-family:"Hahmlet",serif;font-weight:700;font-size:25px;line-height:1.2}
+.ro-v small{font-size:13px;font-weight:500;color:var(--muted);font-family:"IBM Plex Mono",monospace}
 
 .sunwrap{position:relative;height:78px;margin:14px 0 2px}
 .sunwrap svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.axlab{font-family:"IBM Plex Mono",monospace;font-size:9.5px;fill:#6E8480}
+.axlab{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:#6E8480}
 
-.striplab{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+.striplab{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;
   color:var(--muted);margin:20px 0 5px;display:flex;justify-content:space-between;align-items:center}
 #dirLab{color:var(--ink);font-weight:600}
-.strip{position:relative;display:flex;height:52px;border:1px solid var(--ink);border-radius:2px;
+.strip{position:relative;display:flex;height:58px;border:1px solid var(--ink);border-radius:2px;
   overflow:visible;background:var(--ink)}
 .seg{position:relative;cursor:pointer;overflow:hidden;
   border-right:1px solid rgba(255,255,255,.55);transition:filter .18s}
@@ -98,10 +101,10 @@ section{padding:34px 0;border-bottom:1px solid var(--line)}
 .seg .base{position:absolute;inset:0;transition:filter .18s}
 .seg .wash{position:absolute;inset:0;background:linear-gradient(180deg,#FFD98A,#E4633A);transition:opacity .18s linear}
 .seg .no{position:absolute;top:5px;left:0;right:0;text-align:center;color:#fff;
-  font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+  font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
   text-shadow:0 1px 2px rgba(0,0,0,.5);transition:transform .18s}
 .seg .tag{position:absolute;bottom:4px;left:2px;right:2px;text-align:center;
-  font-family:"IBM Plex Mono",monospace;font-size:9px;color:#fff;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:#fff;
   text-shadow:0 1px 2px rgba(0,0,0,.5);white-space:nowrap;overflow:hidden}
 .seg.dim .base{filter:saturate(.35) brightness(1.18)}
 .seg.dim .no,.seg.dim .tag{opacity:.55}
@@ -112,13 +115,13 @@ section{padding:34px 0;border-bottom:1px solid var(--line)}
 .playhead::before{content:"";position:absolute;top:0;left:-7px;
   border-left:8px solid transparent;border-right:8px solid transparent;border-top:11px solid var(--ink)}
 .playhead::after{content:attr(data-km);position:absolute;bottom:-19px;left:50%;transform:translateX(-50%);
-  font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;color:var(--ink);
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;color:var(--ink);
   background:var(--paper);padding:0 3px;white-space:nowrap}
 .axis{position:relative;height:22px;margin-top:22px}
 .tick{position:absolute;top:0;transform:translateX(-50%);
-  font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted)}
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted)}
 .now{margin-top:14px;padding:11px 13px;border:1px solid var(--line);border-left:4px solid var(--exposed);
-  background:#FBFDFC;border-radius:2px;font-size:13.5px;min-height:52px;transition:border-color .18s}
+  background:#FBFDFC;border-radius:2px;font-size:14.5px;min-height:56px;transition:border-color .18s}
 .now b{font-family:"Hahmlet",serif}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:34px;background:transparent;margin-top:12px;cursor:pointer}
 input[type=range]::-webkit-slider-runnable-track{height:4px;background:var(--ink);border-radius:2px}
@@ -128,12 +131,12 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;heigh
 input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--paper);border:3px solid var(--exposed)}
 input[type=range]:focus-visible{outline:3px solid var(--tunnel);outline-offset:4px}
 .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
-.lg{display:flex;align-items:center;gap:6px;font-size:11.5px;color:#3A5A54;font-family:"IBM Plex Mono",monospace}
+.lg{display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3A5A54;font-family:"IBM Plex Mono",monospace}
 .sw{width:16px;height:5px;border-radius:3px}
-.legnote{font-size:11.5px;color:var(--muted);margin-top:8px;font-family:"IBM Plex Mono",monospace}
+.legnote{font-size:12.5px;color:var(--muted);margin-top:8px;font-family:"IBM Plex Mono",monospace}
 
 .maplinks{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-.mlink{flex:1;min-width:150px;text-align:center;text-decoration:none;font-size:13px;font-weight:600;
+.mlink{flex:1;min-width:150px;text-align:center;text-decoration:none;font-size:14.5px;font-weight:600;
   padding:11px 10px;border:1px solid var(--ink);border-radius:3px;color:var(--ink);background:var(--paper)}
 .mlink:hover{background:var(--ink);color:#fff}
 
@@ -143,9 +146,9 @@ input[type=range]:focus-visible{outline:3px solid var(--tunnel);outline-offset:4
 .tl li::before{content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;border-radius:50%;
   background:var(--canvas);border:2px solid var(--ink)}
 .tl li.key::before{background:var(--exposed);border-color:var(--exposed)}
-.tl-t{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13px;color:var(--exposed)}
-.tl-h{font-family:"Hahmlet",serif;font-weight:700;font-size:15.5px;margin:1px 0 2px}
-.tl-d{font-size:13.5px;color:#41615B}
+.tl-t{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;color:var(--exposed)}
+.tl-h{font-family:"Hahmlet",serif;font-weight:700;font-size:17px;margin:1px 0 2px}
+.tl-d{font-size:14.5px;color:#41615B}
 
 /* ---------- accordion ---------- */
 .acc{border:1px solid var(--line);border-radius:3px;background:var(--paper);margin-bottom:10px;overflow:hidden}
@@ -153,32 +156,32 @@ input[type=range]:focus-visible{outline:3px solid var(--tunnel);outline-offset:4
 .acc>button{width:100%;text-align:left;background:none;border:0;padding:14px;cursor:pointer;
   font:inherit;color:inherit;display:grid;grid-template-columns:30px 1fr 18px;gap:12px;align-items:center}
 .acc>button:focus-visible{outline:3px solid var(--tunnel);outline-offset:-3px}
-.acc .rank{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:12.5px;color:#fff;
+.acc .rank{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13.5px;color:#fff;
   width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .acc .rankf{font-family:"Hahmlet",serif;font-weight:900;font-size:22px;color:var(--line);text-align:center;line-height:1}
-.acc .t{font-family:"Hahmlet",serif;font-weight:700;font-size:16px}
-.acc .s{font-size:12.5px;color:var(--muted);margin-top:2px}
-.acc .arw{color:var(--muted);font-size:15px;transition:transform .2s;text-align:center}
+.acc .t{font-family:"Hahmlet",serif;font-weight:700;font-size:17.5px}
+.acc .s{font-size:13.5px;color:var(--muted);margin-top:2px}
+.acc .arw{color:var(--muted);font-size:16px;transition:transform .2s;text-align:center}
 .acc.open .arw{transform:rotate(90deg);color:var(--ink)}
 .panel{padding:0 14px 16px 14px;border-top:1px solid var(--line);margin-top:-1px}
-.panel .kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+.panel .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;
   color:var(--muted);padding:12px 0 8px}
-.panel p{font-size:14px;margin-bottom:10px;color:#2B4B45}
-.panel ul{margin:0 0 12px 17px;font-size:14px;color:#2B4B45}
+.panel p{font-size:15.5px;margin-bottom:10px;color:#2B4B45}
+.panel ul{margin:0 0 12px 17px;font-size:15.5px;color:#2B4B45}
 .panel li{margin-bottom:5px}
-.kv{display:grid;grid-template-columns:78px 1fr;gap:5px 10px;font-size:13.5px;margin:0 0 12px}
-.kv dt{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.06em;padding-top:2px}
+.kv{display:grid;grid-template-columns:78px 1fr;gap:5px 10px;font-size:14.5px;margin:0 0 12px}
+.kv dt{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.06em;padding-top:2px}
 .kv dd{font-weight:500}
-.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;padding:2px 6px;
+.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:2px 6px;
   border-radius:2px;color:#fff;margin-right:5px}
-.warn{border-left:3px solid var(--exposed);background:#FFF6F2;padding:10px 12px;font-size:13.5px;
+.warn{border-left:3px solid var(--exposed);background:#FFF6F2;padding:10px 12px;font-size:14.5px;
   border-radius:2px;margin-bottom:12px}
 .tel{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--tunnel);
-  text-decoration:none;border-bottom:1px solid currentColor;font-size:13px}
+  text-decoration:none;border-bottom:1px solid currentColor;font-size:14.5px}
 
-table{width:100%;border-collapse:collapse;font-size:13.5px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
 th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;color:var(--muted);
+th{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;color:var(--muted);
   text-transform:uppercase;font-weight:500}
 td.pri{font-family:"IBM Plex Mono",monospace;font-weight:600;white-space:nowrap}
 
@@ -191,9 +194,9 @@ td.pri{font-family:"IBM Plex Mono",monospace;font-weight:600;white-space:nowrap}
 .chk input:checked::after{content:"✓";color:#fff;font-size:13px;display:block;text-align:center;line-height:15px}
 .chk input:focus-visible{outline:3px solid var(--tunnel);outline-offset:2px}
 .chk input:checked + span{text-decoration:line-through;color:var(--muted)}
-.chk span{font-size:14px}
-.chk small{display:block;color:var(--muted);font-size:12px;margin-top:1px}
-footer{padding:26px 0 0;color:var(--muted);font-size:12px}
+.chk span{font-size:15.5px}
+.chk small{display:block;color:var(--muted);font-size:13.5px;margin-top:1px}
+footer{padding:26px 0 0;color:var(--muted);font-size:13px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}
   html{scroll-behavior:auto}}
 @media(min-width:620px){#map{height:400px}}
@@ -223,6 +226,7 @@ footer{padding:26px 0 0;color:var(--muted);font-size:12px}
 
   <div class="console">
     <div id="map"></div>
+    <div class="engine"><span>지도 엔진</span><b id="engName">불러오는 중…</b></div>
     <div class="instrument">
       <div class="dateswitch" role="group" aria-label="날짜 선택">
         <button type="button" data-d="0" aria-pressed="true">08.08 <span>SAT</span></button>
@@ -321,7 +325,7 @@ footer{padding:26px 0 0;color:var(--muted);font-size:12px}
       <tr><td class="pri" style="color:#6E8480">—</td><td>광어 · 우럭</td><td>8월엔 굳이. 가을까지 미루는 쪽</td></tr>
     </tbody>
   </table>
-  <p style="margin-top:16px;font-size:14px"><b>5인 추천 구성</b> — 활어모듬회 대(大) 1 + 민어 소(小) 1 + 물회 2 + 서더리탕. 1인 4만원 안팎, 총 20만원선.</p>
+  <p style="margin-top:16px;font-size:15.5px"><b>5인 추천 구성</b> — 활어모듬회 대(大) 1 + 민어 소(小) 1 + 물회 2 + 서더리탕. 1인 4만원 안팎, 총 20만원선.</p>
   <div class="warn" style="margin-top:14px">회에 소주를 드실 거라면 대리운전이 필요합니다. 가락시장 → 수지 3~4만원선. 운전자를 미리 정해두거나, 5명 중 한 명은 마시지 않는 쪽으로 합의해 두세요.</div>
 </section>
 
@@ -441,29 +445,121 @@ function sliceRoute(km0,km1){
   out.push(ptAt(km1));return out;
 }
 
-/* ---------- map ---------- */
-let mapLines=[], rdot=null;
-(function(){
-  if(typeof L==="undefined"){document.getElementById("map").innerHTML=
-    '<p style="padding:18px;font-size:13px;color:#6E8480">지도를 불러오지 못했습니다. 아래 카카오맵 링크를 이용하세요.</p>';return}
+/* ==========================================================
+   지도 엔진 — 카카오맵 우선, 실패하면 OpenStreetMap으로 자동 전환
+   아래 따옴표 안에 카카오 JavaScript 키를 붙여넣으세요.
+   developers.kakao.com → 내 애플리케이션 → 앱 키 → JavaScript 키
+   그리고 [앱 설정 > 플랫폼 > Web]에 사이트 도메인을 등록해야 합니다:
+     https://skda0228.github.io
+   키가 비어 있거나 file:// 로 열면 자동으로 OSM 지도가 뜹니다.
+   ========================================================== */
+const KAKAO_KEY="8e1a40dfbe61117c4709105782a196eb";
+
+let mapReady=false, bootDone=false, setActiveLine=()=>{}, setRider=()=>{};
+
+function engineLabel(n){document.getElementById("engName").textContent=n}
+
+function initKakao(){
+  if(mapReady)return; mapReady=true;
+  const map=new kakao.maps.Map(document.getElementById("map"),
+    {center:new kakao.maps.LatLng(37.537,127.28),level:6});
+  map.addControl(new kakao.maps.ZoomControl(),kakao.maps.ControlPosition.RIGHT);
+  const ll=p=>new kakao.maps.LatLng(p[0],p[1]);
+
+  new kakao.maps.Polyline({map,path:POLY.map(ll),
+    strokeWeight:11,strokeColor:"#FFFFFF",strokeOpacity:.9,strokeStyle:"solid"});
+
+  const lines=SEG.map((s,i)=>{
+    const ln=new kakao.maps.Polyline({map,path:sliceRoute(s.a,s.b).map(ll),
+      strokeWeight:5,strokeColor:COL[s.k],strokeOpacity:.85,strokeStyle:"solid",clickable:true});
+    kakao.maps.event.addListener(ln,"click",()=>gotoSeg(i));
+    return ln;
+  });
+
+  SEG.forEach((s,i)=>{
+    const el=document.createElement("div");
+    el.className="pin";el.style.background=COL[s.k];el.textContent=i+1;
+    el.title=(i+1)+". "+s.t;el.onclick=()=>gotoSeg(i);
+    new kakao.maps.CustomOverlay({map,position:ll(ptAt(PINKM[i])),content:el,
+      xAnchor:.5,yAnchor:.5,zIndex:4,clickable:true});
+  });
+
+  const rEl=document.createElement("div");rEl.className="rdot";
+  const rOv=new kakao.maps.CustomOverlay({map,position:ll(ptAt(0)),content:rEl,
+    xAnchor:.5,yAnchor:.5,zIndex:9});
+
+  const bounds=new kakao.maps.LatLngBounds();
+  POLY.forEach(p=>bounds.extend(ll(p)));
+  map.setBounds(bounds,26,26,26,26);
+
+  setActiveLine=(idx,riding)=>{
+    lines.forEach((ln,j)=>{
+      const on=riding&&j===idx;
+      try{ln.setOptions({strokeWeight:on?9:5,strokeOpacity:on?1:(riding?.5:.85)})}catch(e){}
+    });
+  };
+  setRider=(km,riding)=>{rOv.setPosition(ll(ptAt(km)));rEl.style.opacity=riding?1:.35};
+  engineLabel("카카오맵");
+  if(bootDone)render();
+}
+
+function initLeaflet(){
+  if(mapReady)return; mapReady=true;
+  const box=document.getElementById("map");
+  if(typeof L==="undefined"){
+    box.innerHTML='<p style="padding:18px;font-size:13px;color:#6E8480">지도를 불러오지 못했습니다. 아래 카카오맵 링크를 이용하세요.</p>';
+    engineLabel("불러오기 실패");return;
+  }
   const map=L.map("map",{scrollWheelZoom:false,zoomControl:true});
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
     {maxZoom:19,attribution:'&copy; OpenStreetMap · &copy; CARTO'}).addTo(map);
   L.polyline(POLY,{color:"#FFFFFF",weight:11,opacity:.9}).addTo(map);
-  SEG.forEach((s,i)=>{
+  const lines=SEG.map((s,i)=>{
     const ln=L.polyline(sliceRoute(s.a,s.b),
       {color:COL[s.k],weight:5,opacity:.85,lineCap:"butt"}).addTo(map);
-    ln.on("click",()=>gotoSeg(i));
-    mapLines.push(ln);
+    ln.on("click",()=>gotoSeg(i));return ln;
   });
   SEG.forEach((s,i)=>{
     L.marker(ptAt(PINKM[i]),{icon:L.divIcon({html:'<div class="pin" style="background:'+COL[s.k]+'">'+(i+1)+'</div>',
-      className:"",iconSize:[24,24],iconAnchor:[12,12]}),title:(i+1)+". "+s.t})
+      className:"",iconSize:[27,27],iconAnchor:[13,13]}),title:(i+1)+". "+s.t})
       .addTo(map).on("click",()=>gotoSeg(i));
   });
-  rdot=L.marker(ptAt(0),{icon:L.divIcon({html:'<div class="rdot"></div>',className:"",
+  const rdot=L.marker(ptAt(0),{icon:L.divIcon({html:'<div class="rdot"></div>',className:"",
     iconSize:[16,16],iconAnchor:[8,8]}),zIndexOffset:1000,interactive:false}).addTo(map);
   map.fitBounds(L.polyline(POLY).getBounds(),{padding:[26,26]});
+
+  setActiveLine=(idx,riding)=>{
+    lines.forEach((ln,j)=>{
+      const on=riding&&j===idx;
+      ln.setStyle({weight:on?9:5,opacity:on?1:(riding?.5:.85)});
+      if(on)ln.bringToFront();
+    });
+  };
+  setRider=(km,riding)=>{rdot.setLatLng(ptAt(km));rdot.setOpacity(riding?1:.35)};
+  engineLabel(KAKAO_KEY?"OpenStreetMap (카카오 연결 실패)":"OpenStreetMap");
+  if(bootDone)render();
+}
+
+(function bootMap(){
+  if(!KAKAO_KEY || location.protocol==="file:"){initLeaflet();return}
+  const s=document.createElement("script");
+  s.src="https://dapi.kakao.com/v2/maps/sdk.js?appkey="+KAKAO_KEY+"&autoload=false";
+  s.onload=()=>{
+    try{kakao.maps.load(()=>{try{initKakao()}catch(e){console.warn(e);initLeaflet()}})}
+    catch(e){console.warn(e);initLeaflet()}
+  };
+  s.onerror=()=>initLeaflet();
+  document.head.appendChild(s);
+  let tries=0;
+  const poll=setInterval(()=>{
+    if(mapReady){clearInterval(poll);return}
+    if(window.kakao&&kakao.maps&&kakao.maps.Map){
+      clearInterval(poll);
+      try{initKakao()}catch(e){console.warn(e);initLeaflet()}
+      return;
+    }
+    if(++tries>40){clearInterval(poll);initLeaflet()}
+  },500);
 })();
 
 /* ---------- strip ---------- */
@@ -474,7 +570,7 @@ SEG.forEach((s,i)=>{
   d.className="seg";d.style.flex=w;d.tabIndex=0;d.setAttribute("role","button");
   d.setAttribute("aria-label",(i+1)+". "+s.t);
   d.innerHTML='<div class="base" style="background:'+COL[s.k]+'"></div><div class="wash" style="opacity:0"></div>'+
-    '<div class="no">'+(i+1)+'</div>'+(w>=0.9?'<div class="tag">'+s.n+'</div>':'');
+    '<div class="no">'+(i+1)+'</div>'+(w>=1.35?'<div class="tag">'+s.n+'</div>':'');
   d.onclick=()=>gotoSeg(i);
   d.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();gotoSeg(i)}};
   strip.appendChild(d);
@@ -556,12 +652,8 @@ function render(){
     el.classList.toggle("act",riding&&j===i);
     el.classList.toggle("dim",riding&&j!==i);
   });
-  mapLines.forEach((ln,j)=>{
-    const on=riding&&j===i;
-    ln.setStyle({weight:on?9:5,opacity:on?1:(riding?.5:.85)});
-    if(on)ln.bringToFront();
-  });
-  if(rdot){rdot.setLatLng(ptAt(p.km));rdot.setOpacity(riding?1:.35)}
+  setActiveLine(i,riding);
+  setRider(p.km,riding);
 
   const dot=document.getElementById("sunDot");
   dot.setAttribute("cx",sx(t));dot.setAttribute("cy",sy(alt));dot.setAttribute("r",5+f*4);
@@ -579,7 +671,7 @@ function render(){
   else if(t>153){box.style.borderLeftColor="var(--muted)";
     box.innerHTML="<b>반납 완료.</b> 차에 타서 횟집에 전화하세요. 가락몰까지 35분.";}
   else{box.style.borderLeftColor=COL[s.k];
-    box.innerHTML="<b>"+(i+1)+". "+s.t+"</b><br><span class='mono' style='font-size:12.5px;color:#6E8480'>"+
+    box.innerHTML="<b>"+(i+1)+". "+s.t+"</b><br><span class='mono' style='font-size:13.5px;color:#6E8480'>"+
       p.km.toFixed(1)+"km · "+KLAB[s.k]+"</span> — "+state+
       (s.k==="exposed"&&alt>40?" <span style='color:#E4633A'>· 속도를 낮추고 물을 드세요</span>":"");}
 }
@@ -649,6 +741,7 @@ document.querySelectorAll(".dateswitch button").forEach(b=>{
   };
 });
 applyDate();
+bootDone=true;
 </script>
 </body>
 </html>
