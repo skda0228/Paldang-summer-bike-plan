@@ -71,6 +71,16 @@ h2{font-family:"Hahmlet",serif;font-weight:700;font-size:22px;letter-spacing:-.0
 .killed s{color:#9AAEA9}
 .killed b{color:var(--ink);font-weight:600}
 
+.packnote{margin:14px 0 6px;padding:11px 13px;border:1px solid var(--line);border-left:4px solid var(--shade);
+  background:#F4F9F7;border-radius:2px;font-size:14.5px}
+.grp{margin-top:22px}
+.grph{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;
+  padding-bottom:6px;border-bottom:2px solid var(--ink);margin-bottom:2px}
+.grph .gn{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;font-weight:600;
+  color:#fff;border-radius:2px;padding:2px 7px}
+.grph h3{font-family:"Hahmlet",serif;font-weight:700;font-size:18px}
+.grph .gs{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin-left:auto}
+
 .gate{display:grid;gap:10px;margin:4px 0 6px}
 .g{border:1px solid var(--line);border-left-width:4px;border-radius:3px;background:var(--paper);padding:13px 15px}
 .g .gt{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:4px}
@@ -281,6 +291,7 @@ footer{padding:26px 0 0;color:var(--muted);font-size:13px}
     <span class="chip">반납 10:50</span>
     <span class="chip">회 구매 11:45</span>
     <span class="chip">서울식당 예약완료</span>
+    <span class="chip">가방 3kg 이하</span>
   </div>
 </header>
 
@@ -535,23 +546,83 @@ footer{padding:26px 0 0;color:var(--muted);font-size:13px}
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-num">07</span><h2>출발 전 체크</h2></div>
-  <p class="sec-note">위에서 세 개가 못 지키면 계획이 흔들리는 항목입니다.</p>
+  <div class="sec-head"><span class="sec-num">07</span><h2>가방 꾸리기</h2></div>
+  <p class="sec-note">오늘 짐의 원칙은 하나입니다 — <b>등에 지는 것을 최대한 줄이고, 나머지는 전부 차에 둔다.</b>
+  팔당역 주차장에 차를 세우고 21km를 돌아 <b>같은 자리로 돌아옵니다.</b> 중간에 차로 못 돌아가는 구간이 두 시간뿐이니,
+  그 두 시간에 진짜 필요한 것만 가방에 넣으면 됩니다.
+  전기자전거는 대여라서 <b>공구·펑크패치·펌프는 챙기지 마세요</b> — 문제가 생기면 대여소에 전화하는 게 정답입니다.</p>
+
+  <div class="packnote"><b>가방은 하나면 충분합니다.</b> 작은 배낭이나 크로스백 하나에 아래 A·B가 다 들어갑니다.
+  등에 지는 무게는 <b>3kg 아래</b>로 잡으세요 — 물 2병이 이미 1kg입니다.
+  비 예보가 있으니 <b>가방 안 내용물을 지퍼백이나 비닐로 한 겹 싸서</b> 넣는 편이 확실합니다. 방수 배낭이 아니면 결국 젖습니다.</div>
+
+  <div class="grp">
+    <div class="grph"><span class="gn" style="background:#E4633A">A</span><h3>몸에 지니는 것</h3><span class="gs">주머니 · 항상</span></div>
+    <ul class="chk">
+      <li><label><input type="checkbox"><span>신분증<small>대여할 때 맡깁니다. 지갑째 말고 신분증과 카드 한 장만 빼서 가세요 — 잃어버릴 것이 적을수록 좋습니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>카드 + 현금 2~3만원<small>주차비, 능내역 편의점, 회값. 시장 점포는 카드가 되지만 현금이 빠릅니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>휴대폰 + 지퍼백(또는 방수팩)<small>오늘 지도·레이더를 계속 봐야 합니다. 비 오는 날 주머니 속 휴대폰은 생각보다 잘 젖습니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>차키 — 지퍼백에 함께<small>스마트키는 물에 특히 약합니다. 대표 한 명이 지니고, 누가 가졌는지 출발 전에 서로 확인하세요</small></span></label></li>
+    </ul>
+  </div>
+
+  <div class="grp">
+    <div class="grph"><span class="gn" style="background:#2B5FA8">B</span><h3>가방에 넣을 것</h3><span class="gs">라이딩 2시간용 · 3kg 이하</span></div>
+    <ul class="chk">
+      <li><label><input type="checkbox"><span>물 2병 (1병은 얼려서)<small>인당 기준. 얼린 물 1 + 상온 물 1. 대여 자전거에 물통 거치대가 없을 수 있으니 가방에 들어간다고 보고 챙기세요. 능내역에서 보충 가능</small></span></label></li>
+      <li><label><input type="checkbox"><span>1회용 우비(판초) — 인원수만큼<small>오늘 가방에서 가장 중요한 물건입니다. 편의점 것으로 충분하고 부피도 거의 없습니다. 우산은 절대 금물</small></span></label></li>
+      <li><label><input type="checkbox"><span>간식 — 에너지바 · 바나나 · 삶은계란<small>아침 식사는 없습니다. 출발 전 한 번, 능내역에서 한 번. 빈속 라이딩만 피하면 됩니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>이온음료 1병<small>물과 별개로. 땀으로 나가는 건 수분만이 아닙니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>선크림 (작은 것)<small>비가 갠 뒤의 자외선이 더 셉니다. 능내역 휴식 때 목 뒤·손등에 덧바르세요</small></span></label></li>
+      <li><label><input type="checkbox"><span>작은 수건 1장<small>얼굴·안경용. 큰 수건은 차에 둡니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>휴지 · 물티슈<small>능내역 화장실에 없을 수 있습니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>비닐봉지 2~3장<small>젖은 우비와 쓰레기를 담습니다. 부피 0, 쓸모는 큽니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>보조배터리 + 짧은 케이블<small>지도·레이더를 계속 켜두면 배터리가 빨리 빕니다. 하나면 전원이 같이 씁니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>상비약 — 밴드 · 진통제<small>작은 지퍼백에. 넘어졌을 때 쓸 밴드 몇 장이면 충분합니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>후미등 (있으면)<small>흐린 날 자전거길에서 뒤차에게 보이는 유일한 신호입니다. 대여소에 있는지 물어보세요</small></span></label></li>
+    </ul>
+  </div>
+
+  <div class="grp">
+    <div class="grph"><span class="gn" style="background:#2F6B5E">C</span><h3>차에 두고 갈 것</h3><span class="gs">라이딩 중 불필요</span></div>
+    <ul class="chk">
+      <li><label><input type="checkbox"><span>갈아입을 상의 + 속옷 — 인원수만큼<small>오늘 목록에서 가장 과소평가되는 항목입니다. 젖은 채로 냉방된 식당에 앉는 게 감기의 유일한 경로입니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>큰 수건 · 여벌 양말<small>반납 직후 팔당역 주차장에서 한 번 닦고 갈아입습니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>슬리퍼 또는 여벌 신발<small>운동화는 젖습니다. 식당까지 젖은 신발로 가지 않아도 됩니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>우산 1~2개<small>가락몰 지하주차장이 판매동과 직결이라 크게 쓸 일은 없지만, 서울식당 위치에 따라 필요할 수 있습니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>보냉백 + 아이스팩<small>회가 남으면 집까지 가져가려고. 8월 말이라 이게 없으면 남은 회는 그냥 버려야 합니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>큰 비닐봉지 · 쓰레기봉투<small>젖은 옷과 우비를 담아 트렁크에. 차 시트를 지키는 값싼 보험입니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>시트 커버 또는 큰 수건 (운전석)<small>젖은 채로 40분을 운전해야 합니다</small></span></label></li>
+    </ul>
+  </div>
+
+  <div class="grp">
+    <div class="grph"><span class="gn" style="background:#F0A93B">D</span><h3>입고 나갈 것</h3><span class="gs">가방이 아니라 몸에</span></div>
+    <ul class="chk">
+      <li><label><input type="checkbox"><span>헐렁한 밝은색 긴팔<small>반팔보다 시원하고, 흐린 날 눈에 띕니다. 여름 라이딩에서 긴팔이 정답인 이유입니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>패드 있는 반바지 또는 편한 하의<small>21km면 패드 유무가 체감으로 갈립니다. 청바지만 피하세요 — 젖으면 최악입니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>쿨토시 · 넥게이터<small>복귀 때 태양이 등 뒤라 목 뒤가 제일 많이 탑니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>손등 덮는 자전거 장갑<small>젖은 그립은 미끄럽습니다. 오늘은 미관이 아니라 접지력 문제입니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>선글라스<small>08시대 정면 저각 태양과 수면 반사광. 비가 오면 앞유리 역할도 합니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>헬멧 아래 얇은 두건<small>헬멧은 대여소에서 빌립니다. 두건 한 장이 위생과 땀 흐름을 같이 해결합니다</small></span></label></li>
+      <li><label><input type="checkbox"><span>젖어도 되는 운동화<small>가죽·스웨이드는 두고 가세요. 여벌 신발은 차에</small></span></label></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">08</span><h2>출발 전 체크</h2></div>
+  <p class="sec-note"><b>물건이 아니라 “미리 연락하고 정해둘 것”만 남겼습니다.</b> 챙길 물건은 07을 보세요.
+  아래는 전날 밤에 전화 몇 통과 합의 몇 개로 끝나는 목록이고, 이게 안 되면 당일 아침에 되돌릴 방법이 없는 것들입니다.</p>
   <ul class="chk">
-    <li><label><input type="checkbox"><span>간식 준비 — 아침 식사는 없음<small>에너지바·바나나·삶은계란 정도로 가볍게. 이온음료 1병씩. 출발 전과 능내역 휴식 때 나눠 먹는 구성. 빈속 라이딩만 피하면 됩니다</small></span></label></li>
     <li><label><input type="checkbox"><span>대여소에 우천 운영 여부 확인<small>전날 저녁에. ① 비 와도 대여되는지 ② 당일 취소 시 위약금이 있는지 — 두 가지를 함께. C 시나리오의 비용이 여기서 결정됩니다</small></span></label></li>
-    <li><label><input type="checkbox"><span>1회용 우비(판초) 인원수만큼<small>편의점 것으로 충분. 우산은 절대 금물. 팔당역 주차장에서 미리 입고 대여소로 갑니다</small></span></label></li>
-    <li><label><input type="checkbox"><span>후미등 · 밝은색 상의<small>흐린 날 자전거길에서 뒤차에게 보이는 유일한 신호입니다. 휴대폰 방수팩(또는 지퍼백)도 함께</small></span></label></li>
-    <li><label><input type="checkbox"><span>갈아입을 상의 + 수건을 차에 비치<small>젖은 채로 냉방된 식당에 앉는 게 오늘 감기의 유일한 경로입니다. 인원수만큼</small></span></label></li>
     <li><label><input type="checkbox"><span>정자역 정차 지점 합의<small>06:55 도착 · 5분 정차. 잠깐 세울 위치를 전날 지도로 찍어 공유해두세요</small></span></label></li>
     <li><label><input type="checkbox"><span>전기자전거 인원수만큼 사전 예약<small>바이크토탈 팔당점 · 주말 08시엔 인기 차종이 먼저 빠집니다. 대수를 정해 전화로 걸어두세요</small></span></label></li>
     <li><label><input type="checkbox"><span>서울식당 예약 시각·인원 재확인 <small>예약은 완료. 시각과 인원만 다시 맞춰보세요. 함께 물어둘 것 세 가지 — ① 1인 상차림비 ② 매운탕·공기밥 별도 여부 ③ 회를 어디서 사 오면 되는지(제휴 판매점이 있는 경우가 많습니다)</small></span></label></li>
     <li><label><input type="checkbox"><span>인어교주해적단 앱으로 당일 시세 확인<small>가락몰은 정찰제에 가깝지만, 8월 민어·전어 시세를 알고 가면 흥정이 필요 없습니다. 예산은 1인 3만원 안팎</small></span></label></li>
     <li><label><input type="checkbox"><span>기상청 예보 · 레이더 확인<small>전날 밤 한 번, 08:00 팔당역 주차장에서 한 번. 레이더로 <b>앞으로 1시간</b>만 보면 됩니다. 천둥·번개가 잡히면 그 자리에서 C</small></span></label></li>
-    <li><label><input type="checkbox"><span>신분증 인원수만큼<small>대여 시 맡깁니다</small></span></label></li>
-    <li><label><input type="checkbox"><span>물은 1인 2병 (그중 1병은 얼려서)<small>얼린 물 1 + 상온 물 1. 능내역에서 보충 가능</small></span></label></li>
-    <li><label><input type="checkbox"><span>태양 방어 체계 구축 (비 그친 뒤용)<small>비가 갠 뒤의 자외선이 더 셉니다. ① 헐렁한 밝은색 긴팔 — 반팔보다 시원합니다 ② 쿨토시·넥게이터 ③ 손등 덮는 자전거 장갑 ④ 선크림 SPF50, 목 뒤·귀·손등 집중 ⑤ 선글라스 — 08시대 정면 저각 태양과 수면 반사광 ⑥ 헬멧 아래 얇은 두건 또는 마스크. 복귀 때 태양이 등 뒤라 목 뒤가 제일 많이 탑니다</small></span></label></li>
     <li><label><input type="checkbox"><span>차량 배차와 주차<small>성복역 06:35 출발 → 정자역 06:55 경유. 팔당역 주차장은 주말 유료(1일 8,000원선). 인원에 맞춰 차량 대수를 미리 정하세요</small></span></label></li>
+    <li><label><input type="checkbox"><span>편의점에서 살 것 한 번에 사두기<small>1회용 우비 · 얼릴 물 · 이온음료 · 에너지바 · 지퍼백. 07 목록을 보며 전날 밤에 한 번에 끝내고, 물 한 병은 냉동실에 넣어두세요</small></span></label></li>
     <li><label><input type="checkbox"><span>대리운전 앱 설치<small>음주 시</small></span></label></li>
   </ul>
 </section>
