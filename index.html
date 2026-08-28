@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Riding Proposal by SK — 8/29 팔당 라이딩 · 수종사 옵션 · 가락시장 점심</title>
+<title>A Riding Proposal by SK — 8/29 팔당 라이딩 · 우천 대응 · 가락시장 점심</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700;900&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -60,6 +60,27 @@ h2{font-family:"Hahmlet",serif;font-weight:700;font-size:22px;letter-spacing:-.0
 .datenote{margin-top:10px;padding:10px 12px;border-left:3px solid var(--partial);
   background:#FFFAF0;border-radius:2px;font-size:14.5px}
 
+.rainbar{display:flex;gap:11px;align-items:flex-start;margin-top:18px;padding:12px 14px;
+  border:1px solid var(--tunnel);border-left-width:4px;background:#EEF3FA;border-radius:3px;font-size:14.5px}
+.rainbar .ic{font-size:20px;line-height:1.25;color:var(--tunnel)}
+.rainbar b{font-weight:600}
+.rainbar .src{display:block;margin-top:6px;font-family:"IBM Plex Mono",monospace;
+  font-size:11.5px;letter-spacing:.02em;color:var(--muted)}
+.killed{margin-top:12px;padding:10px 12px;border:1px dashed var(--line);border-radius:2px;
+  font-size:14px;color:var(--muted)}
+.killed s{color:#9AAEA9}
+.killed b{color:var(--ink);font-weight:600}
+
+.gate{display:grid;gap:10px;margin:4px 0 6px}
+.g{border:1px solid var(--line);border-left-width:4px;border-radius:3px;background:var(--paper);padding:13px 15px}
+.g .gt{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+.g .gk{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;font-weight:600;
+  color:#fff;border-radius:2px;padding:2px 7px}
+.g h3{font-family:"Hahmlet",serif;font-weight:700;font-size:18px}
+.g .cond{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);margin-bottom:7px}
+.g p{font-size:14.5px;color:#2B4B45}
+.g .num{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--ink)}
+
 header{padding:34px 0 26px;border-bottom:2px solid var(--ink);
   background:linear-gradient(180deg,rgba(240,169,59,.13),rgba(240,169,59,0) 62%)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
@@ -82,10 +103,6 @@ section{padding:34px 0;border-bottom:1px solid var(--line)}
   border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)}
 .rdot{width:16px;height:16px;border-radius:50%;background:var(--ink);border:3px solid #fff;
   box-shadow:0 0 0 2px var(--ink),0 2px 7px rgba(0,0,0,.45)}
-.tpin{display:flex;align-items:center;gap:5px;padding:3px 8px 3px 4px;background:var(--ink);
-  border:2px solid #fff;border-radius:14px;box-shadow:0 1px 5px rgba(0,0,0,.4);white-space:nowrap}
-.tpin .tp-i{color:var(--partial);font-size:13px;line-height:1}
-.tpin .tp-t{color:#fff;font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600}
 .engine{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
   padding:6px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
 .engine b{font-weight:600;color:var(--ink)}
@@ -226,7 +243,7 @@ td.pri{font-family:"IBM Plex Mono",monospace;font-weight:600;white-space:nowrap}
 footer{padding:26px 0 0;color:var(--muted);font-size:13px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}
   html{scroll-behavior:auto}}
-@media(min-width:620px){#map{height:460px}.wrap{padding:0 22px}}
+@media(min-width:620px){#map{height:460px}.wrap{padding:0 22px}.gate{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
@@ -235,24 +252,41 @@ footer{padding:26px 0 0;color:var(--muted);font-size:13px}
 
 <header>
   <div class="eyebrow" id="ebrow">8월 29일 토요일 · 확정 · 남한강자전거길</div>
-  <h1><span class="hi">그늘</span>은 10시 전에 사라진다.<br>팔당 <span class="hi">라이딩</span>~!</h1>
-  <p class="lede">팔당역 08:00 대여 → 북한강철교 왕복 21km → 가락시장 점심.
-  모든 시각은 <b>08:00 대여</b> 하나에 맞췄습니다. 여름 라이딩에서 관리할 변수는 거리가 아니라 <b>태양 고도</b>입니다.
-  이 문서는 그것 하나를 위해 만들었습니다. 운길산 수종사는 <b>가고 싶은 사람만</b> — 1시간 일찍 나서면 되는 옵션입니다.</p>
+  <h1>비는 <span class="hi">오전</span>에 그친다.<br>팔당 <span class="hi">라이딩</span>~!</h1>
+  <p class="lede">성복역 06:35 출발 → 정자역 경유 → <b>팔당역 08:00 도착</b> → 북한강철교 왕복 21km → 가락시장 점심.
+  모든 시각을 <b>팔당역 08:00 도착</b> 하나에 다시 맞췄습니다.
+  오늘 관리할 변수는 태양 고도가 아니라 <b>비가 언제 그치느냐</b>와 <b>젖은 노면</b>입니다.
+  그래서 라이딩을 <b>세 개의 시나리오</b>로 나눠 두었고, 판단은 두 번만 합니다.</p>
+
+  <div class="rainbar">
+    <span class="ic">☂</span>
+    <div><b>8/29(토) 수도권 비.</b> 기상청은 서울·경기 <b>오전 강수확률 60%</b>, 예상 강수량 <b>20~60mm</b>로 봅니다.
+    비는 새벽부터 내리고 <b>수도권은 오전 중에 그칠 전망</b>입니다 — 우리 라이딩 시간대(08:35–10:50)가 정확히
+    그 “그치는 구간”에 걸칩니다. 시나리오 판단이 필요한 이유입니다.
+    <span class="src">기상청 예보 · 2026-08-28 09시 발표 기준 (연합뉴스·뉴스1 인용) · 출발 전 다시 확인</span></div>
+  </div>
+
+  <div class="killed"><s>운길산 수종사 새벽 일정</s> — <b>취소</b>.
+  비 예보에 급경사 1.5km 콘크리트 외길을 새벽에 오르는 건 오늘 계획에서 가장 위험한 조각이었습니다.
+  두물머리 전망도 흐리면 남는 게 없습니다. <b>바로 팔당으로 갑니다.</b></div>
+
   <div class="chips">
     <span class="chip">8.29(토) 확정</span>
-    <span class="chip">06:45 수지 출발</span>
-    <span class="chip">수종사 옵션</span>
-    <span class="chip">B안 · 왕복 21.2km</span>
-    <span class="chip">라이딩 2h 13m</span>
-    <span class="chip">반납 10:33</span>
-    <span class="chip">점심 11:25</span>
+    <span class="chip">비 · 오전 60%</span>
+    <span class="chip">06:35 성복역 출발</span>
+    <span class="chip">정자역 경유</span>
+    <span class="chip">팔당 08:00 도착</span>
+    <span class="chip">수종사 취소</span>
+    <span class="chip">왕복 21.2km</span>
+    <span class="chip">반납 10:50</span>
+    <span class="chip">점심 11:45</span>
   </div>
 </header>
 
 <section>
   <div class="sec-head"><span class="sec-num">01</span><h2>그늘 지도 · 계기판</h2></div>
-  <p class="sec-note">지도의 경로 색이 곧 그늘 등급입니다. 슬라이더를 밀면 지도의 점과 아래 바가 함께 움직이고, 지나는 구간만 지도·바 양쪽에서 굵고 선명해집니다. 핀이나 구간을 누르면 아래 구간 메모로 이동합니다.</p>
+  <p class="sec-note">지도의 경로 색이 곧 그늘 등급입니다. 슬라이더를 밀면 지도의 점과 아래 바가 함께 움직이고, 지나는 구간만 지도·바 양쪽에서 굵고 선명해집니다. 핀이나 구간을 누르면 아래 구간 메모로 이동합니다.
+  <b>오늘은 흐림·비 예보라 그늘 등급의 무게가 줄고, 대신 “비를 피할 곳이 어디냐”가 같은 색으로 읽힙니다</b> — 파랑(봉안터널)과 초록(능내역)이 오늘의 대피소입니다.</p>
 
   <div class="console">
     <div id="map"></div>
@@ -261,12 +295,12 @@ footer{padding:26px 0 0;color:var(--muted);font-size:13px}
       <div class="swcap"><span>확정 일자</span><em>아래 수치는 이 날짜 기준 계산값입니다</em></div>
       <div class="fixdate">
         <div class="fd-l"><span class="fd-k">FIXED</span><b>08.29</b><span class="fd-s">SAT</span></div>
-        <div class="fd-r">8월 29일 토요일 · 확정<br><span>네 개 후보 중 태양 조건이 가장 나은 날</span></div>
+        <div class="fd-r">8월 29일 토요일 · 확정 · <b>비</b><br><span>팔당역 08:00 도착 기준으로 전 일정 재계산</span></div>
       </div>
       <div class="readout">
-        <div class="ro-item"><div class="ro-k">시각</div><div class="ro-v mono" id="rTime">08:20</div></div>
-        <div class="ro-item"><div class="ro-k">태양 고도</div><div class="ro-v mono" id="rAlt">26°</div></div>
-        <div class="ro-item"><div class="ro-k">체감 기온</div><div class="ro-v mono" id="rTemp">25<small>℃</small></div></div>
+        <div class="ro-item"><div class="ro-k">시각</div><div class="ro-v mono" id="rTime">08:35</div></div>
+        <div class="ro-item"><div class="ro-k">태양 고도</div><div class="ro-v mono" id="rAlt">30°</div></div>
+        <div class="ro-item"><div class="ro-k">강수확률</div><div class="ro-v mono" id="rRain">65<small>%</small></div></div>
       </div>
 
       <div class="sunwrap">
@@ -288,8 +322,8 @@ footer{padding:26px 0 0;color:var(--muted);font-size:13px}
 
       <div class="nudge" id="nudge"><span class="hand">↔</span>
         <span>슬라이더를 밀어보세요. <b>지도 위의 점</b>과 아래 바가 함께 움직입니다.</span></div>
-      <label for="tSlider" class="ro-k" style="display:block;margin-top:12px">시간 이동 (08:00 → 11:00)</label>
-      <input type="range" id="tSlider" min="0" max="180" step="5" value="20" aria-label="시각 이동">
+      <label for="tSlider" class="ro-k" style="display:block;margin-top:12px">시간 이동 (08:00 → 11:20)</label>
+      <input type="range" id="tSlider" min="0" max="200" step="5" value="35" aria-label="시각 이동">
 
       <div class="now" id="nowBox"></div>
 
@@ -299,7 +333,7 @@ footer{padding:26px 0 0;color:var(--muted);font-size:13px}
         <span class="lg"><span class="sw" style="background:#F0A93B"></span>부분 그늘</span>
         <span class="lg"><span class="sw" style="background:#E4633A"></span>완전 노출</span>
       </div>
-      <p class="legnote">지도의 경로 색 = 아래 바의 색 · 지도 위쪽 <b>수종사</b>는 라이딩 전 옵션 일정입니다</p>
+      <p class="legnote">지도의 경로 색 = 아래 바의 색 · 강수확률은 기상청 오전 60% 발표를 “오전 중 그침”에 맞춰 배분한 추정값입니다</p>
       <div class="crit" id="crit"></div>
       <div class="datenote" id="datenote" hidden></div>
     </div>
@@ -310,88 +344,116 @@ footer{padding:26px 0 0;color:var(--muted);font-size:13px}
       href="https://m.map.kakao.com/scheme/route?sn=%ED%8C%94%EB%8B%B9%EC%97%AD&en=%EB%B6%81%ED%95%9C%EA%B0%95%EC%B2%A0%EA%B5%90&sp=37.5473594340956,127.243966151989&ep=37.5512550358613,127.31625726748&by=BICYCLE">카카오맵 자전거 길찾기</a>
     <a class="mlink" target="_blank" rel="noopener"
       href="https://map.kakao.com/link/map/바이크토탈 팔당점,37.54736,127.24397">대여소 위치</a>
+    <a class="mlink" target="_blank" rel="noopener"
+      href="https://map.kakao.com/link/to/팔당역,37.54736,127.24397">팔당역 길찾기</a>
   </div>
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-num">02</span><h2>옵션 · 운길산 수종사</h2><span class="optflag">OPTIONAL</span></div>
-  <p class="sec-note">일출은 쫓지 않습니다. <b>가고 싶은 사람만 1시간 일찍</b> 나서면 되는 곁가지 일정입니다.
-  들르든 안 들르든 <b>08:00 대여, 08:20 출발</b>은 그대로입니다. 라이딩 뒤엔 시간도 체력도 남지 않으니, 볼 거면 이때뿐입니다.</p>
+  <div class="sec-head"><span class="sec-num">02</span><h2>비 · 세 개의 시나리오</h2><span class="optflag" style="background:#2B5FA8">RAIN</span></div>
+  <p class="sec-note">비 예보를 “간다 / 안 간다”로 놓으면 전날 밤에 답이 안 나옵니다.
+  <b>가되, 어디까지 갈지를 현장에서 정하는</b> 구조로 바꿨습니다. 판단은 딱 두 번입니다 —
+  <b>팔당역 도착 직후(08:00)</b>와 <b>능내역(09:04)</b>. 그 사이에는 아무도 고민하지 않습니다.</p>
 
-  <div class="console">
+  <div class="gate">
+    <div class="g" style="border-left-color:#2F6B5E">
+      <div class="gt"><span class="gk" style="background:#2F6B5E">A</span><h3>그대로 갑니다</h3></div>
+      <div class="cond">비 그침 · 이슬비 · 노면만 젖음</div>
+      <p>기본안 그대로 <span class="num">왕복 21.2km</span>. 북한강철교까지 갔다가
+      <span class="num">10:50</span> 반납, <span class="num">11:45</span> 가락몰 점심.
+      아래 03 진행표가 이 시나리오입니다.</p>
+    </div>
+    <div class="g" style="border-left-color:#F0A93B">
+      <div class="gt"><span class="gk" style="background:#F0A93B">B</span><h3>능내역에서 접습니다</h3></div>
+      <div class="cond">약한 비가 계속 · 시야는 확보</div>
+      <p>능내역(6.4km)까지만 가고 반환. <span class="num">왕복 12.8km</span>,
+      <span class="num">09:50</span> 반납. 봉안터널과 팔당호 전망은 다 보고 오는 코스라
+      “못 탄 라이딩”이 아닙니다. 점심이 <span class="num">11:00</span>으로 당겨집니다.</p>
+    </div>
+    <div class="g" style="border-left-color:#E4633A">
+      <div class="gt"><span class="gk" style="background:#E4633A">C</span><h3>대여를 접습니다</h3></div>
+      <div class="cond">호우 · 천둥번개 · 노면 물웅덩이</div>
+      <p>자전거를 빌리지 않고 바로 가락시장으로. <span class="num">11:00</span>쯤 도착.
+      <b>온달수산(06:00~)·영재수산(07:00~)·놀부수산(24시간)</b>은 이 시각에도 열려 있습니다.
+      비 오는 날 회는 오히려 한산합니다.</p>
+    </div>
+  </div>
+
+  <div class="console" style="margin-top:16px">
     <div class="instrument">
-      <div class="readout">
-        <div class="ro-item"><div class="ro-k">수지 출발</div><div class="ro-v mono">05:45</div></div>
-        <div class="ro-item"><div class="ro-k">절 체류</div><div class="ro-v mono">35<small>분</small></div></div>
-        <div class="ro-item"><div class="ro-k">팔당역 도착</div><div class="ro-v mono">07:45</div></div>
-      </div>
-
-      <ul class="tl" style="margin-top:18px">
-        <li><div class="tl-t">05:45</div><div class="tl-h">수지 출발</div><div class="tl-d">기본 일정보다 딱 1시간 이르게. 약 54km · 65분</div></li>
-        <li><div class="tl-t">06:50</div><div class="tl-h">수종사 주차장</div><div class="tl-d">진입로 급경사 1.5km. 주차장 → 절 마당 도보 5~10분</div></li>
-        <li class="key"><div class="tl-t">07:00</div><div class="tl-h">두물머리 전망 · 20분</div><div class="tl-d">은행나무 앞 마당. 해는 이미 떠 있고, 운 좋으면 강 안개가 남아 있습니다</div></li>
-        <li><div class="tl-t">07:25</div><div class="tl-h">하산</div><div class="tl-d">내려올 때도 저단 기어</div></li>
-        <li class="key"><div class="tl-t">07:45</div><div class="tl-h">팔당역 합류</div><div class="tl-d">약 9km · 20분. 08:00 대여에 그대로 붙습니다</div></li>
+      <div class="swcap"><span>판단 지점</span><em>이 두 번 말고는 논의하지 않습니다</em></div>
+      <ul class="tl" style="margin-top:6px">
+        <li class="key"><div class="tl-t">08:00</div><div class="tl-h">팔당역 주차장 — 1차 판단</div>
+          <div class="tl-d">차에서 내려 하늘과 노면을 봅니다. 레이더(기상청 날씨알리미 · 윈디)로 <b>앞으로 1시간</b>만 확인.
+          <b>천둥·번개가 보이면 그 자리에서 C</b>입니다. 대여 자체를 하지 않습니다.
+          비가 오지만 약하면 일단 A로 출발하고, 판단은 능내역으로 미룹니다.</div></li>
+        <li class="key"><div class="tl-t">09:04</div><div class="tl-h">능내역 — 2차 판단</div>
+          <div class="tl-d">여기서부터가 <b>그늘도 지붕도 없는 3.4km</b>입니다. 능내역을 지나면 되돌아올 곳이 없습니다.
+          비가 그쳤거나 잦아들면 A로 계속, 그대로면 <b>여기서 반환(B)</b>.
+          편의점·화장실·처마가 다 있으니 5분 서서 정하면 됩니다.</div></li>
       </ul>
-
-      <dl class="kv">
-        <dt>주소</dt><dd>경기 남양주시 조안면 수종사길 186 · 해발 약 370m</dd>
-        <dt>전화</dt><dd><a class="tel" href="tel:0315768411">031-576-8411</a></dd>
-        <dt>입장</dt><dd>무료 · 주차 무료 (일주문 앞 주차장)</dd>
-        <dt>참고</dt><dd>이날 일출 <span id="rSunrise">05:59</span> — 도착할 땐 이미 밝습니다</dd>
-      </dl>
-
-      <p style="font-size:15.5px;margin-bottom:10px;color:#2B4B45">
-        서거정이 “동방 사찰 중 제일의 전망”이라 한 자리입니다. 은행나무 앞 마당에서 북한강·남한강이 만나는
-        두물머리가 통째로 내려다보입니다. 07시면 해가 올라온 뒤라 사진은 오히려 편하고, 이슬이 마르기 전이라
-        강 위에 안개가 남아 있는 날도 있습니다. <b>마당까지만 보고 내려오는 35분짜리</b>로 잡으세요.</p>
 
       <div class="warn">
-        <b>진입로가 이 옵션의 유일한 난도입니다.</b> 일주문 주차장까지 차로 올라가지만, 폭이 좁은 급경사
-        콘크리트 외길 약 1.5km이고 교행이 어렵습니다. <b>올라갈 때 저단, 내려올 때도 저단(엔진브레이크)</b> —
-        브레이크만 밟으면 과열됩니다. 비가 온 뒤라면 무리하지 말고 아래에 세우고 걸어 올라가세요.
+        <b>오늘 진짜 위험은 태양이 아니라 접지력입니다.</b> 세 곳만 조심하면 됩니다 —
+        ① <b>북한강철교 상판</b>: 젖으면 가장 미끄럽습니다. 철교 위에서는 브레이크·핸들 조작 없이 직진만.
+        ② <b>봉안터널 입구와 출구</b>: 젖은 노면에서 갑자기 어두워집니다. 진입 전에 속도를 미리 줄이세요.
+        ③ <b>폐철도 노반의 옛 철로 흔적</b>(2.8–4.2km): 젖은 금속은 얼음과 같습니다. 비스듬히 밟지 마세요.
+        전기자전거는 무겁습니다. <b>젖은 노면 제동거리는 평소의 2배</b>로 잡고, 차간 거리를 평소의 2배로 벌립니다.
       </div>
 
+      <div class="striplab" style="margin-top:4px"><span>비 오는 날 이 코스의 지붕</span><span>2곳</span></div>
+      <dl class="kv" style="grid-template-columns:92px 1fr">
+        <dt>봉안터널</dt><dd>4.2–4.5km · 길이 약 260m. <b>완전한 지붕</b>이지만 통행로라 오래 서 있으면 안 됩니다. 소나기 통과용 5분.</dd>
+        <dt>능내역</dt><dd>6.4km · 처마·편의점·화장실·자전거샵. <b>제대로 대기할 수 있는 유일한 지점</b>이자 B안의 반환점.</dd>
+        <dt>그 밖</dt><dd>능내역 → 북한강철교 3.4km 구간에는 비를 피할 곳이 <b>없습니다</b>. 2차 판단이 여기 걸린 이유입니다.</dd>
+      </dl>
+
+      <div class="striplab"><span>비 때문에 추가되는 짐</span><span>가볍게</span></div>
       <ul style="margin:0 0 12px 17px;font-size:15.5px;color:#2B4B45">
-        <li>주차장에서 절 마당까지 <b>도보 5~10분 오르막</b>. 라이딩 전 다리를 쓰는 구간이니 천천히.</li>
-        <li>무료 찻집 <b>삼정헌은 이 시간엔 열지 않습니다</b>(대체로 오전 늦게~오후, 월요일 휴무).</li>
-        <li>이른 아침 예불과 겹칠 수 있습니다. 마당까지는 자유롭게 다니되 <b>법당 안은 조용히, 촬영은 자제</b>.</li>
-        <li>산 위는 아래보다 2~3℃ 낮습니다. 라이딩 복장 위에 <b>얇은 바람막이 하나</b>면 충분합니다.</li>
-        <li><b>차량이 나뉘어도 됩니다.</b> 수종사 팀만 05:45에 출발하고, 나머지는 기본 06:45 출발로 팔당역에서 만나면 됩니다.</li>
+        <li><b>1회용 우비(판초)를 인원수만큼.</b> 편의점 것으로 충분합니다. 우산은 절대 금물.</li>
+        <li><b>후미등.</b> 흐린 날 자전거길에서 뒤에서 오는 라이더에게 보이는 유일한 신호입니다. 밝은색 상의도 같은 이유.</li>
+        <li><b>휴대폰 방수팩 또는 지퍼백.</b> 오늘 지도·레이더를 계속 봐야 합니다.</li>
+        <li><b>갈아입을 상의와 수건을 차에 두고 가세요.</b> 젖은 채로 냉방된 횟집에 앉는 게 오늘 감기의 유일한 경로입니다.</li>
+        <li>선크림·쿨토시는 그대로 챙깁니다. <b>비 그친 뒤 개는 하늘의 자외선이 더 셉니다.</b></li>
       </ul>
 
-      <div class="datenote">개방 시간 정보가 자료마다 다릅니다(상시 개방 / 07:00 개방). 07:00 도착 기준이라 대체로 문제없지만,
-      진입로 차단기 운영까지 포함해 <b>전날 오후에 031-576-8411로 한 번 확인</b>하면 확실합니다.
-      막혀 있으면 그냥 건너뛰고 기본 일정으로 붙으세요.</div>
+      <div class="datenote">전기자전거는 생활방수 수준입니다. <b>대여소가 우천 시 대여를 제한할 수 있습니다.</b>
+      전날 저녁에 “비 와도 대여되는지, 취소 시 위약금이 있는지” 두 가지를 함께 물어두세요.
+      C 시나리오는 전화 한 통으로 비용 0원이 되지만, 당일 노쇼로 처리되면 그렇지 않습니다.</div>
     </div>
   </div>
 
   <div class="maplinks">
     <a class="mlink" target="_blank" rel="noopener"
-      href="https://map.kakao.com/link/map/수종사,37.57098,127.30245">수종사 위치</a>
+      href="https://www.weather.go.kr/w/image/radar.do">기상청 레이더</a>
     <a class="mlink" target="_blank" rel="noopener"
-      href="https://map.kakao.com/link/to/수종사,37.57098,127.30245">수종사 길찾기</a>
+      href="https://www.windy.com/?37.547,127.244,10">윈디 · 강수 애니메이션</a>
+    <a class="mlink" target="_blank" rel="noopener"
+      href="http://place.map.kakao.com/17475662">바이크토탈 팔당점</a>
   </div>
 </section>
 
 <section>
   <div class="sec-head"><span class="sec-num">03</span><h2>토요일 진행표</h2></div>
-  <p class="sec-note">08:00 대여를 기준점으로 앞뒤를 맞춘 기본 일정입니다. 아침 식사는 잡지 않았습니다 —
-  출발 전 간식, 능내역에서 한 번 더. 단체 기준으로 장비 세팅·집합에 20분을 따로 잡았고,
-  여기서 30분이 밀리면 복귀가 뙤약볕 한복판에 걸립니다.</p>
+  <p class="sec-note"><b>팔당역 08:00 도착</b>을 기준점으로 앞뒤를 다시 맞춘 A 시나리오 일정입니다.
+  성복역에서 출발해 정자역에서 한 명 태우고 곧장 팔당으로 갑니다. 아침 식사는 잡지 않았습니다 —
+  출발 전 간식, 능내역에서 한 번 더. 장비 세팅·집합에 20분을 따로 잡았고,
+  여기서 30분이 밀리면 복귀가 오후 비에 걸립니다.</p>
   <ul class="tl">
-    <li><div class="tl-t">06:45</div><div class="tl-h">수지 출발</div><div class="tl-d">수도권제1순환 → 서하남IC → 팔당대교. 약 45km · 55분<br><span class="mono" style="color:#F0A93B">수종사 옵션 팀은 05:45 출발 — 02 참고</span></div></li>
-    <li><div class="tl-t">07:40</div><div class="tl-h">팔당역 도착 · 주차</div><div class="tl-d">주말 유료 주차장. 화장실·복장 정리, 간식은 여기서 짧게</div></li>
-    <li class="key"><div class="tl-t">08:00</div><div class="tl-h">바이크토탈 팔당점 대여</div><div class="tl-d">전기자전거 대여. 인원수만큼 신분증 지참. 헬멧 대여</div></li>
-    <li><div class="tl-t">08:20</div><div class="tl-h">출발</div><div class="tl-d">진입로 300m는 도로 구간. 일렬로 붙어서 통과</div></li>
-    <li><div class="tl-t">08:37</div><div class="tl-h">봉안터널 <span class="mono">4.3km</span></div><div class="tl-d">첫 냉기 지점. 여기서 물 한 모금</div></li>
-    <li><div class="tl-t">08:46</div><div class="tl-h">능내역 통과 <span class="mono">6.4km</span></div><div class="tl-d">갈 때는 멈추지 않습니다. 휴식은 복귀 때</div></li>
-    <li class="key"><div class="tl-t">09:05</div><div class="tl-h">북한강철교 — 반환점 <span class="mono">10.6km</span></div><div class="tl-d">사진 20분. 철제 트러스 안이 대표 컷</div></li>
-    <li><div class="tl-t">09:25</div><div class="tl-h">복귀 시작</div><div class="tl-d">노출 구간 3.4km를 다시 통과. 오늘 제일 더운 구간</div></li>
-    <li class="key"><div class="tl-t">09:42</div><div class="tl-h">능내역 그늘 휴식 25분</div><div class="tl-d">편의점·화장실·자전거샵. 물 보충 지점</div></li>
-    <li><div class="tl-t">10:33</div><div class="tl-h">팔당역 반납 <span class="mono">왕복 21.2km</span></div><div class="tl-d">태양 고도 <span class="mono" id="tlAlt">55°</span>. 더 늦추지 않습니다</div></li>
-    <li><div class="tl-t">10:50</div><div class="tl-h">가락시장으로 출발</div><div class="tl-d">차 안에서 횟집에 전화. 약 23km · 35분</div></li>
-    <li class="key"><div class="tl-t">11:25</div><div class="tl-h">가락몰 도착 · 점심</div><div class="tl-d">지하주차장이 수산 판매동과 직결</div></li>
+    <li><div class="tl-t">06:35</div><div class="tl-h">성복역 출발</div><div class="tl-d">수지로 → 분당수서로. 약 9km · 20분<br><span class="mono" style="color:#6E8480">비 예보 반영해 평소보다 5분 넉넉히 잡았습니다</span></div></li>
+    <li class="key"><div class="tl-t">06:55</div><div class="tl-h">정자역 도착 · 합류</div><div class="tl-d">정차 5분. 정차 지점을 전날 미리 정해두세요 — 아침 정자역 앞은 잠깐 세울 곳 찾기가 애매합니다</div></li>
+    <li><div class="tl-t">07:00</div><div class="tl-h">정자역 출발</div><div class="tl-d">분당수서로 → 성남대로 → 수도권제1순환 서하남IC → 팔당대교. 약 43km · 55분<br><span class="mono" style="color:#6E8480">토요일 이른 아침이라 정체는 거의 없습니다. 비로 인한 감속만 감안</span></div></li>
+    <li class="key"><div class="tl-t">08:00</div><div class="tl-h">팔당역 도착 · 주차 <span class="mono">1차 판단</span></div><div class="tl-d">오늘의 목표 시각. 주말 유료 주차장. 화장실·복장 정리, 간식은 여기서 짧게.<br><span class="mono" style="color:#2B5FA8">여기서 레이더를 보고 A / C를 정합니다 — 02 참고</span></div></li>
+    <li class="key"><div class="tl-t">08:15</div><div class="tl-h">바이크토탈 팔당점 대여</div><div class="tl-d">전기자전거 대여. 인원수만큼 신분증 지참. 헬멧 대여. 우비는 여기서 미리 입습니다</div></li>
+    <li><div class="tl-t">08:35</div><div class="tl-h">출발</div><div class="tl-d">진입로 300m는 도로 구간. 젖은 노면이니 일렬로, 차간 거리 2배로 붙어서 통과</div></li>
+    <li><div class="tl-t">08:54</div><div class="tl-h">봉안터널 <span class="mono">4.3km</span></div><div class="tl-d">오늘은 에어컨이자 지붕. 비가 세면 여기서 5분 끊고 갑니다</div></li>
+    <li class="key"><div class="tl-t">09:04</div><div class="tl-h">능내역 <span class="mono">6.4km · 2차 판단</span></div><div class="tl-d">계속 갈지(A) 여기서 반환할지(B)를 정하는 지점. 5분 서서 결정<br><span class="mono" style="color:#F0A93B">B로 가면 09:50 반납 · 11:00 점심</span></div></li>
+    <li class="key"><div class="tl-t">09:25</div><div class="tl-h">북한강철교 — 반환점 <span class="mono">10.6km</span></div><div class="tl-d">사진 15분(비 예보라 20분에서 줄였습니다). 철제 트러스 안이 대표 컷 — 상판이 젖어 있으면 세우고 찍으세요</div></li>
+    <li><div class="tl-t">09:40</div><div class="tl-h">복귀 시작</div><div class="tl-d">지붕 없는 3.4km를 다시 통과. 오늘 가장 취약한 구간</div></li>
+    <li class="key"><div class="tl-t">10:00</div><div class="tl-h">능내역 휴식 20분</div><div class="tl-d">편의점·화장실·처마·자전거샵. 젖었으면 여기서 한 번 말리고 갑니다</div></li>
+    <li><div class="tl-t">10:50</div><div class="tl-h">팔당역 반납 <span class="mono">왕복 21.2km</span></div><div class="tl-d">태양 고도 <span class="mono" id="tlAlt">55°</span>(맑을 경우). 비가 다시 굵어져도 여기서 끝입니다</div></li>
+    <li><div class="tl-t">11:05</div><div class="tl-h">가락시장으로 출발</div><div class="tl-d">차 안에서 횟집에 전화. 약 23km · 40분<br><span class="mono" style="color:#6E8480">젖은 상의는 여기서 갈아입습니다</span></div></li>
+    <li class="key"><div class="tl-t">11:45</div><div class="tl-h">가락몰 도착 · 점심</div><div class="tl-d">지하주차장이 수산 판매동과 직결 — 비를 안 맞고 들어갑니다</div></li>
   </ul>
 </section>
 
@@ -429,21 +491,26 @@ footer{padding:26px 0 0;color:var(--muted);font-size:13px}
   <p class="sec-note">위에서 세 개가 못 지키면 계획이 흔들리는 항목입니다.</p>
   <ul class="chk">
     <li><label><input type="checkbox"><span>간식 준비 — 아침 식사는 없음<small>에너지바·바나나·삶은계란 정도로 가볍게. 이온음료 1병씩. 출발 전과 능내역 휴식 때 나눠 먹는 구성. 빈속 라이딩만 피하면 됩니다</small></span></label></li>
-    <li><label><input type="checkbox"><span>수종사 옵션 인원 확정 (갈 사람만)<small>가는 팀만 05:45 수지 출발, 07:45 팔당역 합류. 차량이 나뉘어도 무방. 안 가면 06:45 출발로 끝</small></span></label></li>
-    <li><label><input type="checkbox"><span>수종사 갈 경우 개방·진입로 확인<small>031-576-8411 · 전날 오후에. 개방 시간과 진입로 차단기 운영을 함께. 막혀 있으면 건너뛰고 기본 일정으로</small></span></label></li>
+    <li><label><input type="checkbox"><span>대여소에 우천 운영 여부 확인<small>전날 저녁에. ① 비 와도 대여되는지 ② 당일 취소 시 위약금이 있는지 — 두 가지를 함께. C 시나리오의 비용이 여기서 결정됩니다</small></span></label></li>
+    <li><label><input type="checkbox"><span>1회용 우비(판초) 인원수만큼<small>편의점 것으로 충분. 우산은 절대 금물. 팔당역 주차장에서 미리 입고 대여소로 갑니다</small></span></label></li>
+    <li><label><input type="checkbox"><span>후미등 · 밝은색 상의<small>흐린 날 자전거길에서 뒤차에게 보이는 유일한 신호입니다. 휴대폰 방수팩(또는 지퍼백)도 함께</small></span></label></li>
+    <li><label><input type="checkbox"><span>갈아입을 상의 + 수건을 차에 비치<small>젖은 채로 냉방된 횟집에 앉는 게 오늘 감기의 유일한 경로입니다. 인원수만큼</small></span></label></li>
+    <li><label><input type="checkbox"><span>정자역 정차 지점 합의<small>06:55 도착 · 5분 정차. 잠깐 세울 위치를 전날 지도로 찍어 공유해두세요</small></span></label></li>
     <li><label><input type="checkbox"><span>전기자전거 인원수만큼 사전 예약<small>바이크토탈 팔당점 · 주말 08시엔 인기 차종이 먼저 빠집니다. 대수를 정해 전화로 걸어두세요</small></span></label></li>
     <li><label><input type="checkbox"><span>횟집 예약 전화<small>영재수산 0507-1469-2890 / 수동상회 02-401-0169 · "11:25 도착, 몇 명"까지 함께</small></span></label></li>
-    <li><label><input type="checkbox"><span>기상청 단기예보 확인<small>8월 게릴라성 소나기. 전날 밤에 한 번 더</small></span></label></li>
+    <li><label><input type="checkbox"><span>기상청 예보 · 레이더 확인<small>전날 밤 한 번, 08:00 팔당역 주차장에서 한 번. 레이더로 <b>앞으로 1시간</b>만 보면 됩니다. 천둥·번개가 잡히면 그 자리에서 C</small></span></label></li>
     <li><label><input type="checkbox"><span>신분증 인원수만큼<small>대여 시 맡깁니다</small></span></label></li>
     <li><label><input type="checkbox"><span>물은 1인 2병 (그중 1병은 얼려서)<small>얼린 물 1 + 상온 물 1. 능내역에서 보충 가능</small></span></label></li>
-    <li><label><input type="checkbox"><span>태양 방어 체계 구축<small>① 헐렁한 밝은색 긴팔 — 반팔보다 시원합니다 ② 쿨토시·넥게이터 ③ 손등 덮는 자전거 장갑 ④ 선크림 SPF50, 목 뒤·귀·손등 집중 ⑤ 선글라스 — 08시대 정면 저각 태양과 수면 반사광 ⑥ 헬멧 아래 얇은 두건 또는 마스크. 복귀 때 태양이 등 뒤라 목 뒤가 제일 많이 탑니다</small></span></label></li>
-    <li><label><input type="checkbox"><span>차량 배차와 주차<small>팔당역 주차장은 주말 유료(1일 8,000원선). 인원에 맞춰 차량 대수를 미리 정하세요</small></span></label></li>
+    <li><label><input type="checkbox"><span>태양 방어 체계 구축 (비 그친 뒤용)<small>비가 갠 뒤의 자외선이 더 셉니다. ① 헐렁한 밝은색 긴팔 — 반팔보다 시원합니다 ② 쿨토시·넥게이터 ③ 손등 덮는 자전거 장갑 ④ 선크림 SPF50, 목 뒤·귀·손등 집중 ⑤ 선글라스 — 08시대 정면 저각 태양과 수면 반사광 ⑥ 헬멧 아래 얇은 두건 또는 마스크. 복귀 때 태양이 등 뒤라 목 뒤가 제일 많이 탑니다</small></span></label></li>
+    <li><label><input type="checkbox"><span>차량 배차와 주차<small>성복역 06:35 출발 → 정자역 06:55 경유. 팔당역 주차장은 주말 유료(1일 8,000원선). 인원에 맞춰 차량 대수를 미리 정하세요</small></span></label></li>
     <li><label><input type="checkbox"><span>대리운전 앱 설치<small>음주 시</small></span></label></li>
   </ul>
 </section>
 
 <footer>
-  <p>태양 고도와 일출 시각은 2026년 8월 29일 · 북위 37.5° 기준 계산값이며, 기상청 발표와 1~2분 차이가 날 수 있습니다. 그늘 등급은 지형·수목 분포에 근거한 추정이며 계절에 따라 달라집니다. 기온·영업시간·가격은 방문 전 확인을 권합니다.</p>
+  <p>태양 고도는 2026년 8월 29일 · 북위 37.5° 기준 계산값이며, 기상청 발표와 1~2분 차이가 날 수 있습니다. 흐리거나 비가 오는 시간대에는 실제 체감과 무관한 참고값입니다.
+  강수 정보는 <b>2026년 8월 28일 09시 기상청 발표</b>(서울·경기 오전 강수확률 60%, 예상 강수량 20~60mm, 수도권은 오전 중 그침)를 인용한 것이고, 계기판의 시간대별 강수확률은 그 발표를 시간축에 배분한 <b>추정값</b>입니다 — 출발 전 기상청에서 반드시 다시 확인하세요.
+  차량 이동 시간(성복역→정자역 약 9km, 정자역→팔당역 약 43km)은 카카오맵 경로 거리에 토요일 이른 아침 통행 속도와 우천 감속을 반영한 추정입니다. 그늘 등급은 지형·수목 분포에 근거한 추정이며 계절에 따라 달라집니다. 기온·영업시간·가격은 방문 전 확인을 권합니다.</p>
 </footer>
 
 <div class="colophon">
@@ -464,31 +531,43 @@ const TOTAL=10.6;
 const SEG=[
  {a:0,b:2.8,k:"exposed",n:"한강변",t:"팔당역 → 한강변 개방 구간",
   d:"대여소를 나와 도로 300m를 탄 뒤 자전거길로 올라섭니다. 팔당대교를 지나 한강을 왼쪽에 끼고 2.8km. 그늘이 거의 없습니다.",
-  li:["팔당대교 북단 삼거리는 안내표지가 부실해 대여소에서 나오는 라이더와 국토종주 라이더가 뒤엉키는 지점입니다. 일행이 흩어지지 않게 일렬로.","팔당댐 방향으로 직진하면 자전거 통행 금지 구간이 나옵니다. 갈림길에서 자전거길 표지 확인.","08시대라 아직 견딜 만합니다. 여기서 페이스를 만들어 두세요."]},
+  li:["팔당대교 북단 삼거리는 안내표지가 부실해 대여소에서 나오는 라이더와 국토종주 라이더가 뒤엉키는 지점입니다. 일행이 흩어지지 않게 일렬로.","팔당댐 방향으로 직진하면 자전거 통행 금지 구간이 나옵니다. 갈림길에서 자전거길 표지 확인.","비 온 뒤라면 도로에서 자전거길로 올라서는 턱이 미끄럽습니다. 08시대 태양은 아직 낮고, 오늘은 흐릴 가능성이 큽니다 — 더위보다 접지력에 신경 쓰세요."]},
  {a:2.8,b:4.2,k:"partial",n:"팔당댐",t:"팔당댐 접근 · 수목 구간",
   d:"강이 넓어지면서 팔당댐이 보이기 시작합니다. 폐철도 노반 양옆으로 나무가 붙어 그늘이 끊겼다 이어졌다 합니다.",
-  li:["옛 철로 흔적이 노면에 남아 있는 구간.","팔당댐을 배경으로 한 단체 사진 포인트. 5분을 넘기지 마세요."]},
+  li:["옛 철로 흔적이 노면에 남아 있는 구간. <b>젖은 금속은 얼음과 같습니다</b> — 비스듬히 밟지 마세요.","팔당댐을 배경으로 한 단체 사진 포인트. 5분을 넘기지 마세요."]},
  {a:4.2,b:4.5,k:"tunnel",n:"봉안터널",t:"봉안터널 — 오늘의 에어컨",
-  d:"이 코스에서 확실하게 시원한 유일한 구간입니다. 들어서는 순간 냉장고 문을 연 것 같은 찬 바람이 나옵니다.",
-  li:["길이 약 260m. 마주 오는 자전거가 많으니 우측 통행.","여기서 잠깐 멈춰 물 한 모금 하기 좋습니다.","카카오맵 경로 정보에도 이 구간의 터널은 1회로 표시됩니다. 팔당~양수 사이 유일한 터널입니다."]},
+  d:"이 코스에서 확실하게 시원한 유일한 구간이자, <b>오늘 비를 완전히 피할 수 있는 유일한 지붕</b>입니다. 들어서는 순간 냉장고 문을 연 것 같은 찬 바람이 나옵니다.",
+  li:["길이 약 260m. 마주 오는 자전거가 많으니 우측 통행.","비가 굵어지면 여기서 5분 끊고 갑니다. 다만 통행로이니 오래 서 있지는 마세요.","입구와 출구에서 젖은 노면이 갑자기 어두워집니다. 진입 전에 미리 감속.","여기서 잠깐 멈춰 물 한 모금 하기 좋습니다.","카카오맵 경로 정보에도 이 구간의 터널은 1회로 표시됩니다. 팔당~양수 사이 유일한 터널입니다."]},
  {a:4.5,b:5.6,k:"partial",n:"팔당호",t:"팔당호 전망 구간",
   d:"터널을 빠져나오면 팔당호가 한눈에 들어옵니다. 수목과 개방이 번갈아 나옵니다.",
-  li:["오전 이른 시간엔 호수 위로 옅은 안개가 남아 있기도 합니다.","노면에 이슬이 남아 있을 수 있으니 코너에서 감속."]},
+  li:["비 온 날 아침엔 호수 위로 안개가 깔립니다 — 오늘 사진이 가장 잘 나올 만한 자리입니다.","노면이 젖어 있습니다. 코너에서 반드시 감속."]},
  {a:5.6,b:6.6,k:"shade",n:"능내역",t:"능내리 수목 구간 → 능내역",
   d:"이 코스에서 그늘이 가장 안정적인 구간이자 유일한 제대로 된 거점입니다.",
-  li:["능내역(6.4km)은 국토종주 인증센터. 편의점·식당·화장실·자전거샵이 모두 있습니다.","갈 때는 통과하고, 복귀 때 25분 쉬는 것으로 배분했습니다. 그때가 더 덥기 때문입니다.","물은 여기서 보충합니다."]},
+  li:["능내역(6.4km)은 국토종주 인증센터. 편의점·식당·화장실·자전거샵·처마가 모두 있습니다. <b>제대로 대기할 수 있는 유일한 지점</b>입니다.","<b>오늘의 2차 판단 지점(09:04)</b>. 계속 갈지(A) 여기서 반환할지(B)를 여기서 정합니다 — 지나면 되돌아올 곳이 없습니다.","갈 때는 5분만 서서 판단하고, 복귀 때 20분 쉬는 것으로 배분했습니다.","물은 여기서 보충합니다. 젖었으면 여기서 한 번 말리고 갑니다."]},
  {a:6.6,b:10.0,k:"exposed",n:"조안면",t:"능내역 → 북한강철교 · 최대 취약 구간",
-  d:"연꽃마을과 조안면 들판을 지나는 3.4km. 그늘이 사실상 없습니다. 오늘 계획의 성패가 여기서 갈립니다.",
-  li:["갈 때는 08:50 전후, 태양이 아직 낮을 때 통과하도록 짰습니다.","복귀는 09:30 이후 — 이미 고도가 크게 올라 있습니다. 여기서 페이스를 올리지 말고 오히려 낮추세요.","한 명이라도 처지면 전원 속도를 맞춥니다. 여름엔 그룹이 흩어지는 게 가장 위험합니다."]},
+  d:"연꽃마을과 조안면 들판을 지나는 3.4km. 그늘도 <b>지붕도</b> 없습니다. 오늘 계획의 성패가 여기서 갈립니다.",
+  li:["<b>이 구간에는 비를 피할 곳이 전혀 없습니다.</b> 능내역에서 2차 판단을 하는 이유가 바로 이 3.4km입니다.","갈 때는 09:05 전후, 복귀는 09:40 이후 — 태양이 아직 낮고, 비가 그친다면 이 시간대입니다.","한 명이라도 처지면 전원 속도를 맞춥니다. 비 오는 날엔 그룹이 흩어지는 게 가장 위험합니다."]},
  {a:10.0,b:10.6,k:"partial",n:"북한강철교",t:"북한강철교 — 반환점",
   d:"옛 중앙선 철교를 그대로 쓴 구간. 철제 트러스 안을 달립니다. 옆은 가려도 위는 뚫려 있습니다.",
-  li:["오늘의 대표 사진 지점. 20분 배정.","여기서 더 가면 두물머리(약 1.5km 추가)지만, 8월엔 복귀가 정오에 걸려 권하지 않습니다.","반환 시각 09:25을 넘기지 마세요."]}
+  li:["오늘의 대표 사진 지점. 비 예보라 20분에서 <b>15분</b>으로 줄였습니다.","<b>젖은 상판이 이 코스에서 가장 미끄럽습니다.</b> 철교 위에서는 브레이크·핸들 조작 없이 직진만. 사진은 세우고 찍으세요.","여기서 더 가면 두물머리(약 1.5km 추가)지만, 오늘은 비도 있고 복귀가 늦어져 권하지 않습니다.","반환 시각 09:40을 넘기지 마세요."]}
 ];
 const PINKM=[0,3.5,4.35,5.0,6.42,8.3,10.4];
-const SUJONG=[37.57098,127.30245];   /* 수종사(옵션) — 라이딩 경로 밖, 참고 표시 */
-const SUJONG_HTML='<div class="tpin"><span class="tp-i">☀</span><span class="tp-t">수종사 · 옵션</span></div>';
 
-const SCH=[[0,0,0],[20,0,0],[37,4.3,0],[46,6.4,0],[65,10.6,0],[85,10.6,1],[102,6.4,1],[127,6.4,1],[153,0,1],[180,0,1]];
+/* 시간축 t = 08:00 이후 경과 분. 팔당역 08:00 도착 → 08:15 대여 → 08:35 출발 → 10:50 반납 */
+const T_GO=35, T_BACK=170;
+const SCH=[[0,0,0],[35,0,0],[54,4.3,0],[64,6.4,0],[85,10.6,0],[100,10.6,1],[120,6.4,1],[140,6.4,1],[170,0,1],[200,0,1]];
+
+/* 강수확률 — 기상청 2026-08-28 09시 발표(서울·경기 오전 60% / 오후 60%, 20~60mm)를
+   "수도권은 오전 중 비가 그칠 전망"에 맞춰 시간축에 배분한 추정값 */
+const RAINPT=[[6,70],[8,65],[9,60],[10,55],[11,50],[12,45]];
+function rainProb(h){
+  if(h<=RAINPT[0][0])return RAINPT[0][1];
+  for(let i=1;i<RAINPT.length;i++){
+    const a=RAINPT[i-1],b=RAINPT[i];
+    if(h<=b[0])return a[1]+(b[1]-a[1])*(h-a[0])/(b[0]-a[0]);
+  }
+  return RAINPT[RAINPT.length-1][1];
+}
 
 const POLY=[[37.5475,127.24379],[37.54788,127.2428],[37.54767,127.24239],[37.54724,127.24219],[37.54668,127.2428],[37.54632,127.24353],[37.54586,127.2444],[37.54564,127.24551],[37.54532,127.24614],[37.54523,127.24647],[37.54508,127.24635],[37.54505,127.24587],[37.54484,127.24526],[37.54443,127.24607],[37.54337,127.24972],[37.54181,127.25235],[37.54077,127.25423],[37.54076,127.25464],[37.5407,127.25529],[37.54086,127.25555],[37.54087,127.25587],[37.53942,127.25758],[37.53873,127.25839],[37.53771,127.25953],[37.53723,127.26005],[37.5363,127.26148],[37.53575,127.26248],[37.5352,127.26372],[37.53486,127.26443],[37.53453,127.26496],[37.53394,127.26605],[37.53372,127.26676],[37.53325,127.26844],[37.53248,127.26991],[37.5321,127.27067],[37.53161,127.2721],[37.53119,127.2732],[37.53063,127.27444],[37.52998,127.27612],[37.52928,127.2781],[37.52915,127.2786],[37.52909,127.27914],[37.52907,127.2803],[37.52899,127.28323],[37.52887,127.28383],[37.52857,127.28452],[37.52836,127.285],[37.52801,127.28549],[37.52753,127.28598],[37.52696,127.28637],[37.52574,127.28712],[37.52436,127.28789],[37.52333,127.28858],[37.52279,127.28916],[37.52228,127.28996],[37.52197,127.29085],[37.52184,127.29152],[37.52177,127.29208],[37.52178,127.29264],[37.52194,127.29367],[37.52227,127.2947],[37.52357,127.29654],[37.52371,127.29619],[37.52357,127.29654],[37.52543,127.29865],[37.52659,127.29918],[37.52725,127.29923],[37.52866,127.29905],[37.5298,127.29883],[37.53075,127.29875],[37.5313,127.2988],[37.53193,127.29903],[37.53241,127.2993],[37.53432,127.30068],[37.53508,127.30126],[37.5358,127.30165],[37.53647,127.30187],[37.53751,127.30184],[37.53884,127.30146],[37.53963,127.30137],[37.54013,127.30143],[37.54129,127.30183],[37.54256,127.30234],[37.54338,127.30248],[37.54438,127.30288],[37.54503,127.30328],[37.54569,127.30363],[37.54717,127.30493],[37.54866,127.3062],[37.54983,127.30718],[37.5514,127.30863],[37.55198,127.30957],[37.55236,127.31052],[37.55246,127.31112],[37.55251,127.31155],[37.55246,127.31269],[37.55197,127.31428],[37.55124,127.31624]];
 
@@ -588,14 +667,8 @@ function initKakao(){
   const rOv=new kakao.maps.CustomOverlay({map,position:ll(ptAt(0)),content:rEl,
     xAnchor:.5,yAnchor:.5,zIndex:9});
 
-  const tEl=document.createElement("div");
-  tEl.innerHTML=SUJONG_HTML;tEl.title="수종사 (옵션 · 라이딩 전)";
-  new kakao.maps.CustomOverlay({map,position:ll(SUJONG),content:tEl,
-    xAnchor:.5,yAnchor:.5,zIndex:5});
-
   const bounds=new kakao.maps.LatLngBounds();
   POLY.forEach(p=>bounds.extend(ll(p)));
-  bounds.extend(ll(SUJONG));
   map.setBounds(bounds,26,26,26,26);
 
   setActiveLine=(idx,riding)=>{
@@ -632,9 +705,7 @@ function initLeaflet(){
   });
   const rdot=L.marker(ptAt(0),{icon:L.divIcon({html:'<div class="rdot"></div>',className:"",
     iconSize:[16,16],iconAnchor:[8,8]}),zIndexOffset:1000,interactive:false}).addTo(map);
-  L.marker(SUJONG,{icon:L.divIcon({html:SUJONG_HTML,className:"",iconSize:[96,22],iconAnchor:[48,11]}),
-    title:"수종사 (옵션 · 라이딩 전)"}).addTo(map);
-  map.fitBounds(L.polyline(POLY.concat([SUJONG])).getBounds(),{padding:[26,26]});
+  map.fitBounds(L.polyline(POLY).getBounds(),{padding:[26,26]});
 
   setActiveLine=(idx,riding)=>{
     lines.forEach((ln,j)=>{
@@ -691,10 +762,10 @@ const ax=document.getElementById("axis");
 });
 
 /* ---------- sun ---------- */
-/* 날짜 확정 — 8월 29일 토요일 */
+/* 날짜 확정 — 8월 29일 토요일 · 비 예보 */
 const DATES=[
-  {lab:"8월 29일 토요일 · 확정",dec:9.0,noon:12.525,t0:24,rise:7,
-   note:"후보 네 날짜(8/8·15·22·29) 중 조건이 가장 나은 날로 확정했습니다. 평균기온이 2~3℃ 내려가고 휴가철이 끝나 한산하며, 그늘 소멸 시각이 8월 초순보다 20분 늦습니다."}
+  {lab:"8월 29일 토요일 · 확정 · 비",dec:9.0,noon:12.525,t0:24,rise:5,
+   note:"수종사 새벽 일정은 비 예보로 취소하고, 성복역 06:35 출발 → 정자역 경유 → 팔당역 08:00 도착으로 전 일정을 다시 맞췄습니다. 기상청은 서울·경기 오전 강수확률 60%, 예상 강수량 20~60mm로 보며 수도권은 오전 중 비가 그칠 전망입니다 — 라이딩 시간대(08:35–10:50)가 그 경계에 걸치므로 02의 세 시나리오로 현장에서 판단합니다."}
 ];
 const dIdx=0;
 function altitude(hour){
@@ -703,26 +774,17 @@ function altitude(hour){
   const H=(hour-D.noon)*15*Math.PI/180;
   return Math.max(0,Math.asin(Math.sin(phi)*Math.sin(dec)+Math.cos(phi)*Math.cos(dec)*Math.cos(H))*180/Math.PI);
 }
-const AMAX=62, sx=t=>8+(t/180)*284, sy=a=>72-(a/AMAX)*64;
+const TMAX=200;
+const AMAX=62, sx=t=>8+(t/TMAX)*284, sy=a=>72-(a/AMAX)*64;
 function drawSun(){
   let d="";
-  for(let t=0;t<=180;t+=3){d+=(t===0?"M":"L")+sx(t).toFixed(1)+","+sy(altitude(8+t/60)).toFixed(1)}
+  for(let t=0;t<=TMAX;t+=3){d+=(t===0?"M":"L")+sx(t).toFixed(1)+","+sy(altitude(8+t/60)).toFixed(1)}
   document.getElementById("sunPath").setAttribute("d",d);
   const y=sy(45);
   const thr=document.getElementById("thr");thr.setAttribute("y1",y);thr.setAttribute("y2",y);
   const lab=document.getElementById("thrLab");
   lab.style.top=(y-3)+"px";
   lab.innerHTML="45° 그늘 소멸선 <b>"+cross45()+"</b>";
-}
-function hm(h){const m=Math.round(h*60);
-  return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")}
-/* 일출 — 대기굴절 -0.833° 기준, 수종사(북위 37.57) */
-function sunrise(){
-  const D=DATES[dIdx];
-  const phi=37.57*Math.PI/180, dec=D.dec*Math.PI/180;
-  const c=(Math.sin(-0.833*Math.PI/180)-Math.sin(phi)*Math.sin(dec))/(Math.cos(phi)*Math.cos(dec));
-  if(c<-1||c>1)return "—";
-  return hm(D.noon-Math.acos(c)*180/Math.PI/15);
 }
 function cross45(){
   const D=DATES[dIdx];
@@ -754,11 +816,11 @@ function render(){
   document.getElementById("rTime").textContent=String(Math.floor(hour)).padStart(2,"0")+":"+String(t%60).padStart(2,"0");
   document.getElementById("rAlt").textContent=Math.round(alt)+"°";
   const D=DATES[dIdx];
-  document.getElementById("rTemp").innerHTML=Math.round(D.t0+t/180*D.rise)+"<small>℃</small>";
+  document.getElementById("rRain").innerHTML=Math.round(rainProb(hour))+"<small>%</small>";
 
   const f=Math.min(1,Math.max(0,(alt-18)/38));
   const p=pos(t), i=segIdx(p.km), s=SEG[i];
-  const riding=(t>=20&&t<=153);
+  const riding=(t>=T_GO&&t<=T_BACK);
 
   segEls.forEach((el,j)=>{
     el.querySelector(".wash").style.opacity=(f*EXP[SEG[j].k]*.8).toFixed(3);
@@ -777,16 +839,20 @@ function render(){
   document.getElementById("dirLab").textContent=riding?(p.row===0?"갈 때 ▶":"◀ 올 때"):"대기";
 
   const box=document.getElementById("nowBox");
-  const state={tunnel:"터널 안. 시원합니다",shade:"수목 그늘 아래",
-    partial:"그늘이 끊겼다 이어집니다",exposed:"그늘 없음"}[s.k];
-  if(t<20){box.style.borderLeftColor="var(--muted)";
-    box.innerHTML="<b>대여 중.</b> 장비 세팅·집합에 20분. 08:20에는 페달을 밟고 있어야 합니다.";}
-  else if(t>153){box.style.borderLeftColor="var(--muted)";
-    box.innerHTML="<b>반납 완료.</b> 차에 타서 횟집에 전화하세요. 가락몰까지 35분.";}
+  const rp=rainProb(hour);
+  const state={tunnel:"터널 안. 시원하고, 오늘은 유일한 지붕입니다",shade:"수목 그늘 아래 · 처마가 있는 구간",
+    partial:"그늘이 끊겼다 이어집니다",exposed:"그늘도 지붕도 없음"}[s.k];
+  if(t<T_GO){box.style.borderLeftColor="var(--tunnel)";
+    box.innerHTML="<b>도착 · 대여 중.</b> 08:00 도착 → 08:15 대여 → 08:35 출발. "+
+      "<span style='color:#2B5FA8'>여기서 레이더를 보고 1차 판단(A / C)을 합니다.</span>";}
+  else if(t>T_BACK){box.style.borderLeftColor="var(--muted)";
+    box.innerHTML="<b>반납 완료.</b> 젖은 상의를 갈아입고, 차에서 횟집에 전화하세요. 가락몰까지 40분.";}
   else{box.style.borderLeftColor=COL[s.k];
     box.innerHTML="<b>"+(i+1)+". "+s.t+"</b><br><span class='mono' style='font-size:13.5px;color:#6E8480'>"+
-      p.km.toFixed(1)+"km · "+KLAB[s.k]+"</span> — "+state+
-      (s.k==="exposed"&&alt>40?" <span style='color:#E4633A'>· 속도를 낮추고 물을 드세요</span>":"");}
+      p.km.toFixed(1)+"km · "+KLAB[s.k]+" · 강수확률 "+Math.round(rp)+"%</span> — "+state+
+      (i===4&&p.row===0?" <span style='color:#2B5FA8'>· 2차 판단 지점입니다</span>":"")+
+      (s.k==="exposed"?" <span style='color:#E4633A'>· 비를 피할 곳이 없는 구간</span>":"")+
+      (rp>=55?" <span style='color:#E4633A'>· 노면 젖음, 차간 거리 2배</span>":"");}
 }
 sl.addEventListener("input",render);
 
@@ -834,19 +900,18 @@ function gotoSeg(i){
 function applyDate(){
   const D=DATES[dIdx];
   document.getElementById("ebrow").textContent=D.lab+" · 남한강자전거길";
-  document.getElementById("tlAlt").textContent=Math.round(altitude(10+33/60))+"°";
+  document.getElementById("tlAlt").textContent=Math.round(altitude(10+50/60))+"°";
   drawSun();
   document.getElementById("crit").innerHTML=
+    "<span>오전 강수확률 <b>60%</b></span>"+
+    "<span>강수량 <b>20–60mm</b></span>"+
+    "<span>기온 <b>24–30℃</b></span>"+
     "<span>그늘 소멸 <b>"+cross45()+"</b></span>"+
-    "<span>출발 08:20 <b>"+Math.round(altitude(8+20/60))+"°</b></span>"+
-    "<span>반환 09:05 <b>"+Math.round(altitude(9+5/60))+"°</b></span>"+
-    "<span>반납 10:33 <b>"+Math.round(altitude(10+33/60))+"°</b></span>";
+    "<span>출발 08:35 <b>"+Math.round(altitude(8+35/60))+"°</b></span>"+
+    "<span>반환 09:25 <b>"+Math.round(altitude(9+25/60))+"°</b></span>"+
+    "<span>반납 10:50 <b>"+Math.round(altitude(10+50/60))+"°</b></span>";
   const dn=document.getElementById("datenote");
   dn.hidden=!D.note; dn.textContent=D.note;
-  const sr=sunrise();
-  ["rSunrise"].forEach(id=>{
-    const el=document.getElementById(id); if(el)el.textContent=sr;
-  });
   render();
 }
 applyDate();
@@ -864,7 +929,7 @@ function demo(){
   if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
   const inst=document.querySelector(".instrument");
   inst.classList.add("demoing");
-  const from=20,to=150,dur=3640,t0=performance.now();
+  const from=T_GO,to=T_BACK-5,dur=3640,t0=performance.now();
   (function step(now){
     if(userTouched){inst.classList.remove("demoing");return}
     const k=Math.min(1,(now-t0)/dur);
