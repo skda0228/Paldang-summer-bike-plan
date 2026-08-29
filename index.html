@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Riding Proposal by SK — 8/29 팔당 라이딩 · 우천 대응 · 서울식당 초장집</title>
+<title>팔당 라이딩 — 비 소식에 쫄았지만 완벽했던 흐린 날</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700;900&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -21,9 +21,11 @@ body{background:var(--canvas);color:var(--ink);
 .wrap{max-width:920px;margin:0 auto;padding:0 14px}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.18em;
   text-transform:uppercase;color:var(--muted);font-weight:500}
-h1{font-family:"Hahmlet",serif;font-weight:900;font-size:clamp(27px,7.4vw,46px);
-  line-height:1.16;letter-spacing:-.025em;margin:10px 0 14px;text-wrap:balance}
-h1 .hi{color:var(--exposed)}
+h1{font-family:"Hahmlet",serif;font-weight:900;font-size:clamp(27px,7.2vw,46px);
+  line-height:1.16;letter-spacing:-.025em;margin:10px 0 6px;text-wrap:balance}
+h1 .hi{color:var(--shade)}
+.sub{font-family:"Hahmlet",serif;font-weight:500;font-size:clamp(16px,3.9vw,21px);
+  color:#3E5F59;line-height:1.4;margin-bottom:14px}
 h2{font-family:"Hahmlet",serif;font-weight:700;font-size:22px;letter-spacing:-.01em}
 .lede{font-size:17px;color:#294B45;max-width:62ch}
 .mono{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
@@ -33,1105 +35,621 @@ h2{font-family:"Hahmlet",serif;font-weight:700;font-size:22px;letter-spacing:-.0
   letter-spacing:.34em;text-transform:uppercase;text-indent:.34em}
 .masthead .mh em{font-style:normal;color:var(--partial)}
 
-.colophon{text-align:center;padding:44px 0 8px}
-.colophon .rule{height:1px;background:var(--line);margin-bottom:26px}
-.colophon .co1{font-family:"Hahmlet",serif;font-weight:900;
-  font-size:clamp(20px,5.6vw,30px);letter-spacing:.1em;line-height:1.2;text-indent:.1em}
-.colophon .co2{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.42em;
-  color:var(--muted);margin-top:10px;text-indent:.42em}
-.colophon .dot{width:5px;height:5px;background:var(--exposed);border-radius:50%;margin:20px auto 0}
+.planlink{display:flex;align-items:center;gap:10px;margin:12px 0 -4px;padding:11px 14px;
+  border:1px solid var(--line);border-left:4px solid var(--partial);border-radius:3px;
+  background:#FFFAF0;color:var(--ink);text-decoration:none;font-size:14.5px}
+.planlink .pl-k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;
+  font-weight:600;color:#fff;background:var(--partial);border-radius:2px;padding:3px 8px;white-space:nowrap}
+.planlink b{font-weight:600}
+.planlink .arw{margin-left:auto;color:var(--muted);font-size:17px}
+.planlink:hover{border-color:var(--partial);background:#FFF3DC}
 
-.swcap{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:7px}
-.swcap span{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;
-  color:var(--muted);text-transform:uppercase}
-.swcap em{font-style:normal;font-size:13px;color:var(--exposed);font-weight:500;text-align:right}
-.fixdate{display:flex;align-items:stretch;gap:0;border:1px solid var(--ink);border-radius:3px;
-  overflow:hidden;margin-bottom:16px;background:var(--paper)}
-.fixdate .fd-l{background:var(--ink);color:#fff;display:flex;align-items:baseline;gap:7px;
-  padding:10px 13px;font-family:"IBM Plex Mono",monospace;white-space:nowrap}
-.fixdate .fd-l b{font-size:19px;font-weight:600;letter-spacing:.02em}
-.fixdate .fd-k{font-size:10px;letter-spacing:.2em;color:var(--partial)}
-.fixdate .fd-s{font-size:11px;letter-spacing:.08em;opacity:.7}
-.fixdate .fd-r{padding:9px 13px;font-size:14px;font-weight:500;line-height:1.42;align-self:center}
-.fixdate .fd-r span{font-size:12.5px;color:var(--muted);font-weight:400}
-.crit{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;padding:10px 12px;
-  border:1px dashed var(--line);border-radius:2px;font-family:"IBM Plex Mono",monospace;font-size:12.5px}
-.crit b{font-weight:600;color:var(--exposed)}
-.datenote{margin-top:10px;padding:10px 12px;border-left:3px solid var(--partial);
-  background:#FFFAF0;border-radius:2px;font-size:14.5px}
-
-.rainbar{display:flex;gap:11px;align-items:flex-start;margin-top:18px;padding:12px 14px;
-  border:1px solid var(--tunnel);border-left-width:4px;background:#EEF3FA;border-radius:3px;font-size:14.5px}
-.rainbar .ic{font-size:20px;line-height:1.25;color:var(--tunnel)}
-.rainbar b{font-weight:600}
-.rainbar .src{display:block;margin-top:6px;font-family:"IBM Plex Mono",monospace;
-  font-size:11.5px;letter-spacing:.02em;color:var(--muted)}
-.killed{margin-top:12px;padding:10px 12px;border:1px dashed var(--line);border-radius:2px;
-  font-size:14px;color:var(--muted)}
-.killed s{color:#9AAEA9}
-.killed b{color:var(--ink);font-weight:600}
-
-.packnote{margin:14px 0 6px;padding:11px 13px;border:1px solid var(--line);border-left:4px solid var(--shade);
-  background:#F4F9F7;border-radius:2px;font-size:14.5px}
-.grp{margin-top:22px}
-.grph{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;
-  padding-bottom:6px;border-bottom:2px solid var(--ink);margin-bottom:2px}
-.grph .gn{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;font-weight:600;
-  color:#fff;border-radius:2px;padding:2px 7px}
-.grph h3{font-family:"Hahmlet",serif;font-weight:700;font-size:18px}
-.grph .gs{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin-left:auto}
-
-.gate{display:grid;gap:10px;margin:4px 0 6px}
-.g{border:1px solid var(--line);border-left-width:4px;border-radius:3px;background:var(--paper);padding:13px 15px}
-.g .gt{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:4px}
-.g .gk{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;font-weight:600;
-  color:#fff;border-radius:2px;padding:2px 7px}
-.g h3{font-family:"Hahmlet",serif;font-weight:700;font-size:18px}
-.g .cond{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);margin-bottom:7px}
-.g p{font-size:14.5px;color:#2B4B45}
-.g .num{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--ink)}
-
-header{padding:34px 0 26px;border-bottom:2px solid var(--ink);
-  background:linear-gradient(180deg,rgba(240,169,59,.13),rgba(240,169,59,0) 62%)}
+header{padding:30px 0 26px;border-bottom:2px solid var(--ink);
+  background:linear-gradient(180deg,rgba(47,107,94,.13),rgba(47,107,94,0) 62%)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
 .chip{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;
   border:1px solid var(--line);border-radius:2px;padding:4px 9px;background:var(--paper);color:#3A5A54}
+.chip.on{background:var(--shade);color:#fff;border-color:var(--shade)}
+
+.hero{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:20px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.hero .h{background:var(--paper);padding:13px 14px}
+.hero .hk{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+  color:var(--muted);text-transform:uppercase}
+.hero .hv{font-family:"Hahmlet",serif;font-weight:900;font-size:27px;line-height:1.2;margin-top:2px}
+.hero .hv small{font-size:13px;font-weight:500;color:var(--muted);font-family:"IBM Plex Mono",monospace}
+.hero .hn{font-size:12.5px;color:var(--muted);margin-top:1px}
 
 section{padding:34px 0;border-bottom:1px solid var(--line)}
 .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;flex-wrap:wrap}
-.sec-num{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--exposed);
+.sec-num{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--shade);
   font-weight:600;letter-spacing:.1em}
 .sec-note{color:var(--muted);font-size:14.5px;margin-bottom:20px;max-width:64ch}
-.optflag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;font-weight:600;
-  color:#fff;background:var(--partial);border-radius:2px;padding:2px 7px}
+.flag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;font-weight:600;
+  color:#fff;background:var(--shade);border-radius:2px;padding:2px 7px}
 
-/* ---------- combined console ---------- */
 .console{border:1px solid var(--line);border-radius:4px;background:var(--paper);overflow:hidden}
-#map{height:300px;background:#E8EEEC;z-index:1;border-bottom:1px solid var(--ink)}
-.pin{display:flex;align-items:center;justify-content:center;width:27px;height:27px;border-radius:50%;
-  color:#fff;font-weight:600;font-size:13px;font-family:"IBM Plex Mono",monospace;
-  border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)}
-.rdot{width:16px;height:16px;border-radius:50%;background:var(--ink);border:3px solid #fff;
-  box-shadow:0 0 0 2px var(--ink),0 2px 7px rgba(0,0,0,.45)}
+#map{height:320px;background:#E8EEEC;z-index:1;border-bottom:1px solid var(--ink)}
 .engine{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
   padding:6px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
 .engine b{font-weight:600;color:var(--ink)}
 .instrument{padding:16px}
-.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:6px}
-.ro-item{border-left:2px solid var(--line);padding-left:10px}
-.ro-k{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;
+.mpin{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;
+  color:#fff;font-weight:600;font-size:12px;font-family:"IBM Plex Mono",monospace;
+  border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);background:var(--shade)}
+.mpin.turn{background:var(--exposed)}
+.mpin.go,.mpin.end{background:var(--ink)}
+
+.swcap{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:7px}
+.swcap span{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.12em;
   color:var(--muted);text-transform:uppercase}
-.ro-v{font-family:"Hahmlet",serif;font-weight:700;font-size:25px;line-height:1.2}
-.ro-v small{font-size:13px;font-weight:500;color:var(--muted);font-family:"IBM Plex Mono",monospace}
+.swcap em{font-style:normal;font-size:13px;color:var(--shade);font-weight:500;text-align:right}
 
-.sunwrap{position:relative;height:78px;margin:14px 0 2px}
-.sunwrap svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.axlab{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:#6E8480}
-.thrlab{position:absolute;left:0;transform:translateY(-100%);
-  font-family:"IBM Plex Sans KR",sans-serif;font-size:12px;font-weight:500;
-  color:var(--exposed);letter-spacing:-.01em;white-space:nowrap;
-  background:var(--paper);padding-right:6px;pointer-events:none}
-.thrlab b{font-family:"IBM Plex Mono",monospace;font-weight:600}
-
-.nudge{display:flex;align-items:center;gap:9px;margin-top:14px;padding:11px 13px;
-  border:1px solid var(--partial);background:#FFF9EC;border-radius:3px;font-size:14px;
-  transition:opacity .35s,transform .35s}
-.nudge.gone{opacity:0;transform:translateY(-4px);pointer-events:none;height:0;
-  margin:0;padding:0;border-width:0;overflow:hidden}
-.nudge .hand{font-size:19px;color:var(--exposed);animation:sway 1.5s ease-in-out infinite}
-.nudge b{font-weight:600}
-@keyframes sway{0%,100%{transform:translateX(-4px)}50%{transform:translateX(4px)}}
-.demoing input[type=range]::-webkit-slider-thumb{border-color:var(--partial)}
-
-.striplab{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;
-  color:var(--muted);margin:20px 0 5px;display:flex;justify-content:space-between;align-items:center}
-#dirLab{color:var(--ink);font-weight:600}
-.strip{position:relative;display:flex;height:58px;border:1px solid var(--ink);border-radius:2px;
-  overflow:visible;background:var(--ink)}
-.seg{position:relative;cursor:pointer;overflow:hidden;
-  border-right:1px solid rgba(255,255,255,.55);transition:filter .18s}
-.seg:last-child{border-right:0}
-.seg:focus-visible{outline:3px solid var(--tunnel);outline-offset:2px;z-index:5}
-.seg .base{position:absolute;inset:0;transition:filter .18s}
-.seg .wash{position:absolute;inset:0;background:linear-gradient(180deg,#FFD98A,#E4633A);transition:opacity .18s linear}
-.seg .no{position:absolute;top:5px;left:0;right:0;text-align:center;color:#fff;
-  font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
-  text-shadow:0 1px 2px rgba(0,0,0,.5);transition:transform .18s}
-.seg .tag{position:absolute;bottom:4px;left:2px;right:2px;text-align:center;
-  font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:#fff;
-  text-shadow:0 1px 2px rgba(0,0,0,.5);white-space:nowrap;overflow:hidden}
-.seg.dim .base{filter:saturate(.35) brightness(1.18)}
-.seg.dim .no,.seg.dim .tag{opacity:.55}
-.seg.act{box-shadow:inset 0 0 0 3px var(--ink);z-index:2}
-.seg.act .no{transform:scale(1.25)}
-.playhead{position:absolute;top:-14px;bottom:-6px;width:2px;background:var(--ink);
-  transition:left .18s linear;z-index:4;pointer-events:none}
-.playhead::before{content:"";position:absolute;top:0;left:-7px;
-  border-left:8px solid transparent;border-right:8px solid transparent;border-top:11px solid var(--ink)}
-.playhead::after{content:attr(data-km);position:absolute;bottom:-19px;left:50%;transform:translateX(-50%);
-  font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;color:var(--ink);
-  background:var(--paper);padding:0 3px;white-space:nowrap}
-.axis{position:relative;height:22px;margin-top:22px}
-.tick{position:absolute;top:0;transform:translateX(-50%);
-  font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted)}
-.now{margin-top:14px;padding:11px 13px;border:1px solid var(--line);border-left:4px solid var(--exposed);
-  background:#FBFDFC;border-radius:2px;font-size:14.5px;min-height:56px;transition:border-color .18s}
-.now b{font-family:"Hahmlet",serif}
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:34px;background:transparent;margin-top:12px;cursor:pointer}
-input[type=range]::-webkit-slider-runnable-track{height:4px;background:var(--ink);border-radius:2px}
-input[type=range]::-moz-range-track{height:4px;background:var(--ink);border-radius:2px}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;
-  background:var(--paper);border:3px solid var(--exposed);margin-top:-11px}
-input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--paper);border:3px solid var(--exposed)}
-input[type=range]:focus-visible{outline:3px solid var(--tunnel);outline-offset:4px}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
-.lg{display:flex;align-items:center;gap:6px;font-size:12.5px;color:#3A5A54;font-family:"IBM Plex Mono",monospace}
-.sw{width:16px;height:5px;border-radius:3px}
-.legnote{font-size:12.5px;color:var(--muted);margin-top:8px;font-family:"IBM Plex Mono",monospace}
+.chartwrap{position:relative;margin-top:6px}
+.chartwrap svg{width:100%;height:150px;display:block;overflow:visible}
+.clab{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:#6E8480}
+.ctog{display:flex;gap:6px;margin:12px 0 4px;flex-wrap:wrap}
+.ctog button{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;padding:5px 11px;
+  border:1px solid var(--line);border-radius:2px;background:var(--paper);color:#3A5A54;cursor:pointer}
+.ctog button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ctog button:focus-visible{outline:3px solid var(--tunnel);outline-offset:2px}
+.readnow{margin-top:10px;padding:10px 12px;border:1px solid var(--line);border-left:4px solid var(--shade);
+  background:#FBFDFC;border-radius:2px;font-size:14px;min-height:44px}
+.readnow b{font-family:"Hahmlet",serif}
 
 .maplinks{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
 .mlink{flex:1;min-width:150px;text-align:center;text-decoration:none;font-size:14.5px;font-weight:600;
   padding:11px 10px;border:1px solid var(--ink);border-radius:3px;color:var(--ink);background:var(--paper)}
 .mlink:hover{background:var(--ink);color:#fff}
 
-/* ---------- timeline ---------- */
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:9px 7px;border-bottom:1px solid var(--line);vertical-align:top;
+  word-break:keep-all;overflow-wrap:break-word}
+th{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;color:var(--muted);
+  text-transform:uppercase;font-weight:500}
+td.pri{font-family:"IBM Plex Mono",monospace;font-weight:600;white-space:nowrap}
+td.num{font-family:"IBM Plex Mono",monospace;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.tot td{border-bottom:0;border-top:2px solid var(--ink);font-weight:700;font-size:16px;padding-top:12px}
+.gain{color:var(--shade);font-weight:600}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tblwrap table{min-width:396px}
+
 .tl{list-style:none;border-left:2px solid var(--line);margin-left:6px}
 .tl li{position:relative;padding:0 0 20px 20px}
 .tl li::before{content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;border-radius:50%;
   background:var(--canvas);border:2px solid var(--ink)}
-.tl li.key::before{background:var(--exposed);border-color:var(--exposed)}
-.tl-t{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;color:var(--exposed)}
+.tl li.key::before{background:var(--shade);border-color:var(--shade)}
+.tl-t{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14px;color:var(--shade)}
 .tl-h{font-family:"Hahmlet",serif;font-weight:700;font-size:17px;margin:1px 0 2px}
 .tl-d{font-size:14.5px;color:#41615B}
+.tl-d .plan{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted)}
 
-/* ---------- accordion ---------- */
-.acc{border:1px solid var(--line);border-radius:3px;background:var(--paper);margin-bottom:10px;overflow:hidden}
-.acc.open{border-color:var(--ink)}
-.acc>button{width:100%;text-align:left;background:none;border:0;padding:14px;cursor:pointer;
-  font:inherit;color:inherit;display:grid;grid-template-columns:30px 1fr 18px;gap:12px;align-items:center}
-.acc>button:focus-visible{outline:3px solid var(--tunnel);outline-offset:-3px}
-.acc .rank{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13.5px;color:#fff;
-  width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.acc .rankf{font-family:"Hahmlet",serif;font-weight:900;font-size:22px;color:var(--line);text-align:center;line-height:1}
-.acc .t{font-family:"Hahmlet",serif;font-weight:700;font-size:17.5px}
-.acc .s{font-size:13.5px;color:var(--muted);margin-top:2px}
-.acc .arw{color:var(--muted);font-size:16px;transition:transform .2s;text-align:center}
-.acc.open .arw{transform:rotate(90deg);color:var(--ink)}
-.panel{padding:0 14px 16px 14px;border-top:1px solid var(--line);margin-top:-1px}
-.panel .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;
-  color:var(--muted);padding:12px 0 8px}
-.panel p{font-size:15.5px;margin-bottom:10px;color:#2B4B45}
-.panel ul{margin:0 0 12px 17px;font-size:15.5px;color:#2B4B45}
-.panel li{margin-bottom:5px}
-.kv{display:grid;grid-template-columns:78px 1fr;gap:5px 10px;font-size:14.5px;margin:0 0 12px}
+.shots{display:grid;gap:10px;grid-template-columns:1fr}
+figure{margin:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--paper)}
+figure img{display:block;width:100%;height:auto;cursor:zoom-in;background:#E8EEEC}
+figcaption{padding:9px 12px 11px;font-size:13.5px;color:#41615B;border-top:1px solid var(--line)}
+figcaption b{font-family:"Hahmlet",serif;font-weight:700;font-size:14.5px;display:block;margin-bottom:1px}
+figcaption .tm{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted)}
+
+.lb{position:fixed;inset:0;background:rgba(10,22,20,.94);display:none;z-index:9999;
+  align-items:center;justify-content:center;padding:16px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:86vh;object-fit:contain;border-radius:3px}
+.lb .cap{position:absolute;left:0;right:0;bottom:12px;text-align:center;color:#D8E4E0;
+  font-size:13.5px;padding:0 20px}
+.lb .x{position:absolute;top:12px;right:14px;color:#fff;background:rgba(0,0,0,.4);
+  border:1px solid rgba(255,255,255,.35);border-radius:50%;width:38px;height:38px;
+  font-size:19px;line-height:1;cursor:pointer}
+
+.epi{display:grid;gap:10px}
+.ep{border:1px solid var(--line);border-left-width:4px;border-radius:3px;background:var(--paper);padding:13px 15px}
+.ep .who{font-family:"Hahmlet",serif;font-weight:700;font-size:17.5px;margin-bottom:2px}
+.ep .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+  color:var(--muted);text-transform:uppercase;margin-bottom:6px}
+.ep p{font-size:14.5px;color:#2B4B45}
+
+.menu{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}
+.mi{font-family:"IBM Plex Sans KR",sans-serif;font-size:14px;border:1px solid var(--line);
+  border-radius:14px;padding:4px 12px;background:var(--paper);color:#2B4B45}
+.mi.star{border-color:var(--exposed);color:var(--exposed);font-weight:600}
+
+.note{margin-top:14px;padding:11px 13px;border-left:3px solid var(--partial);
+  background:#FFFAF0;border-radius:2px;font-size:14.5px}
+.win{margin-top:14px;padding:11px 13px;border-left:3px solid var(--shade);
+  background:#F1F8F5;border-radius:2px;font-size:14.5px}
+.kv{display:grid;grid-template-columns:88px 1fr;gap:5px 10px;font-size:14.5px;margin:0 0 12px}
 .kv dt{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.06em;padding-top:2px}
 .kv dd{font-weight:500}
-.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:2px 6px;
-  border-radius:2px;color:#fff;margin-right:5px}
-.warn{border-left:3px solid var(--exposed);background:#FFF6F2;padding:10px 12px;font-size:14.5px;
-  border-radius:2px;margin-bottom:12px}
-.tel{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--tunnel);
-  text-decoration:none;border-bottom:1px solid currentColor;font-size:14.5px}
 
-table{width:100%;border-collapse:collapse;font-size:14.5px}
-th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;color:var(--muted);
-  text-transform:uppercase;font-weight:500}
-td.pri{font-family:"IBM Plex Mono",monospace;font-weight:600;white-space:nowrap}
-
-.chk{list-style:none;display:grid;gap:2px}
-.chk li{border-bottom:1px solid var(--line)}
-.chk label{display:flex;gap:11px;align-items:flex-start;padding:11px 2px;cursor:pointer}
-.chk input{appearance:none;-webkit-appearance:none;flex:0 0 19px;height:19px;margin-top:2px;
-  border:2px solid var(--ink);border-radius:2px;background:var(--paper);cursor:pointer}
-.chk input:checked{background:var(--shade);border-color:var(--shade)}
-.chk input:checked::after{content:"✓";color:#fff;font-size:13px;display:block;text-align:center;line-height:15px}
-.chk input:focus-visible{outline:3px solid var(--tunnel);outline-offset:2px}
-.chk input:checked + span{text-decoration:line-through;color:var(--muted)}
-.chk span{font-size:15.5px}
-.chk small{display:block;color:var(--muted);font-size:13.5px;margin-top:1px}
+.colophon{text-align:center;padding:44px 0 8px}
+.colophon .rule{height:1px;background:var(--line);margin-bottom:26px}
+.colophon .co1{font-family:"Hahmlet",serif;font-weight:900;
+  font-size:clamp(20px,5.6vw,30px);letter-spacing:.1em;line-height:1.2;text-indent:.1em}
+.colophon .co2{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.42em;
+  color:var(--muted);margin-top:10px;text-indent:.42em}
+.colophon .dot{width:5px;height:5px;background:var(--shade);border-radius:50%;margin:20px auto 0}
 footer{padding:26px 0 0;color:var(--muted);font-size:13px}
+footer a{color:var(--tunnel)}
+
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}
   html{scroll-behavior:auto}}
-@media(min-width:620px){#map{height:460px}.wrap{padding:0 22px}.gate{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:620px){
+  #map{height:460px}.wrap{padding:0 22px}
+  .hero{grid-template-columns:repeat(4,1fr)}
+  .shots{grid-template-columns:1fr 1fr}
+  .shots .wide{grid-column:1 / -1}
+  .epi{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
-<div class="masthead"><div class="mh">A Riding Proposal <em>by SK</em></div></div>
+<div class="masthead"><div class="mh">A Ride Report <em>by SK</em></div></div>
 <div class="wrap">
 
 <header>
-  <div class="eyebrow" id="ebrow">8월 29일 토요일 · 확정 · 남한강자전거길</div>
-  <h1>비는 <span class="hi">오전</span>에 그친다.<br>팔당 <span class="hi">라이딩</span>~!</h1>
-  <p class="lede">성복역 06:35 출발 → 정자역 경유 → <b>팔당역 08:00 도착</b> → 북한강철교 왕복 21km → 가락몰에서 회 사서 <b>초장집 서울식당</b>.
-  모든 시각을 <b>팔당역 08:00 도착</b> 하나에 다시 맞췄습니다.
-  오늘 관리할 변수는 태양 고도가 아니라 <b>비가 언제 그치느냐</b>와 <b>젖은 노면</b>입니다.
-  그래서 라이딩을 <b>세 개의 시나리오</b>로 나눠 두었고, 판단은 두 번만 합니다.</p>
+  <div class="eyebrow">2026년 8월 29일 토요일 · 남한강자전거길 · 완주</div>
+  <h1>팔당 라이딩<br><span class="hi">비 소식</span>에 쫄았지만<br>완벽했던 <span class="hi">흐린 날</span></h1>
+  <p class="lede">기상청은 오전 강수확률 60%, 예상 강수량 20~60mm를 예보했습니다.
+  우리는 우비를 챙기고, 시나리오를 셋으로 나누고, 능내역에서 판단하기로 정해두고 출발했습니다.
+  <b>그리고 비는 한 방울도 오지 않았습니다.</b> 대신 얇게 구름이 깔려, 8월 말 라이딩에서 상상할 수 있는
+  가장 좋은 조건이 됐습니다. 준비한 것 중 쓴 건 거의 없었지만 —
+  덕분에 아무도 걱정하지 않았습니다.</p>
 
-  <div class="rainbar">
-    <span class="ic">☂</span>
-    <div><b>8/29(토) 수도권 비.</b> 기상청은 서울·경기 <b>오전 강수확률 60%</b>, 예상 강수량 <b>20~60mm</b>로 봅니다.
-    비는 새벽부터 내리고 <b>수도권은 오전 중에 그칠 전망</b>입니다 — 우리 라이딩 시간대(08:35–10:50)가 정확히
-    그 “그치는 구간”에 걸칩니다. 시나리오 판단이 필요한 이유입니다.
-    <span class="src">기상청 예보 · 2026-08-28 09시 발표 기준 (연합뉴스·뉴스1 인용) · 출발 전 다시 확인</span></div>
+  <a class="planlink" href="plan.html">
+    <span class="pl-k">PLAN</span>
+    <span>출발 전에 만든 <b>사전 계획 페이지</b> 보기 — 그늘 지도 · 우천 시나리오 · 준비물</span>
+    <span class="arw">›</span>
+  </a>
+
+  <div class="hero">
+    <div class="h"><div class="hk">주행 거리</div><div class="hv mono">21.2<small>km</small></div>
+      <div class="hn">계획과 정확히 일치</div></div>
+    <div class="h"><div class="hk">총 소요</div><div class="hv mono">2:02</div>
+      <div class="hn">실주행 1시간 22분</div></div>
+    <div class="h"><div class="hk">실주행 평균</div><div class="hv mono">15.7<small>km/h</small></div>
+      <div class="hn">정지 시간 제외</div></div>
+    <div class="h"><div class="hk">평균 심박</div><div class="hv mono">109<small>bpm</small></div>
+      <div class="hn">최고 135 · 편안한 강도</div></div>
   </div>
 
-  <div class="killed"><s>운길산 수종사 새벽 일정</s> — <b>취소</b>.
-  비 예보에 급경사 1.5km 콘크리트 외길을 새벽에 오르는 건 오늘 계획에서 가장 위험한 조각이었습니다.
-  두물머리 전망도 흐리면 남는 게 없습니다. <b>바로 팔당으로 갑니다.</b></div>
-
   <div class="chips">
-    <span class="chip">8.29(토) 확정</span>
-    <span class="chip">비 · 오전 60%</span>
-    <span class="chip">06:35 성복역 출발</span>
-    <span class="chip">정자역 경유</span>
-    <span class="chip">팔당 08:00 도착</span>
-    <span class="chip">수종사 취소</span>
-    <span class="chip">왕복 21.2km</span>
-    <span class="chip">반납 10:50</span>
-    <span class="chip">회 구매 11:45</span>
-    <span class="chip">서울식당 예약완료</span>
-    <span class="chip">짐은 샵에 보관</span>
+    <span class="chip on">비 0mm</span>
+    <span class="chip">5명 완주</span>
+    <span class="chip">자전거 5대</span>
+    <span class="chip">08:06 출발</span>
+    <span class="chip">10:09 반납</span>
+    <span class="chip">평균 심박 109</span>
+    <span class="chip">계획보다 40분 빠름</span>
+    <span class="chip">총 369,000원</span>
   </div>
 </header>
 
 <section>
-  <div class="sec-head"><span class="sec-num">01</span><h2>그늘 지도 · 계기판</h2></div>
-  <p class="sec-note">지도의 경로 색이 곧 그늘 등급입니다. 슬라이더를 밀면 지도의 점과 아래 바가 함께 움직이고, 지나는 구간만 지도·바 양쪽에서 굵고 선명해집니다. 핀이나 구간을 누르면 아래 구간 메모로 이동합니다.
-  <b>오늘은 흐림·비 예보라 그늘 등급의 무게가 줄고, 대신 “비를 피할 곳이 어디냐”가 같은 색으로 읽힙니다</b> — 파랑(봉안터널)과 초록(능내역)이 오늘의 대피소입니다.</p>
+  <div class="sec-head"><span class="sec-num">01</span><h2>실제 달린 길</h2><span class="flag">GPX</span></div>
+  <p class="sec-note">갤럭시 워치가 1초 간격으로 기록한 <b>4,857개 좌표</b>를 그대로 지도에 올렸습니다.
+  계획 페이지의 파란 선은 손으로 그린 근사 궤적이었지만, 이건 실제로 바퀴가 지나간 자리입니다.
+  핀을 누르면 그 지점을 몇 시에 지났는지 나옵니다.</p>
 
   <div class="console">
     <div id="map"></div>
     <div class="engine"><span>지도 엔진</span><b id="engName">불러오는 중…</b></div>
     <div class="instrument">
-      <div class="swcap"><span>확정 일자</span><em>아래 수치는 이 날짜 기준 계산값입니다</em></div>
-      <div class="fixdate">
-        <div class="fd-l"><span class="fd-k">FIXED</span><b>08.29</b><span class="fd-s">SAT</span></div>
-        <div class="fd-r">8월 29일 토요일 · 확정 · <b>비</b><br><span>팔당역 08:00 도착 기준으로 전 일정 재계산</span></div>
-      </div>
-      <div class="readout">
-        <div class="ro-item"><div class="ro-k">시각</div><div class="ro-v mono" id="rTime">08:35</div></div>
-        <div class="ro-item"><div class="ro-k">태양 고도</div><div class="ro-v mono" id="rAlt">30°</div></div>
-        <div class="ro-item"><div class="ro-k">강수확률</div><div class="ro-v mono" id="rRain">65<small>%</small></div></div>
-      </div>
+      <div class="swcap"><span>기록</span><em>삼성 헬스 · 갤럭시 워치 울트라</em></div>
 
-      <div class="sunwrap">
-        <svg viewBox="0 0 300 78" preserveAspectRatio="none" aria-hidden="true">
-          <line x1="0" y1="78" x2="300" y2="78" stroke="#CBD8D3" stroke-width="1"/>
-          <line id="thr" x1="0" x2="300" stroke="#E4633A" stroke-width="1" stroke-dasharray="4 4" opacity=".8"/>
-          <path id="sunPath" fill="none" stroke="#16302C" stroke-width="1.4"/>
-          <circle id="sunDot" r="7" fill="#F0A93B"/>
-        </svg>
-        <div class="thrlab" id="thrLab"></div>
+      <div class="ctog" id="ctog">
+        <button data-m="hr" class="on">심박 bpm</button>
+        <button data-m="sp">속도 km/h</button>
+        <button data-m="el">고도 m</button>
       </div>
-
-      <div class="striplab">
-        <span>편도 10.6km · 구간 1–7</span>
-        <span id="dirLab">갈 때 ▶</span>
+      <div class="chartwrap">
+        <svg id="chart" viewBox="0 0 320 150" preserveAspectRatio="none" aria-label="라이딩 기록 그래프"></svg>
       </div>
-      <div class="strip" id="strip"></div>
-      <div class="axis" id="axis"></div>
+      <div class="readnow" id="readnow"></div>
 
-      <div class="nudge" id="nudge"><span class="hand">↔</span>
-        <span>슬라이더를 밀어보세요. <b>지도 위의 점</b>과 아래 바가 함께 움직입니다.</span></div>
-      <label for="tSlider" class="ro-k" style="display:block;margin-top:12px">시간 이동 (08:00 → 11:20)</label>
-      <input type="range" id="tSlider" min="0" max="200" step="5" value="35" aria-label="시각 이동">
-
-      <div class="now" id="nowBox"></div>
-
-      <div class="legend">
-        <span class="lg"><span class="sw" style="background:#2B5FA8"></span>터널 · 냉기</span>
-        <span class="lg"><span class="sw" style="background:#2F6B5E"></span>수목 그늘</span>
-        <span class="lg"><span class="sw" style="background:#F0A93B"></span>부분 그늘</span>
-        <span class="lg"><span class="sw" style="background:#E4633A"></span>완전 노출</span>
-      </div>
-      <p class="legnote">지도의 경로 색 = 아래 바의 색 · 강수확률은 기상청 오전 60% 발표를 “오전 중 그침”에 맞춰 배분한 추정값입니다</p>
-      <div class="crit" id="crit"></div>
-      <div class="datenote" id="datenote" hidden></div>
+      <div class="swcap" style="margin-top:18px"><span>지나간 시각</span><em>워치 기록 기준</em></div>
+      <div class="tblwrap"><table>
+        <thead><tr><th>시각</th><th>지점</th><th style="text-align:right">거리</th></tr></thead>
+        <tbody id="markTbl"></tbody>
+      </table></div>
     </div>
   </div>
 
   <div class="maplinks">
+    <a class="mlink" href="route/actual-20260829.gpx" download>실제 기록 GPX 내려받기</a>
     <a class="mlink" target="_blank" rel="noopener"
-      href="https://m.map.kakao.com/scheme/route?sn=%ED%8C%94%EB%8B%B9%EC%97%AD&en=%EB%B6%81%ED%95%9C%EA%B0%95%EC%B2%A0%EA%B5%90&sp=37.5473594340956,127.243966151989&ep=37.5512550358613,127.31625726748&by=BICYCLE">카카오맵 자전거 길찾기</a>
-    <a class="mlink" target="_blank" rel="noopener"
-      href="https://map.kakao.com/link/map/바이크토탈 팔당점,37.54736,127.24397">대여소 위치</a>
-    <a class="mlink" target="_blank" rel="noopener"
-      href="https://map.kakao.com/link/to/팔당역,37.54736,127.24397">팔당역 길찾기</a>
+      href="https://map.kakao.com/link/map/바이크토탈 팔당점,37.54578,127.24506">출발지 카카오맵</a>
   </div>
+  <div class="note" style="margin-top:14px"><b>숫자 하나는 버렸습니다 — 최고 속도.</b>
+  기록을 그대로 계산하면 복귀 09:54에 30초 평균 40.8km/h가 나옵니다. 그런데 그 30초 안에
+  <b>초당 538km/h</b>짜리 점이 섞여 있습니다. 앞뒤 1분 구간은 22km/h대인데 그 30초만 튄 것이니,
+  터널을 막 빠져나온 자리에서 GPS가 한 번 점프한 것입니다.
+  손목 GPS로는 순간 최고 속도를 신뢰할 수 없어서 <b>이 페이지에는 최고 속도를 싣지 않았습니다.</b>
+  위 그래프의 속도는 튐에 덜 흔들리도록 60초 이동평균으로 그렸고,
+  거리·평균 속도는 초당 60km/h를 넘는 점 43개를 걸러낸 뒤 계산했습니다.</div>
+  <p class="sec-note" style="margin-top:12px;margin-bottom:0">
+  워치가 표시한 거리는 21.24km, 튐을 걸러 좌표를 다시 적분하면 20.71km입니다.
+  상승고도 55.8m, 고도 21~48m — <b>사실상 평지였고, 그래서 전기자전거의 힘이 남았습니다.</b></p>
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-num">02</span><h2>비 · 세 개의 시나리오</h2><span class="optflag" style="background:#2B5FA8">RAIN</span></div>
-  <p class="sec-note">비 예보를 “간다 / 안 간다”로 놓으면 전날 밤에 답이 안 나옵니다.
-  <b>가되, 어디까지 갈지를 현장에서 정하는</b> 구조로 바꿨습니다. 판단은 딱 두 번입니다 —
-  <b>팔당역 도착 직후(08:00)</b>와 <b>능내역(09:04)</b>. 그 사이에는 아무도 고민하지 않습니다.</p>
+  <div class="sec-head"><span class="sec-num">02</span><h2>계획 대 실제</h2></div>
+  <p class="sec-note">전부 앞당겨졌습니다. 팔당역에 30분 일찍 닿으면서 그 뒤가 전부 밀려 올라갔고,
+  결국 <b>계획보다 45분 이른 완주</b>가 됐습니다. 비를 대비해 넣어둔 여유가 고스란히 남은 셈입니다.</p>
 
-  <div class="gate">
-    <div class="g" style="border-left-color:#2F6B5E">
-      <div class="gt"><span class="gk" style="background:#2F6B5E">A</span><h3>그대로 갑니다</h3></div>
-      <div class="cond">비 그침 · 이슬비 · 노면만 젖음</div>
-      <p>기본안 그대로 <span class="num">왕복 21.2km</span>. 북한강철교까지 갔다가
-      <span class="num">10:50</span> 반납, <span class="num">11:45</span> 가락몰에서 회 구매 → 서울식당.
-      아래 03 진행표가 이 시나리오입니다.</p>
-    </div>
-    <div class="g" style="border-left-color:#F0A93B">
-      <div class="gt"><span class="gk" style="background:#F0A93B">B</span><h3>능내역에서 접습니다</h3></div>
-      <div class="cond">약한 비가 계속 · 시야는 확보</div>
-      <p>능내역(6.4km)까지만 가고 반환. <span class="num">왕복 12.8km</span>,
-      <span class="num">09:50</span> 반납. 봉안터널과 팔당호 전망은 다 보고 오는 코스라
-      “못 탄 라이딩”이 아닙니다. 가락몰 도착이 <span class="num">11:00</span>으로 당겨지니
-      <b>서울식당에 시간 변경 전화</b> 한 통만 하면 됩니다.</p>
-    </div>
-    <div class="g" style="border-left-color:#E4633A">
-      <div class="gt"><span class="gk" style="background:#E4633A">C</span><h3>대여를 접습니다</h3></div>
-      <div class="cond">호우 · 천둥번개 · 노면 물웅덩이</div>
-      <p>자전거를 빌리지 않고 바로 가락시장으로. <span class="num">10:00</span>쯤 도착.
-      <b>온달수산(06:00~)·영재수산(07:00~)</b>은 이 시각에도 회를 떠 줍니다.
-      <b>서울식당에 “더 일찍 가겠다”고 전화</b>하는 게 이 시나리오의 유일한 추가 작업입니다.
-      비 오는 날 시장은 오히려 한산합니다.</p>
-    </div>
-  </div>
-
-  <div class="console" style="margin-top:16px">
-    <div class="instrument">
-      <div class="swcap"><span>판단 지점</span><em>이 두 번 말고는 논의하지 않습니다</em></div>
-      <ul class="tl" style="margin-top:6px">
-        <li class="key"><div class="tl-t">08:00</div><div class="tl-h">팔당역 주차장 — 1차 판단</div>
-          <div class="tl-d">차에서 내려 하늘과 노면을 봅니다. 레이더(기상청 날씨알리미 · 윈디)로 <b>앞으로 1시간</b>만 확인.
-          <b>천둥·번개가 보이면 그 자리에서 C</b>입니다. 대여 자체를 하지 않습니다.
-          비가 오지만 약하면 일단 A로 출발하고, 판단은 능내역으로 미룹니다.</div></li>
-        <li class="key"><div class="tl-t">09:04</div><div class="tl-h">능내역 — 2차 판단</div>
-          <div class="tl-d">여기서부터가 <b>그늘도 지붕도 없는 3.4km</b>입니다. 능내역을 지나면 되돌아올 곳이 없습니다.
-          비가 그쳤거나 잦아들면 A로 계속, 그대로면 <b>여기서 반환(B)</b>.
-          편의점·화장실·처마가 다 있으니 5분 서서 정하면 됩니다.</div></li>
-      </ul>
-
-      <div class="warn">
-        <b>오늘 진짜 위험은 태양이 아니라 접지력입니다.</b> 세 곳만 조심하면 됩니다 —
-        ① <b>북한강철교 상판</b>: 젖으면 가장 미끄럽습니다. 철교 위에서는 브레이크·핸들 조작 없이 직진만.
-        ② <b>봉안터널 입구와 출구</b>: 젖은 노면에서 갑자기 어두워집니다. 진입 전에 속도를 미리 줄이세요.
-        ③ <b>폐철도 노반의 옛 철로 흔적</b>(2.8–4.2km): 젖은 금속은 얼음과 같습니다. 비스듬히 밟지 마세요.
-        전기자전거는 무겁습니다. <b>젖은 노면 제동거리는 평소의 2배</b>로 잡고, 차간 거리를 평소의 2배로 벌립니다.
-      </div>
-
-      <div class="striplab" style="margin-top:4px"><span>비 오는 날 이 코스의 지붕</span><span>2곳</span></div>
-      <dl class="kv" style="grid-template-columns:92px 1fr">
-        <dt>봉안터널</dt><dd>4.2–4.5km · 길이 약 260m. <b>완전한 지붕</b>이지만 통행로라 오래 서 있으면 안 됩니다. 소나기 통과용 5분.</dd>
-        <dt>능내역</dt><dd>6.4km · 처마·편의점·화장실·자전거샵. <b>제대로 대기할 수 있는 유일한 지점</b>이자 B안의 반환점.</dd>
-        <dt>그 밖</dt><dd>능내역 → 북한강철교 3.4km 구간에는 비를 피할 곳이 <b>없습니다</b>. 2차 판단이 여기 걸린 이유입니다.</dd>
-      </dl>
-
-      <div class="striplab"><span>비 때문에 추가되는 짐</span><span>가볍게</span></div>
-      <ul style="margin:0 0 12px 17px;font-size:15.5px;color:#2B4B45">
-        <li><b>1회용 우비(판초)를 인원수만큼.</b> 편의점 것으로 충분합니다. 우산은 절대 금물.</li>
-        <li><b>후미등.</b> 흐린 날 자전거길에서 뒤에서 오는 라이더에게 보이는 유일한 신호입니다. 밝은색 상의도 같은 이유.</li>
-        <li><b>휴대폰 방수팩 또는 지퍼백.</b> 오늘 지도·레이더를 계속 봐야 합니다.</li>
-        <li><b>갈아입을 상의와 수건을 차에 두고 가세요.</b> 젖은 채로 냉방된 식당에 앉는 게 오늘 감기의 유일한 경로입니다.</li>
-        <li>선크림·쿨토시는 그대로 챙깁니다. <b>비 그친 뒤 개는 하늘의 자외선이 더 셉니다.</b></li>
-      </ul>
-
-      <div class="datenote">전기자전거는 생활방수 수준입니다. <b>대여소가 우천 시 대여를 제한할 수 있습니다.</b>
-      전날 저녁에 “비 와도 대여되는지, 취소 시 위약금이 있는지” 두 가지를 함께 물어두세요.
-      C 시나리오는 전화 한 통으로 비용 0원이 되지만, 당일 노쇼로 처리되면 그렇지 않습니다.</div>
-    </div>
-  </div>
-
-  <div class="maplinks">
-    <a class="mlink" target="_blank" rel="noopener"
-      href="https://www.weather.go.kr/w/image/radar.do">기상청 레이더</a>
-    <a class="mlink" target="_blank" rel="noopener"
-      href="https://www.windy.com/?37.547,127.244,10">윈디 · 강수 애니메이션</a>
-    <a class="mlink" target="_blank" rel="noopener"
-      href="http://place.map.kakao.com/17475662">바이크토탈 팔당점</a>
-  </div>
-</section>
-
-<section>
-  <div class="sec-head"><span class="sec-num">03</span><h2>토요일 진행표</h2></div>
-  <p class="sec-note"><b>팔당역 08:00 도착</b>을 기준점으로 앞뒤를 다시 맞춘 A 시나리오 일정입니다.
-  성복역에서 출발해 정자역에서 한 명 태우고 곧장 팔당으로 갑니다. 아침 식사는 잡지 않았습니다 —
-  출발 전 간식, 능내역에서 한 번 더. 장비 세팅·집합에 20분을 따로 잡았고,
-  여기서 30분이 밀리면 복귀가 오후 비에 걸립니다.</p>
-  <ul class="tl">
-    <li><div class="tl-t">06:35</div><div class="tl-h">성복역 출발</div><div class="tl-d">수지로 → 분당수서로. 약 9km · 20분<br><span class="mono" style="color:#6E8480">비 예보 반영해 평소보다 5분 넉넉히 잡았습니다</span></div></li>
-    <li class="key"><div class="tl-t">06:55</div><div class="tl-h">정자역 도착 · 합류</div><div class="tl-d">정차 5분. 정차 지점을 전날 미리 정해두세요 — 아침 정자역 앞은 잠깐 세울 곳 찾기가 애매합니다</div></li>
-    <li><div class="tl-t">07:00</div><div class="tl-h">정자역 출발</div><div class="tl-d">분당수서로 → 성남대로 → 수도권제1순환 서하남IC → 팔당대교. 약 43km · 55분<br><span class="mono" style="color:#6E8480">토요일 이른 아침이라 정체는 거의 없습니다. 비로 인한 감속만 감안</span></div></li>
-    <li class="key"><div class="tl-t">08:00</div><div class="tl-h">팔당역 도착 · 주차 <span class="mono">1차 판단</span></div><div class="tl-d">오늘의 목표 시각. 주말 유료 주차장. 화장실·복장 정리, 간식은 여기서 짧게.<br><span class="mono" style="color:#2B5FA8">여기서 레이더를 보고 A / C를 정합니다 — 02 참고</span></div></li>
-    <li class="key"><div class="tl-t">08:15</div><div class="tl-h">바이크토탈 팔당점 대여</div><div class="tl-d">전기자전거 대여. 인원수만큼 신분증 지참. 헬멧 대여. 우비는 여기서 미리 입습니다</div></li>
-    <li><div class="tl-t">08:35</div><div class="tl-h">출발</div><div class="tl-d">진입로 300m는 도로 구간. 젖은 노면이니 일렬로, 차간 거리 2배로 붙어서 통과</div></li>
-    <li><div class="tl-t">08:54</div><div class="tl-h">봉안터널 <span class="mono">4.3km</span></div><div class="tl-d">오늘은 에어컨이자 지붕. 비가 세면 여기서 5분 끊고 갑니다</div></li>
-    <li class="key"><div class="tl-t">09:04</div><div class="tl-h">능내역 <span class="mono">6.4km · 2차 판단</span></div><div class="tl-d">계속 갈지(A) 여기서 반환할지(B)를 정하는 지점. 5분 서서 결정<br><span class="mono" style="color:#F0A93B">B로 가면 09:50 반납 · 11:00 점심</span></div></li>
-    <li class="key"><div class="tl-t">09:25</div><div class="tl-h">북한강철교 — 반환점 <span class="mono">10.6km</span></div><div class="tl-d">사진 15분(비 예보라 20분에서 줄였습니다). 철제 트러스 안이 대표 컷 — 상판이 젖어 있으면 세우고 찍으세요</div></li>
-    <li><div class="tl-t">09:40</div><div class="tl-h">복귀 시작</div><div class="tl-d">지붕 없는 3.4km를 다시 통과. 오늘 가장 취약한 구간</div></li>
-    <li class="key"><div class="tl-t">10:00</div><div class="tl-h">능내역 휴식 20분</div><div class="tl-d">편의점·화장실·처마·자전거샵. 젖었으면 여기서 한 번 말리고 갑니다</div></li>
-    <li><div class="tl-t">10:50</div><div class="tl-h">팔당역 반납 <span class="mono">왕복 21.2km</span></div><div class="tl-d">태양 고도 <span class="mono" id="tlAlt">55°</span>(맑을 경우). 비가 다시 굵어져도 여기서 끝입니다</div></li>
-    <li><div class="tl-t">11:05</div><div class="tl-h">가락시장으로 출발</div><div class="tl-d">차 안에서 서울식당에 도착 시각 확인 전화. 약 23km · 40분<br><span class="mono" style="color:#6E8480">젖은 상의는 여기서 갈아입습니다</span></div></li>
-    <li class="key"><div class="tl-t">11:45</div><div class="tl-h">가락몰 도착 · 회 구매</div><div class="tl-d">지하주차장이 수산 판매동과 직결 — 비를 안 맞고 들어갑니다. 고르고 손질까지 <b>15~20분</b><br><span class="mono" style="color:#6E8480">서더리(뼈·머리) 꼭 같이 받기 — 매운탕용</span></div></li>
-    <li class="key"><div class="tl-t">12:05</div><div class="tl-h">초장집 서울식당 <span class="mono">예약완료</span></div><div class="tl-d">회를 들고 착석. 상차림·매운탕·공기밥은 여기서 주문<br><span class="mono" style="color:#F0A93B">예약 시각을 먼저 확인하고, 위 시각들을 거기에 맞춰 당기거나 미루세요</span></div></li>
-  </ul>
-</section>
-
-<section>
-  <div class="sec-head"><span class="sec-num">04</span><h2>구간별 메모</h2></div>
-  <p class="sec-note">지도 핀, 계기판 구간과 같은 번호입니다. 제목을 누르면 아래로 펼쳐집니다.</p>
-  <div id="segList"></div>
-</section>
-
-<section>
-  <div class="sec-head"><span class="sec-num">05</span><h2>회 사기 → 서울식당</h2><span class="optflag" style="background:#2F6B5E">예약완료</span></div>
-  <p class="sec-note">방식이 바뀌었습니다. 앉아서 주문하는 횟집이 아니라,
-  <b>가락몰 수산 판매동에서 회를 떠서 초장집 서울식당으로 들고 가는</b> 구조입니다.
-  앉을 자리는 이미 잡혔으니 남은 변수는 하나 — <b>어디서 회를 사느냐</b>입니다.</p>
-
-  <div class="console" style="margin-bottom:18px">
-    <div class="instrument">
-      <div class="swcap"><span>착석 장소 · 확정</span><em>예약 완료 · 시각과 인원만 재확인</em></div>
-      <div class="fixdate">
-        <div class="fd-l"><span class="fd-k">BOOKED</span><b>서울식당</b><span class="fd-s">초장집</span></div>
-        <div class="fd-r">서울 송파구 양재대로 932 · 가락몰<br><span>회를 들고 들어가 상차림·매운탕을 주문하는 방식</span></div>
-      </div>
-      <div class="warn" style="margin-top:14px">
-        <b>예약 시각을 먼저 확인하세요.</b> 이 문서의 11:45 / 12:05는 A 시나리오 기준으로 역산한 값입니다.
-        예약이 12:30이면 능내역 휴식을 늘리거나 팔당역에서 천천히 정리하면 되고,
-        11:30이면 북한강철교 사진을 10분으로 줄이면 맞습니다. <b>라이딩이 아니라 이 시각이 오늘의 종점</b>입니다.
-      </div>
-      <div class="striplab"><span>예약 전화 때 함께 물어둘 것</span><span>3가지</span></div>
-      <dl class="kv" style="grid-template-columns:104px 1fr">
-        <dt>상차림비</dt><dd>1인 얼마인지. 가락몰 초장집은 대체로 <b>1인 3,000~7,000원</b>선입니다(집마다 다름).</dd>
-        <dt>추가 비용</dt><dd>매운탕(5,000~12,000원선)·공기밥·소주가 별도인지, 상차림에 포함인지.</dd>
-        <dt>제휴 판매점</dt><dd><b>가장 중요한 질문.</b> 초장집이 “여기서 사 오세요” 하고 지정하는 점포가 있는 경우가 많습니다.
-        있으면 그냥 그 집에서 사는 게 제일 매끄럽습니다 — 아래 목록은 그 답이 없을 때의 카드입니다.</dd>
-      </dl>
-    </div>
-  </div>
-
-  <div class="striplab" style="margin-bottom:8px"><span>회 살 곳 — 가락몰 수산 판매동</span><span>4곳</span></div>
-  <div id="foodList"></div>
-
-  <div class="console" style="margin-top:16px">
-    <div class="instrument">
-      <div class="striplab" style="margin-top:0"><span>사올 때 이것만</span><span>5가지</span></div>
-      <ul style="margin:0 0 4px 17px;font-size:15.5px;color:#2B4B45">
-        <li><b>서더리(뼈·머리)를 반드시 같이 받으세요.</b> 매운탕 재료입니다. 안 챙기면 초장집에서 탕을 따로 사야 합니다. “서더리 주세요” 한마디면 됩니다.</li>
-        <li><b>양은 1인 300~350g.</b> 라이딩 뒤라 평소보다 더 들어갑니다. 4명이면 1.2~1.4kg 정도로 잡으세요.</li>
-        <li><b>“초장집 가져갈 거예요”라고 먼저 말하세요.</b> 포장과 얼음을 그 기준으로 잡아 줍니다.</li>
-        <li><b>시세는 인어교주해적단 앱으로.</b> 가락몰은 정찰제에 가까워 흥정이 필요 없지만, 8월 민어·전어 가격을 알고 가면 마음이 편합니다.</li>
-        <li><b>지하주차장에서 판매동이 바로 연결됩니다.</b> 비 오는 날 이 동선이 크게 유리합니다.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="sec-head"><span class="sec-num">06</span><h2>8월 말 · 무엇을 살까</h2></div>
-  <p class="sec-note">여름은 광어·우럭이 산란을 마쳐 살이 빠지는 시기입니다. 8월엔 다른 걸 사야 합니다.
-  그리고 <b>8월 말은 민어철의 끝자락이자 전어의 시작</b>이라, 1년에 두 어종을 한 상에 놓을 수 있는 며칠 안 되는 시기입니다.</p>
-  <table>
-    <thead><tr><th>순위</th><th>어종 / 메뉴</th><th>이유</th></tr></thead>
+  <div class="tblwrap"><table>
+    <thead><tr><th>구간</th><th>계획</th><th>실제</th><th style="text-align:right">차이</th></tr></thead>
     <tbody>
-      <tr><td class="pri" style="color:#E4633A">★★★</td><td><b>민어</b></td><td>제철 6~9월, 8월이 정점. 부레·껍질까지 챙기세요 — 판매점에 말해야 줍니다</td></tr>
-      <tr><td class="pri" style="color:#E4633A">★★★</td><td><b>전어</b> (세꼬시)</td><td>8월 중순 이후 들어오기 시작. 이번 주말이 올해 첫 전어일 수 있습니다</td></tr>
-      <tr><td class="pri" style="color:#F0A93B">★★</td><td>병어 · 농어 · 갑오징어</td><td>여름 제철. 모듬에 섞기 좋습니다</td></tr>
-      <tr><td class="pri" style="color:#F0A93B">★★</td><td>전복 · 멍게</td><td>곁들임. 사 가는 방식이라 스끼다시를 기대할 수 없으니 직접 챙기세요</td></tr>
-      <tr><td class="pri" style="color:#6E8480">—</td><td>광어 · 우럭</td><td>8월엔 굳이. 가을까지 미루는 쪽</td></tr>
+      <tr><td>성복역 출발</td><td class="pri">06:35</td><td class="pri">06:35</td><td class="num">정시</td></tr>
+      <tr><td>정자역 경유</td><td class="pri">06:55</td><td class="pri">06:55</td><td class="num">정시</td></tr>
+      <tr><td>바이크토탈 도착</td><td class="pri">08:00</td><td class="pri">07:30</td><td class="num gain">−30분</td></tr>
+      <tr><td>자전거 대여</td><td class="pri">08:15</td><td class="pri">07:40</td><td class="num gain">−35분</td></tr>
+      <tr><td>라이딩 출발</td><td class="pri">08:35</td><td class="pri">08:06</td><td class="num gain">−29분</td></tr>
+      <tr><td>봉안터널</td><td class="pri">08:54</td><td class="pri">08:41</td><td class="num gain">−13분</td></tr>
+      <tr><td>능내역</td><td class="pri">09:04</td><td class="pri">08:48</td><td class="num gain">−16분</td></tr>
+      <tr><td>북한강철교 반환</td><td class="pri">09:25</td><td class="pri">09:16</td><td class="num gain">−9분</td></tr>
+      <tr><td>팔당역 반납</td><td class="pri">10:50</td><td class="pri">10:09</td><td class="num gain">−41분</td></tr>
+      <tr><td>가락몰 도착</td><td class="pri">11:45</td><td class="pri">11:00</td><td class="num gain">−45분</td></tr>
+      <tr class="tot"><td>날씨</td><td class="pri">비 60% · 20~60mm</td><td class="pri">흐림 · 0mm</td><td class="num gain">완승</td></tr>
     </tbody>
-  </table>
-  <p style="margin-top:16px;font-size:15.5px"><b>추천 구성</b> — <b>민어 + 전어 세꼬시 + 모듬회</b>를 판매점에서, <b>매운탕(서더리) + 공기밥</b>은 서울식당에서.
-  물회를 드시려면 초장집 메뉴에 있는지 예약 전화 때 확인하세요 — 회를 사 가는 방식에서는 자동으로 따라오지 않습니다.
-  회값 1인 3만원 + 상차림·탕 1인 1만원, <b>합계 1인 4만원 안팎</b>으로 잡으면 맞습니다.</p>
-  <div class="datenote">사 가는 방식의 유일한 함정은 <b>“회는 넉넉한데 나머지가 허전한”</b> 상황입니다.
-  앉아서 시키면 딸려 나오던 스끼다시가 없기 때문입니다. 전복·멍게·낙지 같은 곁들임 한두 개를 판매점에서 같이 사면 그 간극이 메워집니다.</div>
-  <div class="warn" style="margin-top:14px">회에 소주를 드실 거라면 대리운전이 필요합니다. 가락시장 → 수지 3~4만원선. 운전자를 미리 정해두거나, 한 명은 마시지 않는 쪽으로 미리 합의해 두세요.</div>
+  </table></div>
+
+  <div class="win"><b>세 개의 시나리오 중 A였습니다.</b> 능내역에서 판단할 것도 없었고,
+  봉안터널은 지붕이 아니라 그냥 시원한 터널이었고, 우비는 가방에서 나오지 않았습니다.
+  계획이 빗나간 게 아니라, <b>가장 좋은 가지가 선택된 것</b>입니다.</div>
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-num">07</span><h2>짐은 세 곳에</h2></div>
-  <p class="sec-note"><b>가방은 대여소에 맡깁니다.</b> 그러면 라이딩 중 몸에 있는 건 <b>주머니에 들어간 것뿐</b>이고,
-  가방 방수는 신경 쓸 필요가 없어집니다. 대신 딱 하나가 달라집니다 — <b>물을 등에 지고 갈 수 없다는 것.</b>
-  아래 A가 그 답이고, 나머지는 전부 맡기거나 차에 두면 됩니다.
-  전기자전거는 대여라 <b>공구·펑크패치·펌프는 아예 챙기지 마세요</b> — 문제가 생기면 대여소에 전화하는 게 정답입니다.</p>
-
-  <div class="packnote"><b>대여소와 팔당역 주차장은 걸어서 몇 분 거리입니다</b>(팔당로 127 · 팔당로 107).
-  그래서 B와 C의 경계는 엄격하지 않습니다 — 기준은 하나, <b>반납 직후 그 자리에서 바로 쓸 것이면 B(샵), 아니면 C(차)</b>.
-  젖은 몸으로 주차장까지 걷지 않으려면 수건과 갈아입을 상의는 샵 쪽이 낫습니다.</div>
-
-  <div class="grp">
-    <div class="grph"><span class="gn" style="background:#E4633A">A</span><h3>주머니에</h3><span class="gs">라이딩 중 · 이게 전부</span></div>
-    <ul class="chk">
-      <li><label><input type="checkbox"><span>휴대폰 — 지퍼백에 넣어서<small>가방이 없어도 이건 필요합니다. 오늘 지도·레이더를 계속 봐야 하고, 비 오는 날 주머니 속 휴대폰은 생각보다 잘 젖습니다. 자전거 거치대가 있으면 더 편합니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>카드 1장 + 현금 1만원<small>능내역 편의점에서 물·간식 살 돈. 지갑은 가방에 두고 이것만 빼서 주머니에</small></span></label></li>
-      <li><label><input type="checkbox"><span>차키 — 지퍼백에 함께<small>스마트키는 물에 특히 약합니다. 가방에 넣어 맡기지 말고 대표 한 명이 몸에 지니세요. 누가 가졌는지 출발 전에 서로 확인</small></span></label></li>
-      <li><label><input type="checkbox"><span>물 1병<small>가방이 없으니 <b>대여 자전거에 물통 거치대가 있는지 대여할 때 확인</b>하세요. 없으면 한 손에 들거나 저지 뒷주머니에 — 편도 6.4km 능내역까지는 한 병이면 충분합니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>1회용 우비 — 입고 출발<small>챙기는 게 아니라 입는 겁니다. 여분은 샵 가방에</small></span></label></li>
-    </ul>
-    <div class="packnote" style="border-left-color:var(--tunnel);background:#EEF3FA">
-      <b>가방을 안 지고 가니 물이 유일한 숙제입니다.</b> 해법은 능내역입니다 —
-      6.4km 지점의 편의점이고, <b>갈 때 한 번 서고(09:04 판단) 올 때 20분 쉬는</b> 곳입니다.
-      한 병 들고 출발해서 능내역에서 사 마시면, 오늘 코스에서 물이 모자랄 구간은 없습니다.
-      대신 <b>얼린 물은 포기</b>하세요 — 맡긴 가방 속에서 녹아 있을 뿐입니다.
-    </div>
-  </div>
-
-  <div class="grp">
-    <div class="grph"><span class="gn" style="background:#2B5FA8">B</span><h3>가방에 넣어 샵에 맡길 것</h3><span class="gs">반납하면 바로 찾음</span></div>
-    <ul class="chk">
-      <li><label><input type="checkbox"><span>갈아입을 상의 + 속옷 — 인원수만큼<small>오늘 목록에서 가장 과소평가되는 항목입니다. 젖은 채로 냉방된 식당에 앉는 게 감기의 유일한 경로입니다. 반납하고 그 자리에서 갈아입으면 차 시트도 삽니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>수건 · 여벌 양말<small>10:50 반납 직후 한 번 닦고 갈아입는 용도</small></span></label></li>
-      <li><label><input type="checkbox"><span>여분 물 1~2병 + 이온음료<small>라이딩이 끝나고 마실 몫. 능내역에서 사면 되니 많이 넣을 필요는 없습니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>간식 — 에너지바 · 바나나 · 삶은계란<small>아침 식사는 없습니다. <b>출발 전에 여기서 꺼내 먹고</b> 나머지는 맡기세요. 중간 간식은 능내역 편의점에서</small></span></label></li>
-      <li><label><input type="checkbox"><span>선크림<small>출발 전에 바르고 맡깁니다. 덧바를 생각이면 스틱형 작은 것만 주머니에 — 비가 갠 뒤의 자외선이 더 셉니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>여분 우비 · 비닐봉지 2~3장<small>젖은 우비와 옷을 담아 차로 옮깁니다. 부피 0, 쓸모는 큽니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>지갑 · 보조배터리 · 휴지 · 물티슈 · 상비약<small>라이딩 중엔 안 쓰는 것들. 다만 <b>귀중품을 맡기는 게 마음에 걸리면 지갑만 차 트렁크에</b> 두세요</small></span></label></li>
-    </ul>
-  </div>
-
-  <div class="grp">
-    <div class="grph"><span class="gn" style="background:#2F6B5E">C</span><h3>차에 두고 갈 것</h3><span class="gs">부피 큰 것 · 나중에 쓸 것</span></div>
-    <ul class="chk">
-      <li><label><input type="checkbox"><span>보냉백 + 아이스팩<small>회가 남으면 집까지 가져가려고. 8월 말이라 이게 없으면 남은 회는 그냥 버려야 합니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>슬리퍼 또는 여벌 신발<small>운동화는 젖습니다. 식당까지 젖은 신발로 가지 않아도 됩니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>우산 1~2개<small>가락몰 지하주차장이 판매동과 직결이라 크게 쓸 일은 없지만, 서울식당 위치에 따라 필요할 수 있습니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>큰 비닐봉지 · 쓰레기봉투<small>젖은 옷과 우비를 담아 트렁크에</small></span></label></li>
-      <li><label><input type="checkbox"><span>시트 커버 또는 큰 수건 (운전석)<small>갈아입고 타더라도 하의는 젖어 있습니다. 가락시장까지 40분</small></span></label></li>
-    </ul>
-  </div>
-
-  <div class="grp">
-    <div class="grph"><span class="gn" style="background:#F0A93B">D</span><h3>입고 나갈 것</h3><span class="gs">가방이 아니라 몸에</span></div>
-    <ul class="chk">
-      <li><label><input type="checkbox"><span>헐렁한 밝은색 긴팔<small>반팔보다 시원하고, 흐린 날 눈에 띕니다. 여름 라이딩에서 긴팔이 정답인 이유입니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>뒷주머니 있는 저지면 더 좋습니다<small>가방을 안 지는 오늘은 <b>주머니 개수가 곧 수납</b>입니다. 저지가 없으면 지퍼 달린 주머니가 있는 옷으로</small></span></label></li>
-      <li><label><input type="checkbox"><span>패드 있는 반바지 또는 편한 하의<small>21km면 패드 유무가 체감으로 갈립니다. 청바지만 피하세요 — 젖으면 최악입니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>쿨토시 · 넥게이터<small>복귀 때 태양이 등 뒤라 목 뒤가 제일 많이 탑니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>손등 덮는 자전거 장갑<small>젖은 그립은 미끄럽습니다. 오늘은 미관이 아니라 접지력 문제입니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>선글라스<small>08시대 정면 저각 태양과 수면 반사광. 비가 오면 앞유리 역할도 합니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>헬멧 아래 얇은 두건<small>헬멧은 대여소에서 빌립니다. 두건 한 장이 위생과 땀 흐름을 같이 해결합니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>젖어도 되는 운동화<small>가죽·스웨이드는 두고 가세요. 여벌 신발은 차에</small></span></label></li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <div class="sec-head"><span class="sec-num">08</span><h2>출발 전 체크</h2></div>
-  <p class="sec-note"><b>물건이 아니라 “미리 연락하고 정해둘 것”만 남겼습니다.</b> 챙길 물건은 07을 보세요.
-  아래는 전날 밤에 전화 몇 통과 합의 몇 개로 끝나는 목록이고, 이게 안 되면 당일 아침에 되돌릴 방법이 없는 것들입니다.</p>
-  <ul class="chk">
-    <li><label><input type="checkbox"><span>대여소에 세 가지 확인 (전날 저녁)<small>① 비 와도 대여되는지 ② 당일 취소 시 위약금이 있는지 ③ <b>짐 보관이 되는지 · 유료인지</b> — 07의 짐 구성이 통째로 여기에 걸려 있습니다. 안 된다면 가방은 차 트렁크로 가면 됩니다</small></span></label></li>
-    <li><label><input type="checkbox"><span>정자역 정차 지점 합의<small>06:55 도착 · 5분 정차. 잠깐 세울 위치를 전날 지도로 찍어 공유해두세요</small></span></label></li>
-    <li><label><input type="checkbox"><span>전기자전거 인원수만큼 사전 예약<small>바이크토탈 팔당점 · 주말 08시엔 인기 차종이 먼저 빠집니다. 대수를 정해 전화로 걸어두세요</small></span></label></li>
-    <li><label><input type="checkbox"><span>서울식당 예약 시각·인원 재확인 <small>예약은 완료. 시각과 인원만 다시 맞춰보세요. 함께 물어둘 것 세 가지 — ① 1인 상차림비 ② 매운탕·공기밥 별도 여부 ③ 회를 어디서 사 오면 되는지(제휴 판매점이 있는 경우가 많습니다)</small></span></label></li>
-    <li><label><input type="checkbox"><span>인어교주해적단 앱으로 당일 시세 확인<small>가락몰은 정찰제에 가깝지만, 8월 민어·전어 시세를 알고 가면 흥정이 필요 없습니다. 예산은 1인 3만원 안팎</small></span></label></li>
-    <li><label><input type="checkbox"><span>기상청 예보 · 레이더 확인<small>전날 밤 한 번, 08:00 팔당역 주차장에서 한 번. 레이더로 <b>앞으로 1시간</b>만 보면 됩니다. 천둥·번개가 잡히면 그 자리에서 C</small></span></label></li>
-    <li><label><input type="checkbox"><span>차량 배차와 주차<small>성복역 06:35 출발 → 정자역 06:55 경유. 팔당역 주차장은 주말 유료(1일 8,000원선). 인원에 맞춰 차량 대수를 미리 정하세요</small></span></label></li>
-    <li><label><input type="checkbox"><span>편의점에서 살 것 한 번에 사두기<small>1회용 우비 · 생수 · 이온음료 · 에너지바 · 지퍼백. 07 목록을 보며 전날 밤에 한 번에 끝내세요. 가방을 맡기고 타니 <b>물을 얼릴 필요는 없습니다</b> — 녹을 때쯤엔 이미 반납입니다</small></span></label></li>
-    <li><label><input type="checkbox"><span>대리운전 앱 설치<small>음주 시</small></span></label></li>
+  <div class="sec-head"><span class="sec-num">03</span><h2>그날의 진행</h2></div>
+  <p class="sec-note">실제로 일어난 순서입니다. 회색 글씨가 원래 계획이었던 시각입니다.</p>
+  <ul class="tl">
+    <li><div class="tl-t">06:35</div><div class="tl-h">성복역 출발</div>
+      <div class="tl-d">계획대로. 비 예보 때문에 다들 조금 긴장한 채로<br><span class="plan">계획 06:35 · 정시</span></div></li>
+    <li><div class="tl-t">06:55</div><div class="tl-h">정자역 경유</div>
+      <div class="tl-d">한 명 태우고 곧장 팔당으로<br><span class="plan">계획 06:55 · 정시</span></div></li>
+    <li class="key"><div class="tl-t">07:30</div><div class="tl-h">바이크토탈 팔당점 도착</div>
+      <div class="tl-d"><b>예상보다 30분 빠른 도착.</b> 토요일 이른 아침 도로가 생각보다 더 비어 있었습니다.
+      대여 시작을 기다리며 <b>굴을 까먹으며</b> 시간을 보냈습니다 — 오늘 하루 중 가장 예상 밖의 장면<br><span class="plan">계획 08:00 · 30분 빠름</span></div></li>
+    <li class="key"><div class="tl-t">07:40</div><div class="tl-h">자전거 대여 · 5대</div>
+      <div class="tl-d">전기자전거 2대 · 일반자전거 2대 · <b>26인치 대형 1대</b>. 총 82,000원<br><span class="plan">계획 08:15 · 35분 빠름</span></div></li>
+    <li class="key"><div class="tl-t">08:06</div><div class="tl-h">라이딩 출발</div>
+      <div class="tl-d">워치 기록이 시작된 시각. 여기서부터 2시간 2분<br><span class="plan">계획 08:35 · 29분 빠름</span></div></li>
+    <li><div class="tl-t">08:41</div><div class="tl-h">봉안터널 <span class="mono">4.0km</span></div>
+      <div class="tl-d">비를 피할 지붕으로 계산해뒀던 곳. 그냥 시원하게 지나갔습니다<br><span class="plan">계획 08:54</span></div></li>
+    <li><div class="tl-t">08:48</div><div class="tl-h">능내역 통과 <span class="mono">5.5km</span></div>
+      <div class="tl-d">2차 판단 지점이었지만 판단할 게 없었습니다. 그대로 통과<br><span class="plan">계획 09:04</span></div></li>
+    <li class="key"><div class="tl-t">09:16</div><div class="tl-h">북한강철교 — 반환점 <span class="mono">10.3km</span></div>
+      <div class="tl-d">출발점에서 직선거리 6.6km. 나무 데크 위에서 단체 사진.
+      강은 유리처럼 잔잔했고, 구름이 산 능선에 걸려 있었습니다<br><span class="plan">계획 09:25</span></div></li>
+    <li><div class="tl-t">09:47</div><div class="tl-h">능내역 복귀 휴식 <span class="mono">15.2km</span></div>
+      <div class="tl-d">여기서 한 번 쉬고 마지막 5km<br><span class="plan">계획 10:00</span></div></li>
+    <li class="key"><div class="tl-t">10:09</div><div class="tl-h">팔당역 반납 <span class="mono">왕복 21.2km</span></div>
+      <div class="tl-d">완주. 아무도 처지지 않았고, 비는 끝내 오지 않았습니다<br><span class="plan">계획 10:50 · 41분 빠름</span></div></li>
+    <li><div class="tl-t">11:00</div><div class="tl-h">가락몰 도착</div>
+      <div class="tl-d">여기서 오늘의 유일한 삽질이 있었습니다 — 아래 06 참고<br><span class="plan">계획 11:45 · 45분 빠름</span></div></li>
+    <li class="key"><div class="tl-t">13:00</div><div class="tl-h">종료</div>
+      <div class="tl-d">청해수산에서 회를 사서 서울식당에서 두 시간. 닷사이 23과 국화주</div></li>
   </ul>
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-num">09</span><h2>워치에 경로 넣기</h2><span class="optflag" style="background:#2B5FA8">GPX</span></div>
-  <p class="sec-note">이 문서의 경로를 <b>GPX 파일로 뽑아 두었습니다.</b> 갤럭시 워치 울트라에 넣으면
-  턴바이턴 안내와 진동, 경로 이탈 알림, 트랙백(출발점 복귀)을 그대로 쓸 수 있습니다.
-  <b>GPX 경로 안내는 Watch5 Pro와 Watch Ultra에서만 되는 기능</b>이라, 마침 기기가 맞습니다.</p>
+  <div class="sec-head"><span class="sec-num">04</span><h2>사진</h2></div>
+  <p class="sec-note">누르면 크게 열립니다.</p>
+  <div class="shots">
+    <figure class="wide"><img src="photos/01-shop.jpg" width="1200" height="1600" alt="바이크토탈 팔당점 앞에 선 다섯 명과 자전거 다섯 대" loading="lazy"
+      data-cap="07:40 · 바이크토탈 팔당점 — 전기 2, 일반 2, 26인치 대형 1">
+      <figcaption><b>출발선</b><span class="tm">07:40 · 바이크토탈 팔당점</span>
+      다섯 명, 다섯 대. 헬멧까지 쓰고 나면 되돌릴 수 없습니다.</figcaption></figure>
 
-  <div class="maplinks" style="margin-bottom:16px">
-    <a class="mlink" href="route/paldang-roundtrip.gpx" download>왕복 GPX · 21.2km</a>
-    <a class="mlink" href="route/paldang-oneway.gpx" download>편도 GPX · 10.6km</a>
+    <figure class="wide"><img src="photos/02-bridge-selfie.jpg" width="1600" height="1200" alt="북한강철교 위에서 찍은 다섯 명의 단체 셀카" loading="lazy"
+      data-cap="09:16 · 북한강철교 반환점 — 오늘의 대표 사진">
+      <figcaption><b>오늘의 대표 컷</b><span class="tm">09:16 · 북한강철교 · 10.3km</span>
+      반환점. 여기까지 오면 남은 건 왔던 길뿐이라, 표정이 제일 편한 순간입니다.</figcaption></figure>
+
+    <figure><img src="photos/03-neungnae.jpg" width="1600" height="901" alt="능내역 옛 역사와 승강장, 능내역 역명판" loading="lazy"
+      data-cap="능내역 — 판단 지점으로 잡아뒀던 곳">
+      <figcaption><b>능내역</b><span class="tm">08:48 통과 · 09:47 휴식</span>
+      비가 오면 여기서 접기로 했던 곳. 폐역 승강장과 역명판이 그대로 남아 있습니다.</figcaption></figure>
+
+    <figure><img src="photos/04-bridge-deck.jpg" width="1200" height="1600" alt="북한강철교의 나무 데크와 붉은 철제 트러스" loading="lazy"
+      data-cap="북한강철교 — 젖으면 미끄럽다고 경고했던 그 상판">
+      <figcaption><b>마르고 조용했던 상판</b><span class="tm">09:15</span>
+      계획서에서 “젖으면 가장 미끄럽다”고 세 번 강조했던 데크. 뽀송했습니다.</figcaption></figure>
+
+    <figure><img src="photos/05-ebike.jpg" width="1200" height="1600" alt="다리 난간에 세워둔 전기자전거 MOTOVELO PRO3" loading="lazy"
+      data-cap="MOTOVELO PRO3 — 바구니에 우비가 그대로 들어 있다">
+      <figcaption><b>끝내 쓰지 않은 우비</b><span class="tm">바구니 속 초록 봉투</span>
+      전기자전거 바구니에 우비와 물이 그대로. 오늘 가장 기분 좋은 낭비였습니다.</figcaption></figure>
+
+    <figure><img src="photos/06-river.jpg" width="1600" height="901" alt="잔잔한 강물에 아치교가 대칭으로 비친 풍경" loading="lazy"
+      data-cap="북한강 — 바람이 없어 물이 거울이 됐다">
+      <figcaption><b>거울이 된 강</b><span class="tm">09:20 전후</span>
+      바람이 없으니 아치가 통째로 물에 내려앉았습니다. 흐린 날의 보상.</figcaption></figure>
   </div>
-  <p class="legnote" style="margin-bottom:18px">둘 중 <b>왕복</b>을 권합니다. 편도를 넣고 삼성 헬스의 “경로 반전(Reverse route)”으로 돌아오는 방법도 있지만,
-  왕복 파일 하나면 거리·도착 예정 시각이 처음부터 끝까지 맞습니다.
-  <b>휴대폰에서 위 버튼을 눌러 파일을 먼저 내려받으세요</b> — 워치가 아니라 <b>휴대폰</b>에 있어야 합니다.</p>
-
-  <div class="grp" style="margin-top:0">
-    <div class="grph"><span class="gn" style="background:#2B5FA8">1</span><h3>휴대폰 — 삼성 헬스</h3><span class="gs">전날 밤에</span></div>
-    <ul class="chk">
-      <li><label><input type="checkbox"><span>GPX 파일 내려받기<small>위 “왕복 GPX” 버튼 → 내 파일 &gt; 다운로드 폴더에 저장됩니다. 어디 저장됐는지 한 번 열어서 확인해두세요</small></span></label></li>
-      <li><label><input type="checkbox"><span>삼성 헬스 → 홈 탭 → 운동 카드<small>운동 카드의 <b>더보기(⋯)</b>를 누르고 <b>사이클링</b>을 고릅니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>목표 선택에서 “경로” → 경로 선택<small>맨 아래 목표 드롭다운을 열면 거리·시간·칼로리 옆에 <b>경로</b>가 있습니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>“GPX 파일 가져오기” → 방금 받은 파일 선택 → 완료<small>지도에 팔당역~북한강철교 선이 뜨면 제대로 들어간 것입니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>운동 종류를 사이클링으로 두고 저장<small>왕복 파일을 썼다면 <b>경로 반전은 끄고</b> 저장하세요</small></span></label></li>
-      <li><label><input type="checkbox"><span>워치와 동기화 확인<small>워치의 <b>경로(Route) 타일</b> 또는 삼성 헬스 &gt; 사이클링 시작 화면에 경로 이름이 보이면 끝. 여기까지 <b>집에서</b> 끝내세요 — 팔당역에서 하려면 시간도 신호도 부족합니다</small></span></label></li>
-    </ul>
-  </div>
-
-  <div class="grp">
-    <div class="grph"><span class="gn" style="background:#2F6B5E">2</span><h3>워치 — 출발 직전</h3><span class="gs">08:30 대여소 앞</span></div>
-    <ul class="chk">
-      <li><label><input type="checkbox"><span>경로 타일에서 경로를 고르고 시작<small>GPS를 먼저 잡습니다. <b>실외에서 30초~1분</b> 걸리니 페달 밟기 전에 미리 켜두세요</small></span></label></li>
-      <li><label><input type="checkbox"><span>진동 안내 켜기 · 소리는 꺼도 됩니다<small>헬멧 쓰고 달리면 소리는 안 들립니다. 손목 진동이 실질적인 안내입니다</small></span></label></li>
-      <li><label><input type="checkbox"><span>워치 물 잠금 상태 확인<small>비 예보가 있습니다. <b>젖은 화면은 터치가 잘 안 먹습니다</b> — 물방울이 맺히면 소매로 한 번 닦고 조작하세요</small></span></label></li>
-      <li><label><input type="checkbox"><span>배터리 · 충전기<small>Ultra는 GPS를 계속 켜도 2시간 15분은 여유롭습니다. 그래도 전날 밤 충전은 해두세요</small></span></label></li>
-    </ul>
-  </div>
-
-  <div class="console" style="margin-top:16px">
-    <div class="instrument">
-      <div class="striplab" style="margin-top:0"><span>파일에 같이 넣어둔 것</span><span>웨이포인트 5곳</span></div>
-      <dl class="kv" style="grid-template-columns:104px 1fr">
-        <dt>0.0km</dt><dd>팔당역 대여소 — 08:35 출발</dd>
-        <dt>3.5km</dt><dd>팔당댐 전망 — 사진 5분</dd>
-        <dt>4.35km</dt><dd>봉안터널 — 08:54 · 오늘 유일한 지붕</dd>
-        <dt>6.42km</dt><dd><b>능내역 — 09:04 · 2차 판단 지점</b></dd>
-        <dt>10.6km</dt><dd>북한강철교 — 09:25 반환점</dd>
-      </dl>
-      <p class="legnote" style="margin-top:2px">워치에서 이 지점들이 다가오면 이름이 뜹니다. <b>능내역 웨이포인트가 사실상 오늘의 알람</b>입니다 — 거기서 A냐 B냐를 정합니다.</p>
-
-      <div class="warn" style="margin-top:14px">
-        <b>이 GPX는 대시보드 지도의 경로선을 그대로 뽑은 것이라, 측량된 노선이 아니라 근사 궤적입니다.</b>
-        실제 자전거길과 몇 미터~몇십 미터 어긋나는 구간이 있을 수 있고, 그러면 <b>경로 이탈 알림이 예민하게 울릴 수 있습니다</b>.
-        길이도 계산상 10.45km로, 이 문서가 쓰는 10.6km와 1.4% 차이가 납니다.
-        <b>이탈 알림이 계속 울리면 그냥 무시하세요</b> — 남한강자전거길은 갈림길이 거의 없는 외길이라
-        길을 잃을 위험보다 알림에 신경 쓰다 앞을 못 보는 위험이 큽니다. 오늘 이 파일의 진짜 쓸모는
-        길 안내가 아니라 <b>남은 거리와 웨이포인트 도달 시각</b>입니다.
-      </div>
-
-      <div class="datenote">되돌아올 때는 <b>트랙백(Track back)</b>도 있습니다. 왕복 GPX를 쓰면 쓸 일이 없지만,
-      중간에 경로를 벗어났거나 B 시나리오로 능내역에서 접을 때 출발점으로 되돌리는 데 쓸 수 있습니다.</div>
-    </div>
-  </div>
-
-  <p class="legnote" style="margin-top:14px">참고 — 카카오맵·네이버지도는 워치용 자전거 내비가 없습니다.
-  삼성 헬스 대신 다른 걸 쓰고 싶다면 워치에 설치하는 <b>코모트(komoot)</b>나 <b>OsmAnd</b>가 같은 GPX 파일을 그대로 받습니다.
-  다만 오늘 하루를 위해 새 앱을 익히는 건 권하지 않습니다.</p>
 </section>
 
-<footer>
-  <p>태양 고도는 2026년 8월 29일 · 북위 37.5° 기준 계산값이며, 기상청 발표와 1~2분 차이가 날 수 있습니다. 흐리거나 비가 오는 시간대에는 실제 체감과 무관한 참고값입니다.
-  강수 정보는 <b>2026년 8월 28일 09시 기상청 발표</b>(서울·경기 오전 강수확률 60%, 예상 강수량 20~60mm, 수도권은 오전 중 그침)를 인용한 것이고, 계기판의 시간대별 강수확률은 그 발표를 시간축에 배분한 <b>추정값</b>입니다 — 출발 전 기상청에서 반드시 다시 확인하세요.
-  차량 이동 시간(성복역→정자역 약 9km, 정자역→팔당역 약 43km)은 카카오맵 경로 거리에 토요일 이른 아침 통행 속도와 우천 감속을 반영한 추정입니다. 그늘 등급은 지형·수목 분포에 근거한 추정이며 계절에 따라 달라집니다. 기온·영업시간·가격은 방문 전 확인을 권합니다.</p>
-</footer>
+<section>
+  <div class="sec-head"><span class="sec-num">05</span><h2>에피소드</h2></div>
+  <p class="sec-note">기록에는 안 남지만 이날을 기억하게 만드는 것들.</p>
+  <div class="epi">
+    <div class="ep" style="border-left-color:#E4633A">
+      <div class="tag">전기자전거 적응 실패</div>
+      <div class="who">온정 상</div>
+      <p>전기자전거에 적응하지 못해 초반부터 땀을 삐질삐질.
+      <b>2인용 자전거로 교체할 뻔</b>했습니다. 전기의 힘은 익숙해지기 전까지는 짐입니다.</p>
+    </div>
+    <div class="ep" style="border-left-color:#E4633A">
+      <div class="tag">출발 5분의 사고</div>
+      <div class="who">윤지 상</div>
+      <p>전기자전거 초기 부적응으로 <b>넘어졌습니다.</b> 다행히 크게 다치진 않았지만
+      다들 깜짝 놀란 순간. 페달 한 번에 튀어 나가는 감각은 미리 알고 타야 합니다.</p>
+    </div>
+    <div class="ep" style="border-left-color:#F0A93B">
+      <div class="tag">복장</div>
+      <div class="who">종한 상</div>
+      <p>달릴 때마다 <b>휘날리는 망토.</b> 초록 셔츠 자락이 바람을 제대로 받아서,
+      뒤에서 따라가는 사람에게는 그 자체로 이정표였습니다.</p>
+    </div>
+    <div class="ep" style="border-left-color:#2F6B5E">
+      <div class="tag">일반 자전거로 완주</div>
+      <div class="who">남용 상</div>
+      <p><b>종아리가 튼튼합니다.</b> 전기 없이 21km를 그대로 밟아냈고,
+      실주행 평균 15.7km/h는 이 사람 덕분에 유지된 숫자입니다.</p>
+    </div>
+  </div>
+  <div class="win"><b>전기자전거 2대가 오늘의 유일한 변수였습니다.</b>
+  계획서는 비와 젖은 노면만 걱정했는데, 실제 위험은 <b>처음 타보는 전기자전거의 초기 가속</b>이었습니다.
+  다음엔 대여소 앞 공터에서 5분만 굴려보고 출발하는 걸로.</div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">06</span><h2>점심 — 청해수산 · 서울식당</h2></div>
+  <p class="sec-note">계획대로 <b>회를 사서 초장집으로 들고 가는</b> 방식. 판매점은 현장에서 <b>청해수산</b>으로 정했고,
+  초장집은 예약해둔 <b>서울식당</b>. 11시에 도착해 1시에 나왔습니다.</p>
+
+  <div class="note"><b>오늘의 유일한 삽질 — 내비게이션.</b>
+  “가락동 농수산물시장”을 찍고 가면 한참 고생합니다. 도매시장 쪽으로 들어가 버려서
+  주차도, 진입로도 전부 어긋납니다. <b>반드시 “가락몰”로 찍으세요.</b>
+  다음에 가는 사람에게 남길 게 하나뿐이라면 이것입니다.</div>
+
+  <div class="menu">
+    <span class="mi star">줄무늬전갱이</span><span class="mi star">대광어</span><span class="mi">참돔</span>
+    <span class="mi">돌도다리</span><span class="mi">농어</span><span class="mi">멍게</span>
+    <span class="mi">전복</span><span class="mi star">새우 소금구이</span><span class="mi">새우머리 볶음</span>
+    <span class="mi">매운탕</span><span class="mi">계란찜</span>
+  </div>
+  <p style="font-size:15px;color:#41615B;margin-top:6px">반주는 <b>닷사이 23</b>과 <b>국화주</b>.
+  계획서에 “8월 말은 민어 끝자락, 전어 시작”이라고 적어뒀는데
+  실제로 고른 건 <b>줄무늬전갱이</b>였습니다 — 시장에서 그날 좋은 걸 고르는 게 늘 이깁니다.</p>
+
+  <div class="shots" style="margin-top:16px">
+    <figure class="wide"><img src="photos/08-sashimi.jpg" width="1600" height="1200" alt="나무 도마에 담긴 모듬회 한 판" loading="lazy"
+      data-cap="청해수산 모듬회 179,000원 — 줄무늬전갱이·대광어·참돔·돌도다리·농어">
+      <figcaption><b>청해수산 모듬회</b><span class="tm">179,000원</span>
+      줄무늬전갱이·대광어·참돔·돌도다리·농어. 사 온 회를 초장집 접시에 올린 것.</figcaption></figure>
+
+    <figure><img src="photos/07-dassai.jpg" width="1200" height="1600" alt="얼음 통에 담긴 닷사이 사케 한 병" loading="lazy"
+      data-cap="닷사이 23 — 서울식당에서">
+      <figcaption><b>닷사이 23</b><span class="tm">국화주와 함께</span>
+      21km 뒤의 첫 잔. 운전자는 여기 없습니다.</figcaption></figure>
+
+    <figure><img src="photos/09-shrimp.jpg" width="1600" height="1200" alt="새우 소금구이 두 접시와 계란찜" loading="lazy"
+      data-cap="새우 소금구이와 계란찜">
+      <figcaption><b>새우 소금구이</b><span class="tm">+ 계란찜</span>
+      머리는 따로 볶아 나옵니다. 이게 사실상 메인.</figcaption></figure>
+
+    <figure class="wide"><img src="photos/10-maeuntang.jpg" width="1600" height="1200" alt="미나리를 수북이 올린 매운탕 냄비" loading="lazy"
+      data-cap="매운탕 — 서더리로 끓인 마무리">
+      <figcaption><b>마무리 매운탕</b><span class="tm">13:00 종료</span>
+      미나리를 한 움큼. 계획서에 “서더리 꼭 챙기라”고 써둔 게 여기서 회수됐습니다.</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">07</span><h2>정산</h2></div>
+  <p class="sec-note">5명 기준. 주차비와 기름값은 뺀 금액입니다.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>항목</th><th>내용</th><th style="text-align:right">금액</th></tr></thead>
+    <tbody>
+      <tr><td class="pri">청해수산</td><td>모듬회 · 새우</td><td class="num">179,000</td></tr>
+      <tr><td class="pri">서울식당</td><td>상차림 · 매운탕 · 닷사이 23 · 국화주</td><td class="num">108,000</td></tr>
+      <tr><td class="pri">자전거 대여</td><td>전기 2 · 일반 2 · 26인치 대형 1</td><td class="num">82,000</td></tr>
+      <tr class="tot"><td>합계</td><td>1인 약 73,800원</td><td class="num">369,000</td></tr>
+    </tbody>
+  </table></div>
+  <div class="win">계획서에서 잡았던 예산은 <b>1인 4만원 안팎</b>이었습니다.
+  실제는 <b>1인 7.4만원</b> — 회를 넉넉히 뜨고 닷사이를 곁들이면 이렇게 됩니다.
+  아깝다는 사람은 아무도 없었습니다.</div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">08</span><h2>다음에 갈 사람에게</h2></div>
+  <p class="sec-note">이번에 배운 것만 다섯 줄로.</p>
+  <ul class="tl" style="border-left-color:var(--shade)">
+    <li class="key"><div class="tl-t">01</div><div class="tl-h">내비는 “가락몰”</div>
+      <div class="tl-d">“가락동 농수산물시장”으로 찍으면 도매시장 쪽으로 들어가 한참 헤맵니다</div></li>
+    <li class="key"><div class="tl-t">02</div><div class="tl-h">전기자전거는 5분 연습하고 출발</div>
+      <div class="tl-d">오늘 유일한 사고와 유일한 고생이 전부 여기서 나왔습니다. 대여소 앞 공터면 충분합니다</div></li>
+    <li class="key"><div class="tl-t">03</div><div class="tl-h">토요일 아침 도로는 더 빠르다</div>
+      <div class="tl-d">성복 → 팔당 55분으로 잡았는데 실제로는 더 짧았습니다. 30분 여유가 그대로 남았습니다</div></li>
+    <li class="key"><div class="tl-t">04</div><div class="tl-h">비 예보 60%는 갈 이유가 된다</div>
+      <div class="tl-d">흐린 날은 8월 라이딩의 최적 조건입니다. 취소 대신 <b>판단 지점을 정해두는 쪽</b>이 옳았습니다</div></li>
+    <li class="key"><div class="tl-t">05</div><div class="tl-h">21km는 딱 좋았다</div>
+      <div class="tl-d">평균 심박 109, 실주행 1시간 22분. 회와 술로 이어지기에 완벽한 분량이었습니다</div></li>
+  </ul>
+</section>
 
 <div class="colophon">
   <div class="rule"></div>
-  <div class="co1">A Riding Proposal</div>
+  <div class="co1">A Ride Report</div>
   <div class="co2">BY SK</div>
   <div class="dot"></div>
 </div>
+
+<footer>
+  <p>2026년 8월 29일 토요일 팔당 라이딩 기록. 경로·거리·심박·고도는 갤럭시 워치 울트라와 삼성 헬스가 기록한
+  GPX 원본(4,857점, 1초 간격)에서 그대로 계산했습니다. 워치가 표시한 거리는 21.24km, 좌표 재적분값은 20.77km입니다.
+  시각은 모두 한국 표준시. 평균 속도는 정지 구간을 제외한 실주행 기준이며, 초당 60km/h를 넘는 GPS 튐 43점을
+  제외하고 계산했습니다. 순간 최고 속도는 손목 GPS로 신뢰할 수 없어 싣지 않았습니다.
+  사전 계획과 우천 시나리오는 <a href="plan.html">계획 페이지</a>에 그대로 남겨두었습니다.</p>
+</footer>
+
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="사진 크게 보기">
+  <button class="x" id="lbx" aria-label="닫기">✕</button>
+  <img id="lbimg" alt="">
+  <div class="cap" id="lbcap"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
-const COL={tunnel:"#2B5FA8",shade:"#2F6B5E",partial:"#F0A93B",exposed:"#E4633A"};
-const EXP={tunnel:0,shade:.28,partial:.62,exposed:1};
-const KLAB={tunnel:"터널 · 냉기",shade:"수목 그늘",partial:"부분 그늘",exposed:"완전 노출"};
-const TOTAL=10.6;
-
-const SEG=[
- {a:0,b:2.8,k:"exposed",n:"한강변",t:"팔당역 → 한강변 개방 구간",
-  d:"대여소를 나와 도로 300m를 탄 뒤 자전거길로 올라섭니다. 팔당대교를 지나 한강을 왼쪽에 끼고 2.8km. 그늘이 거의 없습니다.",
-  li:["팔당대교 북단 삼거리는 안내표지가 부실해 대여소에서 나오는 라이더와 국토종주 라이더가 뒤엉키는 지점입니다. 일행이 흩어지지 않게 일렬로.","팔당댐 방향으로 직진하면 자전거 통행 금지 구간이 나옵니다. 갈림길에서 자전거길 표지 확인.","비 온 뒤라면 도로에서 자전거길로 올라서는 턱이 미끄럽습니다. 08시대 태양은 아직 낮고, 오늘은 흐릴 가능성이 큽니다 — 더위보다 접지력에 신경 쓰세요."]},
- {a:2.8,b:4.2,k:"partial",n:"팔당댐",t:"팔당댐 접근 · 수목 구간",
-  d:"강이 넓어지면서 팔당댐이 보이기 시작합니다. 폐철도 노반 양옆으로 나무가 붙어 그늘이 끊겼다 이어졌다 합니다.",
-  li:["옛 철로 흔적이 노면에 남아 있는 구간. <b>젖은 금속은 얼음과 같습니다</b> — 비스듬히 밟지 마세요.","팔당댐을 배경으로 한 단체 사진 포인트. 5분을 넘기지 마세요."]},
- {a:4.2,b:4.5,k:"tunnel",n:"봉안터널",t:"봉안터널 — 오늘의 에어컨",
-  d:"이 코스에서 확실하게 시원한 유일한 구간이자, <b>오늘 비를 완전히 피할 수 있는 유일한 지붕</b>입니다. 들어서는 순간 냉장고 문을 연 것 같은 찬 바람이 나옵니다.",
-  li:["길이 약 260m. 마주 오는 자전거가 많으니 우측 통행.","비가 굵어지면 여기서 5분 끊고 갑니다. 다만 통행로이니 오래 서 있지는 마세요.","입구와 출구에서 젖은 노면이 갑자기 어두워집니다. 진입 전에 미리 감속.","여기서 잠깐 멈춰 물 한 모금 하기 좋습니다.","카카오맵 경로 정보에도 이 구간의 터널은 1회로 표시됩니다. 팔당~양수 사이 유일한 터널입니다."]},
- {a:4.5,b:5.6,k:"partial",n:"팔당호",t:"팔당호 전망 구간",
-  d:"터널을 빠져나오면 팔당호가 한눈에 들어옵니다. 수목과 개방이 번갈아 나옵니다.",
-  li:["비 온 날 아침엔 호수 위로 안개가 깔립니다 — 오늘 사진이 가장 잘 나올 만한 자리입니다.","노면이 젖어 있습니다. 코너에서 반드시 감속."]},
- {a:5.6,b:6.6,k:"shade",n:"능내역",t:"능내리 수목 구간 → 능내역",
-  d:"이 코스에서 그늘이 가장 안정적인 구간이자 유일한 제대로 된 거점입니다.",
-  li:["능내역(6.4km)은 국토종주 인증센터. 편의점·식당·화장실·자전거샵·처마가 모두 있습니다. <b>제대로 대기할 수 있는 유일한 지점</b>입니다.","<b>오늘의 2차 판단 지점(09:04)</b>. 계속 갈지(A) 여기서 반환할지(B)를 여기서 정합니다 — 지나면 되돌아올 곳이 없습니다.","갈 때는 5분만 서서 판단하고, 복귀 때 20분 쉬는 것으로 배분했습니다.","물은 여기서 보충합니다. 젖었으면 여기서 한 번 말리고 갑니다."]},
- {a:6.6,b:10.0,k:"exposed",n:"조안면",t:"능내역 → 북한강철교 · 최대 취약 구간",
-  d:"연꽃마을과 조안면 들판을 지나는 3.4km. 그늘도 <b>지붕도</b> 없습니다. 오늘 계획의 성패가 여기서 갈립니다.",
-  li:["<b>이 구간에는 비를 피할 곳이 전혀 없습니다.</b> 능내역에서 2차 판단을 하는 이유가 바로 이 3.4km입니다.","갈 때는 09:05 전후, 복귀는 09:40 이후 — 태양이 아직 낮고, 비가 그친다면 이 시간대입니다.","한 명이라도 처지면 전원 속도를 맞춥니다. 비 오는 날엔 그룹이 흩어지는 게 가장 위험합니다."]},
- {a:10.0,b:10.6,k:"partial",n:"북한강철교",t:"북한강철교 — 반환점",
-  d:"옛 중앙선 철교를 그대로 쓴 구간. 철제 트러스 안을 달립니다. 옆은 가려도 위는 뚫려 있습니다.",
-  li:["오늘의 대표 사진 지점. 비 예보라 20분에서 <b>15분</b>으로 줄였습니다.","<b>젖은 상판이 이 코스에서 가장 미끄럽습니다.</b> 철교 위에서는 브레이크·핸들 조작 없이 직진만. 사진은 세우고 찍으세요.","여기서 더 가면 두물머리(약 1.5km 추가)지만, 오늘은 비도 있고 복귀가 늦어져 권하지 않습니다.","반환 시각 09:40을 넘기지 마세요."]}
-];
-const PINKM=[0,3.5,4.35,5.0,6.42,8.3,10.4];
-
-/* 시간축 t = 08:00 이후 경과 분. 팔당역 08:00 도착 → 08:15 대여 → 08:35 출발 → 10:50 반납 */
-const T_GO=35, T_BACK=170;
-const SCH=[[0,0,0],[35,0,0],[54,4.3,0],[64,6.4,0],[85,10.6,0],[100,10.6,1],[120,6.4,1],[140,6.4,1],[170,0,1],[200,0,1]];
-
-/* 강수확률 — 기상청 2026-08-28 09시 발표(서울·경기 오전 60% / 오후 60%, 20~60mm)를
-   "수도권은 오전 중 비가 그칠 전망"에 맞춰 시간축에 배분한 추정값 */
-const RAINPT=[[6,70],[8,65],[9,60],[10,55],[11,50],[12,45]];
-function rainProb(h){
-  if(h<=RAINPT[0][0])return RAINPT[0][1];
-  for(let i=1;i<RAINPT.length;i++){
-    const a=RAINPT[i-1],b=RAINPT[i];
-    if(h<=b[0])return a[1]+(b[1]-a[1])*(h-a[0])/(b[0]-a[0]);
-  }
-  return RAINPT[RAINPT.length-1][1];
-}
-
-const POLY=[[37.5475,127.24379],[37.54788,127.2428],[37.54767,127.24239],[37.54724,127.24219],[37.54668,127.2428],[37.54632,127.24353],[37.54586,127.2444],[37.54564,127.24551],[37.54532,127.24614],[37.54523,127.24647],[37.54508,127.24635],[37.54505,127.24587],[37.54484,127.24526],[37.54443,127.24607],[37.54337,127.24972],[37.54181,127.25235],[37.54077,127.25423],[37.54076,127.25464],[37.5407,127.25529],[37.54086,127.25555],[37.54087,127.25587],[37.53942,127.25758],[37.53873,127.25839],[37.53771,127.25953],[37.53723,127.26005],[37.5363,127.26148],[37.53575,127.26248],[37.5352,127.26372],[37.53486,127.26443],[37.53453,127.26496],[37.53394,127.26605],[37.53372,127.26676],[37.53325,127.26844],[37.53248,127.26991],[37.5321,127.27067],[37.53161,127.2721],[37.53119,127.2732],[37.53063,127.27444],[37.52998,127.27612],[37.52928,127.2781],[37.52915,127.2786],[37.52909,127.27914],[37.52907,127.2803],[37.52899,127.28323],[37.52887,127.28383],[37.52857,127.28452],[37.52836,127.285],[37.52801,127.28549],[37.52753,127.28598],[37.52696,127.28637],[37.52574,127.28712],[37.52436,127.28789],[37.52333,127.28858],[37.52279,127.28916],[37.52228,127.28996],[37.52197,127.29085],[37.52184,127.29152],[37.52177,127.29208],[37.52178,127.29264],[37.52194,127.29367],[37.52227,127.2947],[37.52357,127.29654],[37.52371,127.29619],[37.52357,127.29654],[37.52543,127.29865],[37.52659,127.29918],[37.52725,127.29923],[37.52866,127.29905],[37.5298,127.29883],[37.53075,127.29875],[37.5313,127.2988],[37.53193,127.29903],[37.53241,127.2993],[37.53432,127.30068],[37.53508,127.30126],[37.5358,127.30165],[37.53647,127.30187],[37.53751,127.30184],[37.53884,127.30146],[37.53963,127.30137],[37.54013,127.30143],[37.54129,127.30183],[37.54256,127.30234],[37.54338,127.30248],[37.54438,127.30288],[37.54503,127.30328],[37.54569,127.30363],[37.54717,127.30493],[37.54866,127.3062],[37.54983,127.30718],[37.5514,127.30863],[37.55198,127.30957],[37.55236,127.31052],[37.55246,127.31112],[37.55251,127.31155],[37.55246,127.31269],[37.55197,127.31428],[37.55124,127.31624]];
-
-const FOOD=[
- {r:"1",n:"온달수산",s:"가락몰 1층 A-23호 · 06:00–21:00",
-  bd:[["시세 투명","#2B5FA8"],["06시 오픈","#2F6B5E"]],
-  kv:[["영업","매일 06:00 – 21:00"],["전화","02-404-2606"],["위치","가락몰 1층 A-23호"],["특징","인어교주해적단 등록 점포"]],
-  p:"회만 떠서 사 가는 오늘 방식에서는 여기가 1순위입니다. 인어교주해적단 등록 점포라 <b>당일 시세가 공개돼 있고</b>, 앱으로 값을 확인한 뒤 들어갈 수 있습니다. 앉아서 먹는 게 아니라 사 가는 거라면, 결국 남는 변수는 가격과 상태 두 가지뿐입니다.",
-  li:["회전율이 높아 횟감 상태가 안정적이라는 평.","06시부터 열어 시간 제약이 없습니다 — C 시나리오(대여 취소, 이른 도착)에서도 그대로 씁니다.","시세를 알고 가면 흥정할 일이 없습니다. 가락몰은 정찰제에 가깝습니다."],
-  w:"원래 ‘예약 필수’로 분류돼 있었지만 그건 앉아서 먹을 때 이야기입니다. 회만 사 간다면 예약은 필요 없고, 대신 <b>인원과 양(1인 300~350g)</b>을 미리 정해 가세요."},
- {r:"2",n:"영재수산",s:"가락몰 판매동 1층 C-10호 · 07:00–22:00",
-  bd:[["숙성회","#2F6B5E"],["무료주차","#2F6B5E"]],
-  kv:[["영업","매일 07:00 – 22:00 · 연중무휴"],["전화","0507-1469-2890"],["위치","가락몰 판매동 1층 C-10호"],["평점","다이닝코드 4.7"]],
-  p:"숙성회 평이 좋은 집입니다. 두툼하게 썰어 나온다는 후기가 많고, 맛·가격·친절 항목이 고르게 높습니다. 주차가 무료로 명시돼 있어 차로 들어가는 오늘 동선과 잘 맞습니다.",
-  li:["07시에 열기 때문에 라이딩이 예정보다 빨리 끝나도 대응이 됩니다.","다이닝코드 ‘가락시장 초장집’ 목록에도 올라 있는 점포 — 회를 사서 나가는 손님에 익숙합니다.","전화가 되니 <b>가는 길에 미리 어종과 양을 말해두면</b> 도착해서 기다리는 시간이 줄어듭니다."],
-  w:"11:45 도착 기준으로 <b>팔당역 출발할 때(11:05) 전화</b>해 두면 가장 매끄럽습니다. “초장집 가져갈 건데 민어와 전어 얼마어치”까지 말해두세요."},
- {r:"3",n:"수동상회",s:"가락몰 5관 회센터 1층 · 10:00–23:00",
-  bd:[["민어","#E4633A"],["2대째","#2F6B5E"]],
-  kv:[["영업","매일 10:00 – 23:00 (L.O 21:30)"],["전화","02-401-0169"],["위치","가락몰 5관 회센터 1층"],["가격","활어모듬회 2인 70,000원선"]],
-  p:"다이닝코드에서 민어회 맛집으로 분류되는 집이라 <b>8월 민어 하나만 보면 여전히 강력한 카드</b>입니다. 다만 이 집의 진짜 강점은 상차림비 없이 산낙지·물회까지 풀코스로 나오는 구성이었고, 회만 사 가는 오늘 방식에서는 그 장점이 살지 않아 순위를 내렸습니다.",
-  li:["2대째 운영, 수십 년 단골이 꾸준한 집.","민어를 제대로 보고 싶다면 여기부터 들러 물어보세요.","10시 오픈 — A 시나리오(11:45 도착)에는 문제없지만, C 시나리오로 일찍 갈 땐 닫혀 있을 수 있습니다."],
-  w:"만약 이 집이 마음에 들면 <b>초장집을 취소하고 여기 앉는 선택지</b>도 있습니다. 다만 서울식당 예약이 이미 잡혔으니, 그건 다음 기회로 두는 편이 깔끔합니다."},
- {r:"4",n:"놀부수산",s:"가락몰 판매동 1층 B23호 · 24시간",
-  bd:[["24시간","#2F6B5E"],["대게·킹크랩","#F0A93B"]],
-  kv:[["영업","24시간 · 연중무휴"],["위치","가락몰 판매동 1층 B23호"],["특징","대게·킹크랩 강세"]],
-  p:"메인이 아니라 <b>곁들임 담당</b>입니다. 회를 사 가는 방식에서는 스끼다시가 따라오지 않아 상이 허전해지는데, 네댓 명이면 대게 한 마리를 더해 그 빈자리를 메우기 좋습니다.",
-  li:["24시간이라 시간 리스크가 0.","푸짐함과 응대에 대한 평이 좋습니다.","찜은 시간이 걸립니다. 회를 고르기 <b>전에</b> 먼저 주문해 두고 다른 점포를 도세요."],
-  w:"갑각류를 초장집에 들고 가도 되는지는 집마다 다릅니다. <b>서울식당에 미리 물어보세요</b> — 안 된다면 회만 들고 가면 됩니다."}
-];
-
-/* ---------- geometry ---------- */
-function hav(a,b){
-  const R=6371000,p1=a[0]*Math.PI/180,p2=b[0]*Math.PI/180;
-  const dp=p2-p1,dl=(b[1]-a[1])*Math.PI/180;
-  const h=Math.sin(dp/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)**2;
-  return 2*R*Math.asin(Math.sqrt(h));
-}
-const CUM=[0];
-for(let i=1;i<POLY.length;i++)CUM.push(CUM[i-1]+hav(POLY[i-1],POLY[i]));
-const LEN=CUM[CUM.length-1];
-function ptAt(km){
-  const t=Math.max(0,Math.min(1,km/TOTAL))*LEN;
-  for(let i=1;i<CUM.length;i++){
-    if(CUM[i]>=t){
-      const f=(t-CUM[i-1])/(CUM[i]-CUM[i-1]||1);
-      return [POLY[i-1][0]+(POLY[i][0]-POLY[i-1][0])*f, POLY[i-1][1]+(POLY[i][1]-POLY[i-1][1])*f];
-    }
-  }
-  return POLY[POLY.length-1];
-}
-function sliceRoute(km0,km1){
-  const t0=km0/TOTAL*LEN, t1=km1/TOTAL*LEN, out=[ptAt(km0)];
-  for(let i=0;i<POLY.length;i++){if(CUM[i]>t0&&CUM[i]<t1)out.push(POLY[i])}
-  out.push(ptAt(km1));return out;
-}
-
-/* ==========================================================
-   지도 엔진 — 카카오맵 우선, 실패하면 OpenStreetMap으로 자동 전환
-   아래 따옴표 안에 카카오 JavaScript 키를 붙여넣으세요.
-   developers.kakao.com → 내 애플리케이션 → 앱 키 → JavaScript 키
-   그리고 [앱 설정 > 플랫폼 > Web]에 사이트 도메인을 등록해야 합니다:
-     https://skda0228.github.io
-   키가 비어 있거나 file:// 로 열면 자동으로 OSM 지도가 뜹니다.
-   ========================================================== */
 const KAKAO_KEY="8e1a40dfbe61117c4709105782a196eb";
+const RIDE={"track":[[37.545785,127.245058],[37.545713,127.24544],[37.54549,127.245909],[37.545287,127.246211],[37.545061,127.246465],[37.544959,127.246554],[37.545091,127.246485],[37.545244,127.246328],[37.545483,127.246013],[37.545679,127.245655],[37.545272,127.246244],[37.545163,127.24637],[37.545011,127.246507],[37.544954,127.246538],[37.544498,127.246659],[37.544363,127.246728],[37.544299,127.246797],[37.543963,127.2482],[37.543661,127.24909],[37.543383,127.249783],[37.542864,127.250762],[37.542487,127.251322],[37.541161,127.253417],[37.541043,127.253639],[37.540887,127.254023],[37.540823,127.25412],[37.540765,127.254408],[37.540773,127.254748],[37.540658,127.255064],[37.540628,127.255225],[37.540662,127.255356],[37.54075,127.255451],[37.540751,127.255585],[37.540881,127.255772],[37.540873,127.25583],[37.54083,127.255925],[37.540637,127.256212],[37.540386,127.256506],[37.538968,127.258044],[37.537927,127.259219],[37.537273,127.260006],[37.53688,127.260609],[37.536148,127.261814],[37.535598,127.262921],[37.535281,127.26364],[37.534855,127.264434],[37.534231,127.265505],[37.534012,127.265957],[37.533815,127.266477],[37.533371,127.268058],[37.533239,127.268446],[37.533024,127.268924],[37.532329,127.27018],[37.532144,127.270581],[37.531593,127.272211],[37.531318,127.272915],[37.530873,127.273924],[37.530645,127.274401],[37.529477,127.277511],[37.529315,127.277988],[37.529168,127.278606],[37.529107,127.27905],[37.52908,127.279669],[37.529092,127.280328],[37.52902,127.281689],[37.52869,127.284288],[37.528458,127.284817],[37.52822,127.285217],[37.527976,127.285545],[37.527715,127.285824],[37.527339,127.28615],[37.526861,127.286468],[37.525277,127.28737],[37.52502,127.287541],[37.52478,127.287663],[37.52415,127.288027],[37.523768,127.288265],[37.52333,127.28859],[37.522742,127.289188],[37.522563,127.289429],[37.52234,127.289828],[37.522097,127.290396],[37.522018,127.29063],[37.521868,127.291242],[37.521789,127.291783],[37.521766,127.292215],[37.521782,127.292719],[37.521858,127.293284],[37.522028,127.294038],[37.522134,127.294361],[37.522275,127.294712],[37.522444,127.295029],[37.52295,127.295708],[37.524776,127.298043],[37.525008,127.29829],[37.525235,127.298496],[37.525582,127.298759],[37.525818,127.2989],[37.526096,127.299031],[37.526479,127.299161],[37.526798,127.299226],[37.527069,127.299246],[37.527831,127.299207],[37.528214,127.299159],[37.528644,127.299094],[37.529709,127.298887],[37.530516,127.298786],[37.530849,127.298773],[37.531346,127.298838],[37.531828,127.29897],[37.532342,127.29923],[37.532944,127.299616],[37.534794,127.30106],[37.535325,127.30143],[37.535497,127.301538],[37.535691,127.301635],[37.535894,127.301721],[37.536241,127.301837],[37.536464,127.301878],[37.536948,127.30192],[37.537486,127.301884],[37.537773,127.301822],[37.538588,127.301556],[37.539083,127.301429],[37.53952,127.301385],[37.539916,127.3014],[37.540244,127.301449],[37.540543,127.301537],[37.540908,127.301677],[37.54173,127.302033],[37.542414,127.302274],[37.542711,127.302353],[37.54342,127.30248],[37.543645,127.302548],[37.544435,127.302908],[37.54474,127.303095],[37.545092,127.303339],[37.545244,127.303409],[37.545484,127.303489],[37.545633,127.303587],[37.546482,127.3043],[37.551022,127.308234],[37.551511,127.308757],[37.551802,127.30917],[37.551963,127.30947],[37.552323,127.310346],[37.552399,127.310633],[37.552467,127.311065],[37.552514,127.311502],[37.552522,127.311852],[37.552493,127.312389],[37.552385,127.313116],[37.552221,127.313723],[37.550141,127.319217],[37.550105,127.319355],[37.550128,127.319329],[37.551392,127.315972],[37.551723,127.315129],[37.552246,127.313703],[37.552355,127.31333],[37.552422,127.313017],[37.552525,127.312186],[37.552536,127.311751],[37.552491,127.311248],[37.552394,127.310603],[37.552284,127.310228],[37.551992,127.309552],[37.551735,127.309084],[37.551587,127.308871],[37.551391,127.308631],[37.550928,127.308155],[37.550061,127.307375],[37.54648,127.304282],[37.54567,127.303607],[37.545479,127.303475],[37.545128,127.303339],[37.54441,127.30288],[37.54353,127.302482],[37.543312,127.302421],[37.54266,127.302295],[37.542279,127.302189],[37.541973,127.302082],[37.540554,127.301496],[37.540207,127.301391],[37.540005,127.301358],[37.539438,127.301352],[37.538917,127.301417],[37.537838,127.301737],[37.537394,127.301839],[37.537115,127.301881],[37.536882,127.30189],[37.536531,127.301862],[37.536291,127.301835],[37.536094,127.30179],[37.535741,127.301652],[37.535432,127.301491],[37.535225,127.301363],[37.534491,127.300824],[37.532854,127.299544],[37.53252,127.299313],[37.531805,127.298909],[37.531654,127.298857],[37.531381,127.298797],[37.530864,127.298723],[37.530471,127.298732],[37.530037,127.298796],[37.528604,127.299064],[37.528211,127.299122],[37.527726,127.299176],[37.527047,127.299216],[37.526812,127.299202],[37.526463,127.299127],[37.526094,127.299007],[37.525786,127.298867],[37.525524,127.298712],[37.525271,127.298516],[37.525022,127.298295],[37.524789,127.29805],[37.524041,127.297107],[37.522444,127.294999],[37.522348,127.294836],[37.522237,127.294592],[37.522002,127.293872],[37.521866,127.293263],[37.521825,127.292887],[37.521816,127.292493],[37.521869,127.292218],[37.521929,127.29142],[37.521985,127.291054],[37.522059,127.290814],[37.522356,127.290141],[37.522563,127.28962],[37.522723,127.289288],[37.522825,127.28913],[37.522995,127.288937],[37.523328,127.288627],[37.523771,127.288292],[37.524999,127.287554],[37.526889,127.286473],[37.527249,127.286235],[37.527612,127.285947],[37.527805,127.285757],[37.527981,127.285552],[37.528181,127.285274],[37.52849,127.284789],[37.528566,127.284696],[37.528714,127.28428],[37.528885,127.283899],[37.528898,127.283984],[37.528951,127.283921],[37.529231,127.283407],[37.529193,127.283422],[37.529161,127.283406],[37.529154,127.28336],[37.529176,127.283212],[37.529881,127.280713],[37.529216,127.278476],[37.529297,127.2781],[37.529476,127.277544],[37.530299,127.275294],[37.530616,127.274512],[37.531188,127.273246],[37.531405,127.272723],[37.532054,127.270871],[37.532302,127.270308],[37.533025,127.268911],[37.533238,127.268438],[37.533395,127.267971],[37.53377,127.266581],[37.533939,127.266115],[37.534098,127.265772],[37.534265,127.265458],[37.535049,127.264128],[37.535818,127.262472],[37.536201,127.261713],[37.536685,127.260905],[37.537218,127.260072],[37.537445,127.259745],[37.537602,127.259552],[37.539609,127.257429],[37.540357,127.256608],[37.54072,127.256188],[37.540814,127.256055],[37.540858,127.255957],[37.540889,127.255824],[37.540883,127.255669],[37.540831,127.255533],[37.540693,127.255299],[37.540652,127.255121],[37.540658,127.25502],[37.54075,127.25476],[37.540745,127.254643],[37.540731,127.254634],[37.540679,127.254687],[37.54015,127.255438],[37.540734,127.254482],[37.540771,127.254379],[37.540762,127.25416],[37.540924,127.253911],[37.541137,127.253454],[37.542641,127.251104],[37.542831,127.250787],[37.543408,127.249708],[37.543683,127.249018],[37.543965,127.248155],[37.544354,127.246542],[37.544384,127.246513],[37.544422,127.246516],[37.544527,127.246595],[37.544892,127.246719],[37.545014,127.246612],[37.545234,127.246367],[37.545426,127.246104],[37.545546,127.245903],[37.54564,127.245665],[37.545748,127.245179]],"marks":[{"lat":37.545785,"lon":127.245058,"t":"08:06","km":0.0,"n":"출발 · 바이크토탈","d":"08:06 페달을 밟다","k":"go"},{"lat":37.529092,"lon":127.280328,"t":"08:41","km":4.0,"n":"봉안터널","d":"길이 260m · 유일한 냉기 구간","k":""},{"lat":37.521778,"lon":127.292647,"t":"08:48","km":5.5,"n":"능내역","d":"갈 때는 그대로 통과","k":""},{"lat":37.550105,"lon":127.319355,"t":"09:16","km":10.3,"n":"북한강철교 · 반환점","d":"오늘의 최원거리 지점","k":"turn"},{"lat":37.521815,"lon":127.292626,"t":"09:47","km":15.2,"n":"능내역 · 복귀 휴식","d":"여기서 한 번 쉬고","k":""},{"lat":37.545748,"lon":127.245179,"t":"10:09","km":20.7,"n":"반납 · 바이크토탈","d":"10:09 완주","k":"end"}],"prof":[[0.0,0.0,0,30.6,0],[0.5,0.02,101,29.1,2.5],[0.9,0.07,120,28.5,4.5],[1.1,0.12,112,27.5,6.8],[1.4,0.16,107,26.8,7.6],[4.6,0.23,99,27.6,1.1],[4.8,0.28,105,28.8,2.0],[6.7,0.33,103,27.8,1.5],[6.9,0.37,99,26.9,2.5],[7.2,0.42,95,27.4,3.7],[10.7,0.5,103,26.0,1.3],[10.9,0.53,102,25.7,1.8],[11.4,0.57,98,25.9,7.6],[11.7,0.64,103,25.0,7.9],[11.9,0.71,101,25.1,10.1],[12.2,0.78,96,25.1,11.7],[12.4,0.84,100,25.6,16.2],[12.7,0.9,94,25.8,16.1],[12.9,0.96,98,25.4,15.4],[13.2,1.02,105,25.3,14.6],[13.4,1.08,111,24.7,14.5],[13.7,1.15,111,26.1,14.4],[14.0,1.2,130,30.3,13.9],[14.2,1.23,132,30.3,12.3],[17.1,1.28,114,31.6,0.9],[17.3,1.3,104,33.0,1.2],[17.6,1.32,106,34.3,1.4],[17.8,1.34,115,35.5,1.7],[18.1,1.37,118,36.6,5.2],[18.3,1.39,123,38.2,5.3],[19.0,1.41,130,39.2,2.5],[19.3,1.45,121,39.8,4.0],[19.5,1.5,118,39.8,6.0],[19.8,1.55,116,41.1,7.1],[20.0,1.6,111,40.1,11.7],[20.3,1.65,112,41.0,12.1],[20.5,1.71,116,41.0,12.2],[20.8,1.76,113,40.9,12.6],[21.0,1.82,115,41.4,13.1],[21.3,1.88,117,41.4,13.5],[21.5,1.94,112,41.3,13.8],[21.8,2.0,111,41.4,14.1],[22.0,2.06,115,41.4,14.2],[22.3,2.12,111,41.2,14.2],[22.5,2.17,112,40.8,14.3],[22.8,2.25,113,40.4,15.1],[23.0,2.31,112,40.0,15.4],[23.3,2.38,116,39.4,15.6],[23.5,2.44,111,38.9,15.6],[23.8,2.51,103,39.0,15.5],[24.0,2.58,108,38.6,15.9],[24.3,2.65,111,37.9,16.3],[24.5,2.72,106,37.8,17.0],[24.8,2.79,107,38.2,16.8],[25.0,2.85,110,37.4,16.5],[25.3,2.91,112,37.6,15.4],[25.5,2.96,113,37.0,14.6],[25.8,3.02,111,38.2,13.9],[26.0,3.07,116,38.1,13.0],[26.3,3.12,109,37.9,13.0],[26.5,3.17,110,38.0,12.7],[26.8,3.21,108,37.9,11.8],[31.4,3.25,101,38.5,0.4],[31.6,3.31,86,38.7,1.0],[31.9,3.37,89,38.6,1.7],[32.1,3.43,96,38.6,2.3],[32.4,3.48,96,38.5,13.7],[32.6,3.53,96,38.8,13.5],[32.9,3.59,99,38.8,13.3],[33.1,3.65,106,39.2,13.1],[33.4,3.71,94,39.8,13.6],[33.6,3.77,97,40.0,14.1],[33.9,3.83,90,40.6,14.3],[34.1,3.89,93,41.4,14.4],[34.4,3.95,93,41.6,14.4],[35.9,4.35,111,40.2,15.1],[36.1,4.42,104,39.5,15.4],[36.4,4.49,100,39.0,15.7],[36.6,4.57,105,37.5,26.7],[36.9,4.64,104,37.8,17.6],[37.1,4.71,108,38.7,17.8],[37.4,4.77,107,38.5,16.9],[37.6,4.82,106,37.6,15.3],[37.9,4.85,114,37.7,12.5],[38.1,4.89,105,37.6,10.8],[38.4,4.95,101,37.7,10.3],[38.6,5.0,99,37.7,10.5],[38.9,5.05,103,37.9,11.9],[39.1,5.1,105,37.8,12.5],[39.4,5.16,107,37.8,12.8],[39.6,5.21,104,38.3,13.0],[39.9,5.26,104,38.5,12.6],[40.1,5.31,107,39.0,12.1],[40.4,5.35,104,39.3,11.8],[40.6,5.4,104,39.9,11.1],[41.5,5.43,108,40.5,3.6],[41.7,5.45,103,40.6,2.5],[42.0,5.49,101,41.3,3.7],[42.2,5.54,106,41.7,5.3],[42.5,5.6,109,42.5,10.1],[42.7,5.66,113,42.9,12.9],[43.0,5.72,112,43.1,14.3],[43.2,5.78,114,43.8,14.6],[43.5,5.84,114,44.7,14.7],[43.7,5.9,114,45.3,14.4],[44.0,5.96,114,45.2,14.2],[44.2,6.02,0,45.8,14.2],[44.5,6.08,112,44.9,14.5],[44.7,6.15,109,44.3,14.9],[45.0,6.22,108,43.4,15.8],[45.2,6.3,100,42.3,16.5],[45.5,6.36,97,42.3,16.7],[45.7,6.42,100,42.1,16.3],[46.0,6.48,99,42.1,15.4],[46.2,6.54,103,42.1,14.6],[46.5,6.6,106,42.0,14.3],[46.7,6.66,107,43.0,14.3],[47.0,6.72,111,43.6,14.2],[47.2,6.78,112,44.3,14.4],[47.5,6.85,116,45.0,14.7],[47.7,6.91,116,45.6,14.7],[48.0,6.97,117,46.5,15.0],[48.2,7.03,122,47.0,14.8],[48.5,7.09,117,47.9,14.6],[48.7,7.16,118,47.6,14.8],[49.0,7.22,116,47.7,15.0],[49.2,7.29,113,47.9,15.4],[49.5,7.35,111,46.8,15.7],[49.7,7.41,107,46.9,15.0],[50.7,7.44,105,46.1,2.3],[51.0,7.48,109,47.4,2.6],[51.2,7.53,108,45.7,4.3],[51.5,7.59,112,45.4,5.8],[51.7,7.65,114,44.7,12.3],[52.0,7.71,108,44.0,13.9],[52.2,7.78,100,43.3,15.0],[52.5,7.85,98,42.8,15.5],[52.7,7.91,91,42.1,15.4],[53.0,7.97,90,41.2,15.2],[53.2,8.03,91,40.4,15.2],[53.5,8.1,91,40.1,15.3],[53.7,8.16,100,40.3,15.5],[54.0,8.23,104,40.0,15.8],[54.2,8.3,100,38.7,15.8],[54.5,8.36,97,38.0,15.7],[54.7,8.4,96,38.1,14.2],[55.0,8.43,98,38.0,11.7],[55.2,8.46,105,38.3,10.0],[55.5,8.51,102,39.6,8.8],[55.7,8.56,107,40.2,9.4],[56.0,8.62,110,40.0,11.3],[56.2,8.68,107,40.0,12.8],[56.5,8.74,108,40.1,13.9],[56.7,8.81,112,40.9,15.1],[57.0,8.87,106,40.0,15.6],[57.2,8.94,104,40.1,15.9],[57.5,9.02,111,40.3,16.7],[57.7,9.1,110,39.6,17.5],[58.0,9.17,109,38.4,18.0],[58.2,9.24,113,39.0,17.8],[58.5,9.31,117,41.0,17.3],[58.7,9.37,114,41.3,16.5],[59.0,9.44,117,41.5,16.2],[59.2,9.51,118,41.1,16.5],[59.5,9.57,122,44.6,15.9],[59.7,9.66,122,42.2,17.2],[60.0,9.74,128,42.8,17.5],[60.2,9.8,127,43.3,17.1],[60.5,9.85,121,43.0,16.9],[60.7,9.9,107,42.9,14.5],[67.7,9.94,98,42.1,0.1],[68.0,9.99,95,42.3,0.5],[68.2,10.05,100,42.4,1.0],[68.5,10.11,100,42.3,1.4],[68.7,10.17,103,42.3,14.1],[69.0,10.24,104,42.0,15.2],[69.2,10.3,100,42.0,15.3],[69.5,10.34,108,41.6,13.7],[70.2,10.35,97,41.9,4.3],[70.4,10.4,99,42.3,4.1],[70.7,10.46,97,42.2,6.7],[70.9,10.51,95,42.4,8.3],[71.2,10.57,94,42.4,13.0],[71.4,10.63,101,42.0,13.8],[71.7,10.69,107,42.2,14.1],[71.9,10.75,108,42.5,14.3],[72.2,10.82,106,42.4,14.7],[72.4,10.88,109,42.5,15.0],[72.7,10.94,109,41.8,15.3],[72.9,11.02,115,41.1,16.2],[73.2,11.09,106,42.0,16.5],[73.4,11.14,101,42.5,15.5],[73.7,11.2,110,40.0,15.6],[73.9,11.27,111,40.0,14.7],[74.2,11.34,109,39.6,14.8],[74.4,11.41,108,38.1,16.5],[74.7,11.47,103,38.2,16.0],[74.9,11.54,108,35.7,16.4],[75.2,11.6,106,38.1,16.0],[75.4,11.67,106,38.3,15.7],[75.7,11.75,119,38.2,16.6],[75.9,11.83,123,38.4,17.3],[76.2,11.91,120,38.0,18.2],[76.4,11.98,120,37.8,18.3],[76.7,12.05,113,38.1,18.1],[76.9,12.12,114,38.1,17.5],[77.2,12.18,115,37.1,16.5],[77.4,12.24,118,35.7,16.0],[77.7,12.31,107,35.6,15.7],[77.9,12.38,108,35.9,15.6],[78.2,12.44,98,37.7,15.6],[78.4,12.51,104,37.7,15.9],[78.7,12.58,113,37.8,16.3],[78.9,12.66,114,38.1,16.6],[79.2,12.73,120,38.8,17.2],[79.4,12.8,114,40.0,16.8],[79.7,12.86,106,40.3,16.4],[79.9,12.93,112,41.1,16.1],[80.2,12.99,112,42.7,15.6],[80.4,13.06,118,42.6,15.8],[80.7,13.12,117,43.3,15.5],[80.9,13.19,121,43.9,15.3],[81.3,13.23,121,44.1,11.3],[81.6,13.29,108,44.0,11.0],[81.8,13.35,115,44.2,10.8],[82.1,13.42,114,44.5,11.9],[82.3,13.48,114,45.0,15.2],[82.6,13.55,111,45.2,15.6],[82.8,13.61,110,44.8,15.8],[83.1,13.68,110,44.4,16.1],[83.3,13.76,107,43.4,16.4],[83.6,13.82,105,43.2,16.5],[83.8,13.89,102,42.4,16.5],[84.1,13.96,102,41.0,16.5],[84.3,14.04,101,40.3,17.1],[84.6,14.11,106,39.8,17.4],[84.8,14.19,109,39.6,18.3],[85.1,14.27,111,39.9,18.8],[85.3,14.35,119,39.6,18.8],[85.6,14.43,121,40.2,18.9],[85.8,14.5,113,41.1,18.2],[86.1,14.57,110,41.8,17.6],[86.3,14.64,111,42.3,17.0],[86.6,14.7,120,42.8,16.5],[86.8,14.76,118,42.8,16.0],[87.1,14.81,119,42.4,14.6],[100.0,14.85,97,42.0,0.1],[100.2,14.91,98,41.4,0.4],[100.5,15.0,104,40.4,0.8],[100.7,15.1,109,41.0,1.2],[101.0,15.19,115,39.1,20.3],[101.2,15.23,128,37.6,19.0],[101.5,15.37,119,36.7,22.2],[101.7,15.45,110,36.2,21.0],[102.0,15.55,106,35.7,22.0],[102.2,15.63,93,35.5,23.9],[102.5,15.71,104,35.6,20.6],[102.7,15.79,105,35.4,20.3],[103.0,15.85,105,35.6,17.7],[103.2,15.9,105,35.5,16.5],[103.5,15.96,102,35.4,14.8],[103.7,16.01,102,36.1,13.6],[104.0,16.07,101,35.8,13.1],[104.2,16.12,100,36.7,12.9],[104.5,16.17,106,36.6,12.5],[104.7,16.21,111,37.3,11.9],[105.0,16.26,109,38.2,11.3],[105.2,16.3,111,37.8,10.9],[106.0,16.48,101,38.8,13.1],[106.2,16.63,124,39.7,19.7],[107.4,16.96,123,37.7,15.1],[107.6,17.06,129,36.4,17.0],[107.9,17.16,126,36.0,18.2],[108.1,17.25,128,35.3,30.4],[108.4,17.34,123,35.6,22.7],[108.6,17.43,123,35.5,22.3],[108.9,17.52,123,35.5,21.6],[109.1,17.61,120,35.3,21.7],[109.4,17.71,120,34.7,22.0],[109.6,17.81,127,35.5,22.8],[109.9,17.91,135,35.2,23.4],[110.1,17.99,130,35.0,22.7],[110.4,18.07,125,34.8,21.7],[110.6,18.15,119,35.4,19.9],[110.9,18.22,119,35.9,18.5],[111.1,18.29,121,36.5,17.8],[111.4,18.36,125,37.1,17.4],[111.6,18.44,126,37.7,17.4],[111.9,18.51,125,38.3,17.5],[112.1,18.58,122,38.8,17.6],[112.4,18.66,123,39.1,18.1],[112.6,18.74,123,39.0,18.3],[112.9,18.82,125,38.9,18.4],[113.1,18.89,119,38.8,18.4],[113.4,18.97,117,38.6,18.3],[113.6,19.04,113,38.5,17.9],[113.9,19.11,111,37.8,17.8],[114.1,19.19,110,37.4,17.8],[114.4,19.25,111,37.3,17.4],[114.6,19.32,106,36.6,16.7],[114.9,19.36,104,35.2,15.0],[115.1,19.39,105,32.8,12.5],[115.4,19.44,99,29.8,11.3],[115.7,19.59,99,28.7,15.9],[116.9,19.69,102,27.6,4.9],[117.5,19.74,107,26.6,4.9],[117.7,19.82,103,22.3,9.0],[118.0,19.87,106,22.4,10.1],[118.2,19.95,112,22.1,11.7],[118.5,20.02,110,22.2,17.1],[118.7,20.08,112,22.4,15.7],[119.0,20.13,110,21.5,15.3],[119.2,20.18,109,21.4,13.9],[119.5,20.25,99,21.9,13.7],[119.7,20.33,114,22.4,15.3],[120.0,20.41,120,22.7,16.8],[120.2,20.48,118,22.6,18.0],[120.6,20.5,114,23.8,12.6],[121.7,20.58,116,24.5,4.8],[121.9,20.64,116,25.7,5.8],[122.2,20.69,111,26.3,6.9]],"turnIdx":154};
+const T=RIDE.track, M=RIDE.marks, P=RIDE.prof, TURN=RIDE.turnIdx;
+const COL={go:"#16302C",turn:"#E4633A",end:"#16302C",mid:"#2F6B5E"};
 
-let mapReady=false, bootDone=false, setActiveLine=()=>{}, setRider=()=>{};
+/* ---------- 지나간 시각 표 ---------- */
+document.getElementById("markTbl").innerHTML=M.map((m,i)=>
+  '<tr><td class="pri" style="color:'+(COL[m.k]||COL.mid)+'">'+m.t+'</td>'+
+  '<td><b>'+m.n+'</b><br><span style="font-size:13px;color:#6E8480">'+m.d+'</span></td>'+
+  '<td class="num">'+m.km.toFixed(1)+'km</td></tr>').join("");
 
+/* ---------- 지도 ---------- */
+let mapReady=false;
 function engineLabel(n){document.getElementById("engName").textContent=n}
-
+function pinHTML(m,i){
+  const c=m.k==="turn"?"turn":(m.k==="go"||m.k==="end")?"go":"";
+  return '<div class="mpin '+c+'">'+(i+1)+'</div>';
+}
 function initKakao(){
   if(mapReady)return; mapReady=true;
-  const map=new kakao.maps.Map(document.getElementById("map"),
-    {center:new kakao.maps.LatLng(37.537,127.28),level:6});
-  map.addControl(new kakao.maps.ZoomControl(),kakao.maps.ControlPosition.RIGHT);
   const ll=p=>new kakao.maps.LatLng(p[0],p[1]);
-
-  new kakao.maps.Polyline({map,path:POLY.map(ll),
-    strokeWeight:11,strokeColor:"#FFFFFF",strokeOpacity:.9,strokeStyle:"solid"});
-
-  const lines=SEG.map((s,i)=>{
-    const ln=new kakao.maps.Polyline({map,path:sliceRoute(s.a,s.b).map(ll),
-      strokeWeight:5,strokeColor:COL[s.k],strokeOpacity:.85,strokeStyle:"solid",clickable:true});
-    kakao.maps.event.addListener(ln,"click",()=>gotoSeg(i));
-    return ln;
-  });
-
-  SEG.forEach((s,i)=>{
+  const map=new kakao.maps.Map(document.getElementById("map"),
+    {center:ll(T[0]),level:6});
+  map.addControl(new kakao.maps.ZoomControl(),kakao.maps.ControlPosition.RIGHT);
+  const path=T.map(ll);
+  new kakao.maps.Polyline({map,path,strokeWeight:9,strokeColor:"#FFFFFF",
+    strokeOpacity:.85,strokeStyle:"solid",zIndex:1});
+  new kakao.maps.Polyline({map,path:path.slice(0,TURN+1),strokeWeight:5,
+    strokeColor:"#2F6B5E",strokeOpacity:.95,strokeStyle:"solid",zIndex:2});
+  new kakao.maps.Polyline({map,path:path.slice(TURN),strokeWeight:4,
+    strokeColor:"#2B5FA8",strokeOpacity:.8,strokeStyle:"shortdash",zIndex:3});
+  M.forEach((m,i)=>{
     const el=document.createElement("div");
-    el.className="pin";el.style.background=COL[s.k];el.textContent=i+1;
-    el.title=(i+1)+". "+s.t;el.onclick=()=>gotoSeg(i);
-    new kakao.maps.CustomOverlay({map,position:ll(ptAt(PINKM[i])),content:el,
-      xAnchor:.5,yAnchor:.5,zIndex:4,clickable:true});
+    el.innerHTML=pinHTML(m,i); el.style.cursor="pointer";
+    el.title=m.t+" · "+m.n;
+    const ov=new kakao.maps.CustomOverlay({map,position:ll([m.lat,m.lon]),
+      content:el,xAnchor:.5,yAnchor:.5,zIndex:10});
+    const iw=new kakao.maps.InfoWindow({position:ll([m.lat,m.lon]),
+      content:'<div style="padding:7px 10px;font-size:13px;white-space:nowrap">'+
+        '<b>'+m.n+'</b><br>'+m.t+' · '+m.km.toFixed(1)+'km</div>'});
+    let open=false;
+    el.onclick=()=>{open?iw.close():iw.open(map,new kakao.maps.Marker({position:ll([m.lat,m.lon])}));open=!open};
   });
-
-  const rEl=document.createElement("div");rEl.className="rdot";
-  const rOv=new kakao.maps.CustomOverlay({map,position:ll(ptAt(0)),content:rEl,
-    xAnchor:.5,yAnchor:.5,zIndex:9});
-
-  const bounds=new kakao.maps.LatLngBounds();
-  POLY.forEach(p=>bounds.extend(ll(p)));
-  map.setBounds(bounds,26,26,26,26);
-
-  setActiveLine=(idx,riding)=>{
-    lines.forEach((ln,j)=>{
-      const on=riding&&j===idx;
-      try{ln.setOptions({strokeWeight:on?9:5,strokeOpacity:on?1:(riding?.5:.85)})}catch(e){}
-    });
-  };
-  setRider=(km,riding)=>{rOv.setPosition(ll(ptAt(km)));rEl.style.opacity=riding?1:.35};
+  const b=new kakao.maps.LatLngBounds();
+  T.forEach(p=>b.extend(ll(p)));
+  map.setBounds(b,24,24,24,24);
   engineLabel("카카오맵");
-  if(bootDone)render();
 }
-
 function initLeaflet(){
-  if(mapReady)return; mapReady=true;
-  const box=document.getElementById("map");
-  if(typeof L==="undefined"){
-    box.innerHTML='<p style="padding:18px;font-size:13px;color:#6E8480">지도를 불러오지 못했습니다. 아래 카카오맵 링크를 이용하세요.</p>';
-    engineLabel("불러오기 실패");return;
-  }
-  const map=L.map("map",{scrollWheelZoom:false,zoomControl:true});
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-    {maxZoom:19,attribution:'&copy; OpenStreetMap · &copy; CARTO'}).addTo(map);
-  L.polyline(POLY,{color:"#FFFFFF",weight:11,opacity:.9}).addTo(map);
-  const lines=SEG.map((s,i)=>{
-    const ln=L.polyline(sliceRoute(s.a,s.b),
-      {color:COL[s.k],weight:5,opacity:.85,lineCap:"butt"}).addTo(map);
-    ln.on("click",()=>gotoSeg(i));return ln;
+  if(mapReady)return;
+  if(typeof L==="undefined"){engineLabel("지도를 불러오지 못했습니다 — 아래 표와 GPX 파일은 그대로 쓸 수 있습니다");return}
+  mapReady=true;
+  const map=L.map("map",{scrollWheelZoom:false}).setView(T[0],12);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {maxZoom:19,attribution:"&copy; OpenStreetMap"}).addTo(map);
+  L.polyline(T,{color:"#FFFFFF",weight:9,opacity:.85}).addTo(map);
+  L.polyline(T.slice(0,TURN+1),{color:"#2F6B5E",weight:5,opacity:.95}).addTo(map);
+  L.polyline(T.slice(TURN),{color:"#2B5FA8",weight:4,opacity:.8,dashArray:"7 6"}).addTo(map);
+  M.forEach((m,i)=>{
+    L.marker([m.lat,m.lon],{icon:L.divIcon({html:pinHTML(m,i),className:"",
+      iconSize:[26,26],iconAnchor:[13,13]}),title:m.t+" · "+m.n})
+     .addTo(map).bindPopup("<b>"+m.n+"</b><br>"+m.t+" · "+m.km.toFixed(1)+"km");
   });
-  SEG.forEach((s,i)=>{
-    L.marker(ptAt(PINKM[i]),{icon:L.divIcon({html:'<div class="pin" style="background:'+COL[s.k]+'">'+(i+1)+'</div>',
-      className:"",iconSize:[27,27],iconAnchor:[13,13]}),title:(i+1)+". "+s.t})
-      .addTo(map).on("click",()=>gotoSeg(i));
-  });
-  const rdot=L.marker(ptAt(0),{icon:L.divIcon({html:'<div class="rdot"></div>',className:"",
-    iconSize:[16,16],iconAnchor:[8,8]}),zIndexOffset:1000,interactive:false}).addTo(map);
-  map.fitBounds(L.polyline(POLY).getBounds(),{padding:[26,26]});
-
-  setActiveLine=(idx,riding)=>{
-    lines.forEach((ln,j)=>{
-      const on=riding&&j===idx;
-      ln.setStyle({weight:on?9:5,opacity:on?1:(riding?.5:.85)});
-      if(on)ln.bringToFront();
-    });
-  };
-  setRider=(km,riding)=>{rdot.setLatLng(ptAt(km));rdot.setOpacity(riding?1:.35)};
+  map.fitBounds(L.polyline(T).getBounds(),{padding:[24,24]});
   engineLabel(KAKAO_KEY?"OpenStreetMap (카카오 연결 실패)":"OpenStreetMap");
-  if(bootDone)render();
 }
-
-(function bootMap(){
-  if(!KAKAO_KEY || location.protocol==="file:"){initLeaflet();return}
+function bootMap(){
+  if(!KAKAO_KEY||location.protocol==="file:"){initLeaflet();return}
   const s=document.createElement("script");
   s.src="https://dapi.kakao.com/v2/maps/sdk.js?appkey="+KAKAO_KEY+"&autoload=false";
-  s.onload=()=>{
-    try{kakao.maps.load(()=>{try{initKakao()}catch(e){console.warn(e);initLeaflet()}})}
-    catch(e){console.warn(e);initLeaflet()}
-  };
+  s.onload=()=>{try{kakao.maps.load(()=>{try{initKakao()}catch(e){console.warn(e);initLeaflet()}})}
+    catch(e){console.warn(e);initLeaflet()}};
   s.onerror=()=>initLeaflet();
   document.head.appendChild(s);
-  let tries=0;
+  let n=0;
   const poll=setInterval(()=>{
     if(mapReady){clearInterval(poll);return}
-    if(window.kakao&&kakao.maps&&kakao.maps.Map){
-      clearInterval(poll);
-      try{initKakao()}catch(e){console.warn(e);initLeaflet()}
-      return;
-    }
-    if(++tries>40){clearInterval(poll);initLeaflet()}
+    if(window.kakao&&kakao.maps&&kakao.maps.Map){clearInterval(poll);
+      try{initKakao()}catch(e){console.warn(e);initLeaflet()}return}
+    if(++n>40){clearInterval(poll);initLeaflet()}
   },500);
-})();
-
-/* ---------- strip ---------- */
-const strip=document.getElementById("strip");
-SEG.forEach((s,i)=>{
-  const w=(s.b-s.a);
-  const d=document.createElement("div");
-  d.className="seg";d.style.flex=w;d.tabIndex=0;d.setAttribute("role","button");
-  d.setAttribute("aria-label",(i+1)+". "+s.t);
-  d.innerHTML='<div class="base" style="background:'+COL[s.k]+'"></div><div class="wash" style="opacity:0"></div>'+
-    '<div class="no">'+(i+1)+'</div>'+(w>=1.35?'<div class="tag">'+s.n+'</div>':'');
-  d.onclick=()=>gotoSeg(i);
-  d.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();gotoSeg(i)}};
-  strip.appendChild(d);
-});
-const head=document.createElement("div");head.className="playhead";strip.appendChild(head);
-const ax=document.getElementById("axis");
-[0,2,4,6,8,10].forEach(k=>{
-  const t=document.createElement("div");
-  t.className="tick";t.style.left=(k/TOTAL*100)+"%";t.textContent=k+"km";ax.appendChild(t);
-});
-
-/* ---------- sun ---------- */
-/* 날짜 확정 — 8월 29일 토요일 · 비 예보 */
-const DATES=[
-  {lab:"8월 29일 토요일 · 확정 · 비",dec:9.0,noon:12.525,t0:24,rise:5,
-   note:"수종사 새벽 일정은 비 예보로 취소하고, 성복역 06:35 출발 → 정자역 경유 → 팔당역 08:00 도착으로 전 일정을 다시 맞췄습니다. 기상청은 서울·경기 오전 강수확률 60%, 예상 강수량 20~60mm로 보며 수도권은 오전 중 비가 그칠 전망입니다 — 라이딩 시간대(08:35–10:50)가 그 경계에 걸치므로 02의 세 시나리오로 현장에서 판단합니다."}
-];
-const dIdx=0;
-function altitude(hour){
-  const D=DATES[dIdx];
-  const phi=37.53*Math.PI/180, dec=D.dec*Math.PI/180;
-  const H=(hour-D.noon)*15*Math.PI/180;
-  return Math.max(0,Math.asin(Math.sin(phi)*Math.sin(dec)+Math.cos(phi)*Math.cos(dec)*Math.cos(H))*180/Math.PI);
-}
-const TMAX=200;
-const AMAX=62, sx=t=>8+(t/TMAX)*284, sy=a=>72-(a/AMAX)*64;
-function drawSun(){
-  let d="";
-  for(let t=0;t<=TMAX;t+=3){d+=(t===0?"M":"L")+sx(t).toFixed(1)+","+sy(altitude(8+t/60)).toFixed(1)}
-  document.getElementById("sunPath").setAttribute("d",d);
-  const y=sy(45);
-  const thr=document.getElementById("thr");thr.setAttribute("y1",y);thr.setAttribute("y2",y);
-  const lab=document.getElementById("thrLab");
-  lab.style.top=(y-3)+"px";
-  lab.innerHTML="45° 그늘 소멸선 <b>"+cross45()+"</b>";
-}
-function cross45(){
-  const D=DATES[dIdx];
-  const phi=37.53*Math.PI/180, dec=D.dec*Math.PI/180;
-  const c=(Math.sin(Math.PI/4)-Math.sin(phi)*Math.sin(dec))/(Math.cos(phi)*Math.cos(dec));
-  if(c<-1||c>1)return "—";
-  const h=D.noon-Math.acos(c)*180/Math.PI/15;
-  const m=Math.round(h*60);
-  return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
 }
 
-/* ---------- render ---------- */
-function pos(t){
-  for(let i=0;i<SCH.length-1;i++){
-    const [t0,k0,r0]=SCH[i],[t1,k1,r1]=SCH[i+1];
-    if(t>=t0&&t<=t1){
-      const f=t1===t0?0:(t-t0)/(t1-t0);
-      return {km:k0+(k1-k0)*f,row:r1===r0?r0:(f<.5?r0:r1)};
-    }
-  }
-  return {km:0,row:1};
-}
-function segIdx(km){for(let i=0;i<SEG.length;i++){if(km>=SEG[i].a&&km<=SEG[i].b)return i}return SEG.length-1}
-
-const sl=document.getElementById("tSlider");
-const segEls=[...strip.querySelectorAll(".seg")];
-function render(){
-  const t=+sl.value, hour=8+t/60, alt=altitude(hour);
-  document.getElementById("rTime").textContent=String(Math.floor(hour)).padStart(2,"0")+":"+String(t%60).padStart(2,"0");
-  document.getElementById("rAlt").textContent=Math.round(alt)+"°";
-  const D=DATES[dIdx];
-  document.getElementById("rRain").innerHTML=Math.round(rainProb(hour))+"<small>%</small>";
-
-  const f=Math.min(1,Math.max(0,(alt-18)/38));
-  const p=pos(t), i=segIdx(p.km), s=SEG[i];
-  const riding=(t>=T_GO&&t<=T_BACK);
-
-  segEls.forEach((el,j)=>{
-    el.querySelector(".wash").style.opacity=(f*EXP[SEG[j].k]*.8).toFixed(3);
-    el.classList.toggle("act",riding&&j===i);
-    el.classList.toggle("dim",riding&&j!==i);
+/* ---------- 그래프 ---------- */
+const SVG=document.getElementById("chart");
+const MET={
+  hr:{i:2,lab:"심박",unit:"bpm",col:"#E4633A",fill:"rgba(228,99,58,.14)"},
+  sp:{i:4,lab:"속도",unit:"km/h",col:"#2B5FA8",fill:"rgba(43,95,168,.14)"},
+  el:{i:3,lab:"고도",unit:"m",col:"#2F6B5E",fill:"rgba(47,107,94,.16)"}
+};
+let cur="hr";
+const W=320,H=150,PAD=14;
+const tmax=P[P.length-1][0];
+const xOf=t=>PAD+(t/tmax)*(W-PAD*2);
+function draw(){
+  const m=MET[cur], vs=P.map(r=>r[m.i]).filter(v=>v>0);
+  const lo=Math.min(...vs), hi=Math.max(...vs), sp=(hi-lo)||1;
+  const yOf=v=>H-20-((v-lo)/sp)*(H-40);
+  let d="",a="";
+  P.forEach((r,k)=>{
+    const v=r[m.i]||lo, x=xOf(r[0]), y=yOf(v);
+    d+=(k?"L":"M")+x.toFixed(1)+","+y.toFixed(1);
   });
-  setActiveLine(i,riding);
-  setRider(p.km,riding);
-
-  const dot=document.getElementById("sunDot");
-  dot.setAttribute("cx",sx(t));dot.setAttribute("cy",sy(alt));dot.setAttribute("r",5+f*4);
-
-  head.style.left=(p.km/TOTAL*100)+"%";
-  head.style.opacity=riding?1:.25;
-  head.setAttribute("data-km",p.km.toFixed(1)+"km");
-  document.getElementById("dirLab").textContent=riding?(p.row===0?"갈 때 ▶":"◀ 올 때"):"대기";
-
-  const box=document.getElementById("nowBox");
-  const rp=rainProb(hour);
-  const state={tunnel:"터널 안. 시원하고, 오늘은 유일한 지붕입니다",shade:"수목 그늘 아래 · 처마가 있는 구간",
-    partial:"그늘이 끊겼다 이어집니다",exposed:"그늘도 지붕도 없음"}[s.k];
-  if(t<T_GO){box.style.borderLeftColor="var(--tunnel)";
-    box.innerHTML="<b>도착 · 대여 중.</b> 08:00 도착 → 08:15 대여 → 08:35 출발. "+
-      "<span style='color:#2B5FA8'>여기서 레이더를 보고 1차 판단(A / C)을 합니다.</span>";}
-  else if(t>T_BACK){box.style.borderLeftColor="var(--muted)";
-    box.innerHTML="<b>반납 완료.</b> 젖은 상의를 갈아입고, 차에서 서울식당에 도착 시각을 알리세요. 가락몰까지 40분.";}
-  else{box.style.borderLeftColor=COL[s.k];
-    box.innerHTML="<b>"+(i+1)+". "+s.t+"</b><br><span class='mono' style='font-size:13.5px;color:#6E8480'>"+
-      p.km.toFixed(1)+"km · "+KLAB[s.k]+" · 강수확률 "+Math.round(rp)+"%</span> — "+state+
-      (i===4&&p.row===0?" <span style='color:#2B5FA8'>· 2차 판단 지점입니다</span>":"")+
-      (s.k==="exposed"?" <span style='color:#E4633A'>· 비를 피할 곳이 없는 구간</span>":"")+
-      (rp>=55?" <span style='color:#E4633A'>· 노면 젖음, 차간 거리 2배</span>":"");}
+  a="M"+xOf(0).toFixed(1)+","+(H-20)+d.slice(1)+"L"+xOf(tmax).toFixed(1)+","+(H-20)+"Z";
+  const turnT=P.reduce((b,r)=>Math.abs(r[1]-10.34)<Math.abs(b[1]-10.34)?r:b)[0];
+  SVG.innerHTML=
+    '<line x1="'+PAD+'" y1="'+(H-20)+'" x2="'+(W-PAD)+'" y2="'+(H-20)+'" stroke="#CBD8D3"/>'+
+    '<line x1="'+xOf(turnT).toFixed(1)+'" y1="6" x2="'+xOf(turnT).toFixed(1)+'" y2="'+(H-20)+
+      '" stroke="#E4633A" stroke-dasharray="3 3" opacity=".65"/>'+
+    '<text class="clab" x="'+(xOf(turnT)+4).toFixed(1)+'" y="14">반환</text>'+
+    '<path d="'+a+'" fill="'+m.fill+'"/>'+
+    '<path d="'+d+'" fill="none" stroke="'+m.col+'" stroke-width="1.6" stroke-linejoin="round"/>'+
+    '<text class="clab" x="'+PAD+'" y="'+(H-7)+'">08:06</text>'+
+    '<text class="clab" x="'+(W-PAD)+'" y="'+(H-7)+'" text-anchor="end">10:09</text>'+
+    '<text class="clab" x="'+PAD+'" y="12">'+hi+' '+m.unit+'</text>';
+  document.getElementById("readnow").innerHTML=
+    "<b>"+m.lab+"</b> — 최저 "+lo+" · 최고 "+hi+" "+m.unit+
+    "<br><span style='font-size:13px;color:#6E8480'>"+
+    (cur==="hr"?"평균 109bpm. 2시간 내내 편안한 유산소 구간에 머물렀습니다":
+     cur==="sp"?"60초 이동평균. 실주행 평균 15.7km/h — 전기 2대와 일반 3대가 같이 갈 수 있는 속도입니다":
+     "상승고도 합계 55.8m. 사실상 평지입니다")+"</span>";
 }
-sl.addEventListener("input",render);
+document.getElementById("ctog").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b)return;
+  cur=b.dataset.m;
+  [...e.currentTarget.querySelectorAll("button")].forEach(x=>x.classList.toggle("on",x===b));
+  draw();
+});
+draw();
 
-/* ---------- accordions ---------- */
-function makeAcc(list,items,build){
-  items.forEach((it,i)=>{
-    const wrap=document.createElement("div");wrap.className="acc";wrap.id=list.id+"-"+i;
-    const btn=document.createElement("button");
-    btn.setAttribute("aria-expanded","false");btn.innerHTML=build.head(it,i);
-    const panel=document.createElement("div");panel.className="panel";panel.hidden=true;
-    panel.innerHTML=build.body(it,i);
-    btn.onclick=()=>{const open=wrap.classList.toggle("open");
-      panel.hidden=!open;btn.setAttribute("aria-expanded",String(open));};
-    wrap.append(btn,panel);list.appendChild(wrap);
+/* ---------- 라이트박스 ---------- */
+const lb=document.getElementById("lb"),lbi=document.getElementById("lbimg"),
+      lbc=document.getElementById("lbcap");
+document.querySelectorAll("figure img").forEach(img=>{
+  img.addEventListener("click",()=>{
+    lbi.src=img.src; lbi.alt=img.alt;
+    lbc.textContent=img.dataset.cap||img.alt;
+    lb.classList.add("on"); document.body.style.overflow="hidden";
   });
-}
-makeAcc(document.getElementById("segList"),SEG,{
-  head:(s,i)=>'<div class="rank" style="background:'+COL[s.k]+'">'+(i+1)+'</div>'+
-    '<div><div class="t">'+s.n+'</div><div class="s mono">'+s.a.toFixed(1)+'–'+s.b.toFixed(1)+'km · '+KLAB[s.k]+'</div></div>'+
-    '<div class="arw">▸</div>',
-  body:(s,i)=>'<div class="kicker">'+s.t+'</div><p>'+s.d+'</p><ul>'+
-    s.li.map(x=>'<li>'+x+'</li>').join("")+'</ul>'+
-    '<a class="tel" target="_blank" rel="noopener" href="https://map.kakao.com/link/map/'+
-      encodeURIComponent(s.n)+','+ptAt(PINKM[i])[0].toFixed(5)+','+ptAt(PINKM[i])[1].toFixed(5)+
-      '">카카오맵에서 이 지점 보기</a>'
 });
-makeAcc(document.getElementById("foodList"),FOOD,{
-  head:(f)=>'<div class="rankf">'+f.r+'</div>'+
-    '<div><div class="t">'+f.n+'</div><div class="s">'+f.s+'</div></div><div class="arw">▸</div>',
-  body:(f)=>'<div class="kicker">'+f.bd.map(b=>'<span class="badge" style="background:'+b[1]+'">'+b[0]+'</span>').join("")+'</div>'+
-    '<dl class="kv">'+f.kv.map(k=>'<dt>'+k[0]+'</dt><dd>'+
-      (k[0]==="전화"?'<a class="tel" href="tel:'+k[1].replace(/-/g,"")+'">'+k[1]+'</a>':k[1])+'</dd>').join("")+'</dl>'+
-    '<p>'+f.p+'</p><ul>'+f.li.map(x=>'<li>'+x+'</li>').join("")+'</ul>'+
-    '<div class="warn">'+f.w+'</div>'+
-    '<a class="tel" target="_blank" rel="noopener" href="https://map.kakao.com/link/search/'+
-      encodeURIComponent(f.n+" 가락몰")+'">카카오맵에서 찾기</a>'
-});
-function gotoSeg(i){
-  const el=document.getElementById("segList-"+i);if(!el)return;
-  if(!el.classList.contains("open"))el.querySelector("button").click();
-  el.scrollIntoView({block:"center",behavior:"smooth"});
-}
+function closeLb(){lb.classList.remove("on");document.body.style.overflow="";lbi.src=""}
+document.getElementById("lbx").onclick=closeLb;
+lb.addEventListener("click",e=>{if(e.target===lb)closeLb()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&lb.classList.contains("on"))closeLb()});
 
-/* ---------- date switch ---------- */
-function applyDate(){
-  const D=DATES[dIdx];
-  document.getElementById("ebrow").textContent=D.lab+" · 남한강자전거길";
-  document.getElementById("tlAlt").textContent=Math.round(altitude(10+50/60))+"°";
-  drawSun();
-  document.getElementById("crit").innerHTML=
-    "<span>오전 강수확률 <b>60%</b></span>"+
-    "<span>강수량 <b>20–60mm</b></span>"+
-    "<span>기온 <b>24–30℃</b></span>"+
-    "<span>그늘 소멸 <b>"+cross45()+"</b></span>"+
-    "<span>출발 08:35 <b>"+Math.round(altitude(8+35/60))+"°</b></span>"+
-    "<span>반환 09:25 <b>"+Math.round(altitude(9+25/60))+"°</b></span>"+
-    "<span>반납 10:50 <b>"+Math.round(altitude(10+50/60))+"°</b></span>";
-  const dn=document.getElementById("datenote");
-  dn.hidden=!D.note; dn.textContent=D.note;
-  render();
-}
-applyDate();
-bootDone=true;
-
-/* ---------- 첫 진입 시 슬라이더가 스스로 한 번 움직여 보이기 ---------- */
-let userTouched=false;
-const nudge=document.getElementById("nudge");
-["input","pointerdown","keydown"].forEach(ev=>
-  sl.addEventListener(ev,()=>{userTouched=true;nudge.classList.add("gone");
-    document.querySelector(".instrument").classList.remove("demoing");}));
-
-function demo(){
-  if(userTouched)return;
-  if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-  const inst=document.querySelector(".instrument");
-  inst.classList.add("demoing");
-  const from=T_GO,to=T_BACK-5,dur=3640,t0=performance.now();
-  (function step(now){
-    if(userTouched){inst.classList.remove("demoing");return}
-    const k=Math.min(1,(now-t0)/dur);
-    const e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
-    const tri=e<.5?e*2:(1-e)*2;
-    sl.value=Math.round(from+(to-from)*tri);
-    render();
-    if(k<1)requestAnimationFrame(step);
-    else{sl.value=from;render();inst.classList.remove("demoing")}
-  })(t0);
-}
-const kick=setInterval(()=>{if(mapReady){clearInterval(kick);setTimeout(demo,900)}},300);
-setTimeout(()=>clearInterval(kick),25000);
+/* 지도는 마지막에 — 실패해도 위의 그래프·표·사진은 그대로 동작합니다 */
+try{bootMap()}catch(e){console.warn(e);engineLabel("지도를 불러오지 못했습니다")}
 </script>
 </body>
 </html>
