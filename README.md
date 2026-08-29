@@ -10,7 +10,8 @@
 
 ## 데이터
 
-- `route/actual-20260829.gpx` — 갤럭시 워치 울트라 실제 주행 기록 (4,857점 · 1초 간격 · 심박 포함)
+- `route/actual-20260829.gpx` — 갤럭시 워치 울트라 실제 주행 기록 (4,857점 · 1초 간격)
+  워치가 함께 기록한 심박은 개인 생체정보라 공개 전에 제거했습니다.
 - `route/paldang-roundtrip.gpx`, `route/paldang-oneway.gpx` — 출발 전에 만든 계획 경로
 - `photos/` — 당일 사진 10장
 
