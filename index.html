@@ -144,6 +144,7 @@ figcaption .tm{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(
 .epi{display:grid;gap:10px}
 .ep{border:1px solid var(--line);border-left-width:4px;border-radius:3px;background:var(--paper);padding:13px 15px}
 .ep .who{font-family:"Hahmlet",serif;font-weight:700;font-size:17.5px;margin-bottom:2px}
+.ep.full{grid-column:1 / -1}
 .ep .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
   color:var(--muted);text-transform:uppercase;margin-bottom:6px}
 .ep p{font-size:14.5px;color:#2B4B45}
@@ -190,10 +191,9 @@ footer a{color:var(--tunnel)}
   <div class="eyebrow">2026년 8월 29일 토요일 · 남한강자전거길 · 완주</div>
   <h1>팔당 라이딩<br><span class="hi">비 소식</span>에 쫄았지만<br>완벽했던 <span class="hi">흐린 날</span></h1>
   <p class="lede">기상청은 오전 강수확률 60%, 예상 강수량 20~60mm를 예보했습니다.
-  우리는 우비를 챙기고, 시나리오를 셋으로 나누고, 능내역에서 판단하기로 정해두고 출발했습니다.
-  <b>그리고 비는 한 방울도 오지 않았습니다.</b> 대신 얇게 구름이 깔려, 8월 말 라이딩에서 상상할 수 있는
-  가장 좋은 조건이 됐습니다. 준비한 것 중 쓴 건 거의 없었지만 —
-  덕분에 아무도 걱정하지 않았습니다.</p>
+  우리는 시나리오를 셋으로 나누고, 능내역에서 판단하기로 정해두고 출발했습니다.
+  계획서에서 제일 크게 써둔 <b>우비는 결국 사지 않았고</b> — <b>비는 한 방울도 오지 않았습니다.</b>
+  대신 얇게 구름이 깔려, 8월 말 라이딩에서 상상할 수 있는 가장 좋은 조건이 됐습니다.</p>
 
   <a class="planlink" href="plan.html">
     <span class="pl-k">PLAN</span>
@@ -219,6 +219,8 @@ footer a{color:var(--tunnel)}
     <span class="chip">08:06 출발</span>
     <span class="chip">10:09 반납</span>
     <span class="chip">평균 심박 109</span>
+    <span class="chip">우비 안 삼</span>
+    <span class="chip">전원 음주 · 대리운전</span>
     <span class="chip">계획보다 40분 빠름</span>
     <span class="chip">총 369,000원</span>
   </div>
@@ -294,7 +296,8 @@ footer a{color:var(--tunnel)}
   </table></div>
 
   <div class="win"><b>세 개의 시나리오 중 A였습니다.</b> 능내역에서 판단할 것도 없었고,
-  봉안터널은 지붕이 아니라 그냥 시원한 터널이었고, 우비는 가방에서 나오지 않았습니다.
+  봉안터널은 지붕이 아니라 그냥 시원한 터널이었습니다.
+  그리고 계획서가 가장 강하게 밀었던 <b>우비는 아무도 사지 않았습니다.</b> 결과적으로 옳았습니다 —
   계획이 빗나간 게 아니라, <b>가장 좋은 가지가 선택된 것</b>입니다.</div>
 </section>
 
@@ -325,9 +328,10 @@ footer a{color:var(--tunnel)}
     <li class="key"><div class="tl-t">10:09</div><div class="tl-h">팔당역 반납 <span class="mono">왕복 21.2km</span></div>
       <div class="tl-d">완주. 아무도 처지지 않았고, 비는 끝내 오지 않았습니다<br><span class="plan">계획 10:50 · 41분 빠름</span></div></li>
     <li><div class="tl-t">11:00</div><div class="tl-h">가락몰 도착</div>
-      <div class="tl-d">여기서 오늘의 유일한 삽질이 있었습니다 — 아래 06 참고<br><span class="plan">계획 11:45 · 45분 빠름</span></div></li>
+      <div class="tl-d">내비 목적지는 “가락몰”로 — 아래 06 참고<br><span class="plan">계획 11:45 · 45분 빠름</span></div></li>
     <li class="key"><div class="tl-t">13:00</div><div class="tl-h">종료</div>
-      <div class="tl-d">청해수산에서 회를 사서 서울식당에서 두 시간. 닷사이 23과 국화주</div></li>
+      <div class="tl-d">청해수산에서 회를 사서 서울식당에서 두 시간.
+      <b>목이 말라 맥주부터</b>, 그다음 닷사이 23과 국화주. 돌아올 땐 대리운전</div></li>
   </ul>
 </section>
 
@@ -356,9 +360,9 @@ footer a{color:var(--tunnel)}
       계획서에서 “젖으면 가장 미끄럽다”고 세 번 강조했던 데크. 뽀송했습니다.</figcaption></figure>
 
     <figure><img src="photos/05-ebike.jpg" width="1200" height="1600" alt="다리 난간에 세워둔 전기자전거 MOTOVELO PRO3" loading="lazy"
-      data-cap="MOTOVELO PRO3 — 바구니에 우비가 그대로 들어 있다">
-      <figcaption><b>끝내 쓰지 않은 우비</b><span class="tm">바구니 속 초록 봉투</span>
-      전기자전거 바구니에 우비와 물이 그대로. 오늘 가장 기분 좋은 낭비였습니다.</figcaption></figure>
+      data-cap="MOTOVELO PRO3 — 오늘의 주력 장비">
+      <figcaption><b>오늘의 주력</b><span class="tm">MOTOVELO PRO3 · 다리 위에서</span>
+      바구니에는 물과 짐만. 우비 자리는 처음부터 비어 있었고, 끝까지 비어 있었습니다.</figcaption></figure>
 
     <figure><img src="photos/06-river.jpg" width="1600" height="901" alt="잔잔한 강물에 아치교가 대칭으로 비친 풍경" loading="lazy"
       data-cap="북한강 — 바람이 없어 물이 거울이 됐다">
@@ -395,6 +399,13 @@ footer a{color:var(--tunnel)}
       <p><b>종아리가 튼튼합니다.</b> 전기 없이 21km를 그대로 밟아냈고,
       실주행 평균 15.7km/h는 이 사람 덕분에 유지된 숫자입니다.</p>
     </div>
+    <div class="ep full" style="border-left-color:#2B5FA8">
+      <div class="tag">차 안에서</div>
+      <div class="who">윤지 상의 커피사탕</div>
+      <p>운전하면서 하나씩 까먹은 <b>커피사탕이 맛있었습니다.</b>
+      계획서 어디에도 없던 물건인데, 그날 차 안의 기억으로는 제일 선명하게 남았습니다.
+      준비물 목록은 늘 이런 걸 빠뜨립니다.</p>
+    </div>
   </div>
   <div class="win"><b>전기자전거 2대가 오늘의 유일한 변수였습니다.</b>
   계획서는 비와 젖은 노면만 걱정했는데, 실제 위험은 <b>처음 타보는 전기자전거의 초기 가속</b>이었습니다.
@@ -406,10 +417,9 @@ footer a{color:var(--tunnel)}
   <p class="sec-note">계획대로 <b>회를 사서 초장집으로 들고 가는</b> 방식. 판매점은 현장에서 <b>청해수산</b>으로 정했고,
   초장집은 예약해둔 <b>서울식당</b>. 11시에 도착해 1시에 나왔습니다.</p>
 
-  <div class="note"><b>오늘의 유일한 삽질 — 내비게이션.</b>
-  “가락동 농수산물시장”을 찍고 가면 한참 고생합니다. 도매시장 쪽으로 들어가 버려서
-  주차도, 진입로도 전부 어긋납니다. <b>반드시 “가락몰”로 찍으세요.</b>
-  다음에 가는 사람에게 남길 게 하나뿐이라면 이것입니다.</div>
+  <div class="note"><b>참고 — 내비 목적지는 “가락몰”.</b>
+  “가락동 농수산물시장”으로 찍으면 도매시장 쪽으로 들어가게 되어 주차도 진입로도 어긋납니다.
+  크게 헤맬 일은 아니지만, 알고 가면 편합니다.</div>
 
   <div class="menu">
     <span class="mi star">줄무늬전갱이</span><span class="mi star">대광어</span><span class="mi">참돔</span>
@@ -417,7 +427,8 @@ footer a{color:var(--tunnel)}
     <span class="mi">전복</span><span class="mi star">새우 소금구이</span><span class="mi">새우머리 볶음</span>
     <span class="mi">매운탕</span><span class="mi">계란찜</span>
   </div>
-  <p style="font-size:15px;color:#41615B;margin-top:6px">반주는 <b>닷사이 23</b>과 <b>국화주</b>.
+  <p style="font-size:15px;color:#41615B;margin-top:6px">순서가 있었습니다 —
+  21km를 달리고 앉았으니 <b>목이 말라 맥주부터</b>. 그다음이 <b>닷사이 23</b>, 그리고 <b>국화주</b>.
   계획서에 “8월 말은 민어 끝자락, 전어 시작”이라고 적어뒀는데
   실제로 고른 건 <b>줄무늬전갱이</b>였습니다 — 시장에서 그날 좋은 걸 고르는 게 늘 이깁니다.</p>
 
@@ -429,8 +440,8 @@ footer a{color:var(--tunnel)}
 
     <figure><img src="photos/07-dassai.jpg" width="1200" height="1600" alt="얼음 통에 담긴 닷사이 사케 한 병" loading="lazy"
       data-cap="닷사이 23 — 서울식당에서">
-      <figcaption><b>닷사이 23</b><span class="tm">국화주와 함께</span>
-      21km 뒤의 첫 잔. 운전자는 여기 없습니다.</figcaption></figure>
+      <figcaption><b>닷사이 23</b><span class="tm">맥주 다음 · 국화주 앞</span>
+      <b>대리운전을 부르기로 했으니 오늘은 운전자가 없습니다.</b> 다섯 명 모두 마셨습니다.</figcaption></figure>
 
     <figure><img src="photos/09-shrimp.jpg" width="1600" height="1200" alt="새우 소금구이 두 접시와 계란찜" loading="lazy"
       data-cap="새우 소금구이와 계란찜">
@@ -446,19 +457,19 @@ footer a{color:var(--tunnel)}
 
 <section>
   <div class="sec-head"><span class="sec-num">07</span><h2>정산</h2></div>
-  <p class="sec-note">5명 기준. 주차비와 기름값은 뺀 금액입니다.</p>
+  <p class="sec-note">5명 기준. <b>주차비 · 기름값 · 대리운전비는 빠진 금액</b>입니다.</p>
   <div class="tblwrap"><table>
     <thead><tr><th>항목</th><th>내용</th><th style="text-align:right">금액</th></tr></thead>
     <tbody>
       <tr><td class="pri">청해수산</td><td>모듬회 · 새우</td><td class="num">179,000</td></tr>
-      <tr><td class="pri">서울식당</td><td>상차림 · 매운탕 · 닷사이 23 · 국화주</td><td class="num">108,000</td></tr>
+      <tr><td class="pri">서울식당</td><td>상차림 · 매운탕 · 맥주 · 닷사이 23 · 국화주</td><td class="num">108,000</td></tr>
       <tr><td class="pri">자전거 대여</td><td>전기 2 · 일반 2 · 26인치 대형 1</td><td class="num">82,000</td></tr>
       <tr class="tot"><td>합계</td><td>1인 약 73,800원</td><td class="num">369,000</td></tr>
     </tbody>
   </table></div>
   <div class="win">계획서에서 잡았던 예산은 <b>1인 4만원 안팎</b>이었습니다.
-  실제는 <b>1인 7.4만원</b> — 회를 넉넉히 뜨고 닷사이를 곁들이면 이렇게 됩니다.
-  아깝다는 사람은 아무도 없었습니다.</div>
+  실제는 <b>1인 7.4만원</b> — 회를 넉넉히 뜨고 맥주에 닷사이까지 가면 이렇게 됩니다.
+  여기에 대리운전비가 더 붙지만, 아깝다는 사람은 아무도 없었습니다.</div>
 </section>
 
 <section>
@@ -472,9 +483,13 @@ footer a{color:var(--tunnel)}
     <li class="key"><div class="tl-t">03</div><div class="tl-h">토요일 아침 도로는 더 빠르다</div>
       <div class="tl-d">성복 → 팔당 55분으로 잡았는데 실제로는 더 짧았습니다. 30분 여유가 그대로 남았습니다</div></li>
     <li class="key"><div class="tl-t">04</div><div class="tl-h">비 예보 60%는 갈 이유가 된다</div>
-      <div class="tl-d">흐린 날은 8월 라이딩의 최적 조건입니다. 취소 대신 <b>판단 지점을 정해두는 쪽</b>이 옳았습니다</div></li>
+      <div class="tl-d">흐린 날은 8월 라이딩의 최적 조건입니다. 취소 대신 <b>판단 지점을 정해두는 쪽</b>이 옳았습니다.
+      우비를 안 산 것도 결과적으로는 맞았지만, 그건 운이 좋았던 쪽에 가깝습니다</div></li>
     <li class="key"><div class="tl-t">05</div><div class="tl-h">21km는 딱 좋았다</div>
       <div class="tl-d">평균 심박 109, 실주행 1시간 22분. 회와 술로 이어지기에 완벽한 분량이었습니다</div></li>
+    <li class="key"><div class="tl-t">06</div><div class="tl-h">대리운전을 전제하면 계획이 편해진다</div>
+      <div class="tl-d">운전자를 정해두는 대신 <b>돌아올 때 대리를 부르기로</b> 하니 다섯 명 모두 마셨습니다.
+      가락시장 → 수지 3~4만원이면 하루의 마무리를 통째로 사는 값입니다</div></li>
   </ul>
 </section>
 
